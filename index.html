@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aubfest Music Festival - Home</title>
+
+    <!-- Try both relative and root-relative paths -->
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/home.css">
+</head>
+<body>
+    <div class="css-load-check">CSS not loaded</div>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>AUBFEST</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lineup.html">Lineup</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="carousel-container">
+            <div class="carousel-overlay">
+                <!-- Placeholder for logo overlay -->
+                <img src="images/placeholder-logo.png" alt="Aubfest Logo" class="overlay-logo">
+            </div>
+            <div class="carousel">
+                <div class="carousel-slide active">
+                    <img src="images/placeholder1.jpg" alt="Festival Image 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/placeholder2.jpg" alt="Festival Image 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/placeholder3.jpg" alt="Festival Image 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/placeholder4.jpg" alt="Festival Image 4">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/placeholder5.jpg" alt="Festival Image 5">
+                </div>
+            </div>
+            <button class="carousel-button prev">&lt;</button>
+            <button class="carousel-button next">&gt;</button>
+            <div class="carousel-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>Welcome to Aubfest</h2>
+            <p>Experience the magic of music in the heart of Auburn, Alabama.</p>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@aubfest.com</p>
+                <p>Phone: (334) XXX-XXXX</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Aubfest Music Festival. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/carousel.js"></script>
+</body>
+</html> 
