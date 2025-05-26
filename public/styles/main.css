@@ -156,6 +156,63 @@ h2 {
     border-top: 1px solid rgba(255, 253, 208, 0.2);
 }
 
+/* Hamburger styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1201;
+    position: absolute;
+    top: 28px;
+    right: 24px;
+}
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 4px;
+    margin: 4px 0;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Slide-in menu styles */
+.slide-menu {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 280px;
+    height: 100vh;
+    background: #006400;
+    box-shadow: -2px 0 12px rgba(0,0,0,0.12);
+    flex-direction: column;
+    gap: 2rem;
+    padding: 100px 2rem 2rem 2rem;
+    z-index: 1200;
+    transition: right 0.35s cubic-bezier(0.77,0.2,0.05,1.0);
+    display: flex;
+}
+.slide-menu.open {
+    right: 0;
+}
+
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 1199;
+}
+.nav-overlay.active {
+    display: block;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .nav-container {
@@ -176,5 +233,80 @@ h2 {
 
     .social-links {
         justify-content: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-container {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+    }
+    .logo.mobile-logo {
+        position: absolute;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1202;
+        height: 100px;
+        display: flex;
+        align-items: center;
+    }
+    .logo.mobile-logo img {
+        height: 100px;
+        width: auto;
+    }
+    .tickets-btn {
+        position: static;
+        left: unset;
+        transform: none;
+        z-index: 1202;
+        margin: 0 auto;
+    }
+    .nav-links.desktop-nav {
+        display: none;
+    }
+    .slide-menu {
+        display: flex;
+    }
+    .slide-menu a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.35em;
+        font-weight: 500;
+        padding: 0.7em 0;
+        border-radius: 4px;
+        transition: color 0.3s;
+    }
+    .slide-menu a:hover,
+    .slide-menu a.active {
+        color: #FFFDD0;
+        text-decoration: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media (min-width: 901px) {
+    .slide-menu, .nav-overlay, .hamburger {
+        display: none !important;
+    }
+    .nav-links.desktop-nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        gap: 2.5rem;
+        background: none;
+        box-shadow: none;
+        height: auto;
+        padding: 0;
+    }
+    .tickets-btn {
+        position: static;
+        transform: none;
     }
 }

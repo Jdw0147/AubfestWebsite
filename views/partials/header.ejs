@@ -12,17 +12,48 @@
 <body>
     <header class="main-header">
         <nav class="nav-container">
-            <div class="logo">
+            <div class="logo mobile-logo">
                 <img src="/images/Quick_logo.png" />
             </div>
-            <ul class="nav-links">
+            <div class="tickets-btn">
+                <a href="/tickets" class="tickets-btn <%= page === 'tickets' ? 'active' : '' %>"><button class="tickets-button">Tickets</button></a>
+            </div>
+            <button class="hamburger" id="hamburger-menu" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-overlay" id="nav-overlay"></div>
+            <!-- Desktop nav links -->
+            <ul class="nav-links desktop-nav">
                 <li><a href="/" class="<%= page === 'home' ? 'active' : '' %>">Home</a></li>
                 <li><a href="/lineup" class="<%= page === 'lineup' ? 'active' : '' %>">Lineup</a></li>
                 <li><a href="/info" class="<%= page === 'info' ? 'active' : '' %>">Info</a></li>
                 <li><a href="/contact" class="<%= page === 'contact' ? 'active' : '' %>">Contact</a></li>
-                <li><a href="/tickets" class="tickets-btn <%= page === 'tickets' ? 'active' : '' %>"><button class="tickets-button">Tickets</button></a></li>
+            </ul>
+            <!-- Mobile slide-in menu -->
+            <ul class="slide-menu" id="slide-menu">
+                <li><a href="/" class="<%= page === 'home' ? 'active' : '' %>">Home</a></li>
+                <li><a href="/lineup" class="<%= page === 'lineup' ? 'active' : '' %>">Lineup</a></li>
+                <li><a href="/info" class="<%= page === 'info' ? 'active' : '' %>">Info</a></li>
+                <li><a href="/contact" class="<%= page === 'contact' ? 'active' : '' %>">Contact</a></li>
             </ul>
         </nav>
     </header>
+    <script>
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navOverlay = document.getElementById('nav-overlay');
+        const slideMenu = document.getElementById('slide-menu');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navOverlay.classList.toggle('active');
+            slideMenu.classList.toggle('active');
+        });
+
+        navOverlay.addEventListener('click', () => {
+            navOverlay.classList.remove('active');
+            slideMenu.classList.remove('active');
+        });
+    </script>
 </body>
 </html>
