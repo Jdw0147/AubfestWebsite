@@ -9,14 +9,14 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: #FFFDD0; /* Cream background */
-    color: #228B22; /* Forest green text */
+    color: hsl(120, 61%, 34%); /* Forest green text */
 }
 
 /* Header styles */
 .main-header {
     background-color: #006400; /* Dark green background */
     color: white;
-    padding: 1rem 0;
+    padding: 2rem 0; /* Increased padding for larger header */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
@@ -24,22 +24,25 @@ body {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 18px; /* Reduced horizontal padding */
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Vertically center nav content */
+    height: 100px; /* Ensures vertical centering and consistent height */
 }
 
-.logo h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    letter-spacing: 2px;
+/* Aubfest Logo that appears on the left side of the header */
+.logo img {
+    height: 150px;
+    display: block;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
+    font-size: 1.25rem;
+    align-items: center; /* Vertically center nav links */
 }
 
 .nav-links a {
@@ -47,11 +50,42 @@ body {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    font-size: 1.1em;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
     color: #FFFDD0; /* Cream color on hover and active */
+}
+
+/* Tickets button styles */
+.tickets-btn {
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.tickets-button {
+    background: #fff;
+    color: #006400;
+    border: 2px solid #006400;
+    border-radius: 6px;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 0.7em 1.7em;
+    margin-left: 0.5em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s, color 0.2s, border 0.2s, transform 0.1s;
+}
+
+.tickets-button:hover, .tickets-btn.active .tickets-button {
+    background: #006400;
+    color: #fff;
+    border: 2px solid #006400;
+    transform: scale(1.06);
 }
 
 /* Main content styles */
@@ -75,7 +109,7 @@ h2 {
 
 /* Footer styles */
 .main-footer {
-    background-color: #8B4513; /* Soft brown background */
+    background-color: #006400; /* Dark green background */
     color: #FFFDD0; /* Cream text */
     padding: 3rem 0 1rem;
     margin-top: 3rem;
@@ -122,6 +156,63 @@ h2 {
     border-top: 1px solid rgba(255, 253, 208, 0.2);
 }
 
+/* Hamburger styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1201;
+    position: absolute;
+    top: 28px;
+    right: 24px;
+}
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 4px;
+    margin: 4px 0;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Slide-in menu styles */
+.slide-menu {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 280px;
+    height: 100vh;
+    background: #006400;
+    box-shadow: -2px 0 12px rgba(0,0,0,0.12);
+    flex-direction: column;
+    gap: 2rem;
+    padding: 100px 2rem 2rem 2rem;
+    z-index: 1300; /* Increased z-index to go above logo and tickets button */
+    transition: right 0.35s cubic-bezier(0.77,0.2,0.05,1.0);
+    display: flex;
+}
+.slide-menu.open {
+    right: 0;
+}
+
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 1299; /* Ensure overlay is just below the menu */
+}
+.nav-overlay.active {
+    display: block;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .nav-container {
@@ -143,4 +234,79 @@ h2 {
     .social-links {
         justify-content: center;
     }
-} 
+}
+
+@media (max-width: 900px) {
+    .nav-container {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+    }
+    .logo.mobile-logo {
+        position: absolute;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1202;
+        height: 100px;
+        display: flex;
+        align-items: center;
+    }
+    .logo.mobile-logo img {
+        height: 100px;
+        width: auto;
+    }
+    .tickets-btn {
+        position: static;
+        left: unset;
+        transform: none;
+        z-index: 1202;
+        margin: 0 auto;
+    }
+    .nav-links.desktop-nav {
+        display: none;
+    }
+    .slide-menu {
+        display: flex;
+    }
+    .slide-menu a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.35em;
+        font-weight: 500;
+        padding: 0.7em 0;
+        border-radius: 4px;
+        transition: color 0.3s;
+    }
+    .slide-menu a:hover,
+    .slide-menu a.active {
+        color: #FFFDD0;
+        text-decoration: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media (min-width: 901px) {
+    .slide-menu, .nav-overlay, .hamburger {
+        display: none !important;
+    }
+    .nav-links.desktop-nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        gap: 2.5rem;
+        background: none;
+        box-shadow: none;
+        height: auto;
+        padding: 0;
+    }
+    .tickets-btn {
+        position: static;
+        transform: none;
+    }
+}
