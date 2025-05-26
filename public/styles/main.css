@@ -194,7 +194,7 @@ h2 {
     flex-direction: column;
     gap: 2rem;
     padding: 100px 2rem 2rem 2rem;
-    z-index: 1200;
+    z-index: 1300; /* Increased z-index to go above logo and tickets button */
     transition: right 0.35s cubic-bezier(0.77,0.2,0.05,1.0);
     display: flex;
 }
@@ -207,7 +207,7 @@ h2 {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background: rgba(0,0,0,0.3);
-    z-index: 1199;
+    z-index: 1299; /* Ensure overlay is just below the menu */
 }
 .nav-overlay.active {
     display: block;
