@@ -233,6 +233,25 @@ h2 {
     transition: 0.3s;
 }
 
+/* Close button styles */
+.close-menu {
+    display: none;
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: bold;
+    z-index: 1301;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.slide-menu.open ~ .close-menu {
+    display: block;
+}
+
 /* Slide-in menu styles */
 .slide-menu {
     position: fixed;
@@ -259,6 +278,9 @@ h2 {
     top: 0; left: 0; right: 0; bottom: 0;
     background: rgba(0,0,0,0.3);
     z-index: 1299; /* Ensure overlay is just below the menu */
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
 }
 .nav-overlay.active {
     display: block;
@@ -344,6 +366,9 @@ h2 {
     }
     .hamburger {
         display: flex;
+    }
+    .close-menu {
+        display: none;
     }
 }
 
