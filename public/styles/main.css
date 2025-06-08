@@ -127,6 +127,7 @@ body {
     box-shadow: 0 2px 12px rgba(0,0,0,0.10);
     border-radius: 12px;
     overflow: hidden;
+    font-size: 1.35em;
 }
 .content-section.welcome-section::before {
     content: '';
@@ -139,6 +140,15 @@ body {
 .content-section.welcome-section > * {
     position: relative;
     z-index: 2;
+}
+
+.content-section.welcome-section h2 {
+    font-size: 2.3em;
+}
+
+.content-section.welcome-section p {
+    font-size: 1.18em;
+    line-height: 1.7;
 }
 
 h2 {
@@ -155,6 +165,7 @@ h2 {
     box-shadow: 0 2px 12px rgba(0,0,0,0.10);
     border-radius: 12px;
     overflow: hidden;
+    font-size: 1.35em;
 }
 .content-section.lineup-preview-section::before {
     content: '';
@@ -167,6 +178,15 @@ h2 {
 .content-section.lineup-preview-section > * {
     position: relative;
     z-index: 2;
+}
+
+.content-section.lineup-preview-section h2 {
+    font-size: 2.3em;
+}
+
+.content-section.lineup-preview-section p {
+    font-size: 1.18em;
+    line-height: 1.7;
 }
 
 /* Footer styles */
@@ -406,4 +426,21 @@ h2 {
     transform: scale(1.06);
     box-shadow: 0 4px 18px rgba(0, 100, 0, 0.18);
     text-decoration: none;
+}
+
+/* Media query for mobile font size adjustment */
+@media (max-width: 600px) {
+  .content-section.welcome-section,
+  .content-section.lineup-preview-section {
+    font-size: 1em;
+  }
+  .content-section.welcome-section h2,
+  .content-section.lineup-preview-section h2 {
+    font-size: 1.3em;
+  }
+  .content-section.welcome-section p,
+  .content-section.lineup-preview-section p {
+    font-size: 1em;
+    font-weight: bold;
+  }
 }
