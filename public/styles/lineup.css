@@ -98,3 +98,45 @@
         min-width: 120px;
     }
 }
+
+/* Application section styles */
+.application-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5em 0 1.5em 0;
+}
+.application-box {
+    background: rgba(255,255,255,0.95);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    padding: 2.5em 2em 2em 2em;
+    text-align: center;
+    max-width: 420px;
+    width: 100%;
+}
+.application-box h1 {
+    color: #006400;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+.application-box h3 {
+    color: #228B22;
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+}
+.application-box .about-btn {
+    margin-top: 1em;
+}
+@media (max-width: 600px) {
+    .application-box {
+        padding: 1.2em 0.5em 1.2em 0.5em;
+        max-width: 98vw;
+    }
+    .application-box h1 {
+        font-size: 1.2em;
+    }
+    .application-box h3 {
+        font-size: 1em;
+    }
+}
