@@ -1,0 +1,142 @@
+/* Artist cards styles for lineup page */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.artist-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    cursor: pointer;
+    transition: transform 0.2s;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+.artist-card img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.3s;
+    border-radius: 12px;
+}
+.artist-card .card-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: opacity 0.3s;
+    text-align: center;
+    padding: 1.5em;
+}
+.artist-card:hover img {
+    filter: brightness(0.6);
+}
+.artist-card:hover .card-overlay {
+    opacity: 1;
+}
+@media (max-width: 900px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+    .artist-card img {
+        min-height: 0;
+        min-width: 0;
+    }
+}
+
+/* Lineup poster image scaling for lineup page */
+.lineup-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 1.5rem 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+.lineup {
+    max-width: 1800px;
+    width: 99vw;
+    display: flex;
+    justify-content: center;
+}
+.lineup img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    max-height: 98vh;
+    min-width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    display: block;
+    object-fit: contain;
+}
+@media (max-width: 900px) {
+    .lineup {
+        max-width: 100vw;
+        width: 100vw;
+    }
+    .lineup img {
+        max-height: 80vh;
+        min-width: 120px;
+    }
+}
+
+/* Application section styles */
+.application-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5em 0 1.5em 0;
+}
+.application-box {
+    background: rgba(255,255,255,0.95);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    padding: 2.5em 2em 2em 2em;
+    text-align: center;
+    max-width: 420px;
+    width: 100%;
+}
+.application-box h1 {
+    color: #006400;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+.application-box h3 {
+    color: #228B22;
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+}
+.application-box .about-btn {
+    margin-top: 1em;
+}
+@media (max-width: 600px) {
+    .application-box {
+        padding: 1.2em 0.5em 1.2em 0.5em;
+        max-width: 98vw;
+    }
+    .application-box h1 {
+        font-size: 1.2em;
+    }
+    .application-box h3 {
+        font-size: 1em;
+    }
+}

@@ -15,22 +15,40 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.getElementById('hamburger-menu');
     const slideMenu = document.getElementById('slide-menu');
     const navOverlay = document.getElementById('nav-overlay');
+    const closeMenu = document.getElementById('close-menu');
+
+    function showCloseMenu(show) {
+        if (closeMenu) {
+            closeMenu.style.display = show ? 'block' : 'none';
+        }
+    }
+
+    function openMenu() {
+        slideMenu.classList.add('open');
+        navOverlay.classList.add('active');
+        showCloseMenu(true);
+        // Ensure overlay is on top and clickable
+        navOverlay.style.pointerEvents = 'auto';
+    }
+    function closeMenuFunc() {
+        slideMenu.classList.remove('open');
+        navOverlay.classList.remove('active');
+        showCloseMenu(false);
+        navOverlay.style.pointerEvents = 'none';
+    }
 
     if (hamburger && slideMenu && navOverlay) {
-        hamburger.addEventListener('click', function() {
-            slideMenu.classList.toggle('open');
-            navOverlay.classList.toggle('active');
-        });
-        navOverlay.addEventListener('click', function() {
-            slideMenu.classList.remove('open');
-            navOverlay.classList.remove('active');
-        });
+        hamburger.addEventListener('click', openMenu);
+        navOverlay.addEventListener('click', closeMenuFunc);
+        if (closeMenu) {
+            closeMenu.addEventListener('click', closeMenuFunc);
+        }
         // Optional: close menu on link click (mobile UX)
         slideMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function() {
-                slideMenu.classList.remove('open');
-                navOverlay.classList.remove('active');
-            });
+            link.addEventListener('click', closeMenuFunc);
         });
     }
+    // Hide closeMenu by default on load
+    showCloseMenu(false);
+    navOverlay.style.pointerEvents = 'none';
 });

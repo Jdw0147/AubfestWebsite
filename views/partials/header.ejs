@@ -23,6 +23,7 @@
                 <span></span>
                 <span></span>
             </button>
+            <button class="close-menu" id="close-menu" aria-label="Close navigation menu">&times;</button>
             <div class="nav-overlay" id="nav-overlay"></div>
             <!-- Desktop nav links -->
             <ul class="nav-links desktop-nav">
@@ -42,12 +43,18 @@
     </header>
     <script>
         const hamburgerMenu = document.getElementById('hamburger-menu');
+        const closeMenu = document.getElementById('close-menu');
         const navOverlay = document.getElementById('nav-overlay');
         const slideMenu = document.getElementById('slide-menu');
 
         hamburgerMenu.addEventListener('click', () => {
             navOverlay.classList.toggle('active');
             slideMenu.classList.toggle('active');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            navOverlay.classList.remove('active');
+            slideMenu.classList.remove('active');
         });
 
         navOverlay.addEventListener('click', () => {
