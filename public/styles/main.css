@@ -113,15 +113,60 @@ body {
 }
 
 .content-section {
-    background-color: white;
+    background: rgba(255,255,255,0.90); /* semi-transparent white for readability */
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
+.content-section.welcome-section {
+    background: url('/images/6-crowd3.JPG') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    color: #222;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.content-section.welcome-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.6); /* soft white overlay */
+    z-index: 1;
+    border-radius: 12px;
+}
+.content-section.welcome-section > * {
+    position: relative;
+    z-index: 2;
+}
+
 h2 {
     color: #006400; /* Dark green */
     margin-bottom: 1rem;
+}
+
+/* Specific styles for the lineup-preview-section */
+.content-section.lineup-preview-section {
+    background: url('/images/lineup-section.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    color: #222;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.content-section.lineup-preview-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.6); /* soft white overlay */
+    z-index: 1;
+    border-radius: 12px;
+}
+.content-section.lineup-preview-section > * {
+    position: relative;
+    z-index: 2;
 }
 
 /* Footer styles */
@@ -332,4 +377,33 @@ h2 {
         position: static;
         transform: none;
     }
+}
+
+/* Lineup button styles */
+.lineup-btn {
+    background: #006400;
+    color: #FFFDD0;
+    border: 2.5px solid #FFFDD0;
+    border-radius: 18px;
+    font-size: 1.18em;
+    font-weight: bold;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    padding: 0.7em 2.2em;
+    margin: 1.2em auto 0 auto;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 100, 0, 0.13);
+    transition: background 0.2s, color 0.2s, border 0.2s, transform 0.1s, box-shadow 0.2s;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.lineup-btn:hover {
+    background: #228B22;
+    color: #fff;
+    border: 2.5px solid #228B22;
+    transform: scale(1.06);
+    box-shadow: 0 4px 18px rgba(0, 100, 0, 0.18);
+    text-decoration: none;
 }
