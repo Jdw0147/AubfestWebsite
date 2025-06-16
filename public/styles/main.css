@@ -632,6 +632,14 @@ h2 {
     border-color: #ECD189;
 }
 
+/* Override navy for get involved page body text to black */
+body.involved-page .content-section,
+body.involved-page .content-section p,
+body.involved-page .get-involved-section,
+body.involved-page .get-involved-section p {
+    color: #111 !important;
+}
+
 .content-section.welcome-section,
 .content-section.welcome-section p,
 .content-section.lineup-preview-section,
