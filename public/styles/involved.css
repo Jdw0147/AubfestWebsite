@@ -32,7 +32,7 @@
 
 .involved-section-box .apply-btn {
     display: inline-block;
-    background: #006400; /* Header dark green */
+    background: #006400; /* Dark green */
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -43,7 +43,26 @@
     cursor: pointer;
 }
 .involved-section-box .apply-btn:hover {
-    background: #004d00; /* Even darker green for hover */
+    background: #228c1d; /* Slightly lighter green on hover */
+}
+
+.involved-nav-link {
+    display: inline-block;
+    background: #006400;
+    color: #fff !important;
+    border: none;
+    border-radius: 8px;
+    padding: 0.4rem 1.1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    margin: 0 0.5em;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+.involved-nav-link:hover {
+    background: #228c1d;
+    color: #fff !important;
+    text-decoration: none;
 }
 
 @media (max-width: 600px) {
