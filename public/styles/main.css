@@ -637,7 +637,7 @@ body.involved-page .content-section,
 body.involved-page .content-section p,
 body.involved-page .get-involved-section,
 body.involved-page .get-involved-section p {
-    color: #111 !important;
+    color: #392F5A !important;
 }
 
 .content-section.welcome-section,
@@ -651,7 +651,7 @@ body.involved-page .get-involved-section p {
 
 .nav-links a.active,
 .slide-menu a.active {
-    color: #BFA75A !important; /* Darker shade of tan for active page */
+    color: #392F5A !important; /* Darker shade of tan for active page */
     background: none;
 }
 
