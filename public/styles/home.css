@@ -185,11 +185,8 @@
     margin-top: 2.5em;
 }
 
-.main-content,
-.content-section,
-.content-section h2,
-.content-section p {
-    color: #111;
+body.homepage {
+    color: #392F5A;
 }
 
 @media (max-width: 768px) {

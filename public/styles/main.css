@@ -12,7 +12,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: #ECD189; /* Updated background color */
-    color: #111; /* Set body text to black */
+    color: #392F5A; /* Set body text to navy */
 }
 
 /* Header styles */
@@ -152,7 +152,7 @@ body {
 }
 
 h2 {
-    color: #006400; /* Dark green */
+    color: #392F5A; /* Dark green */
     margin-bottom: 1rem;
 }
 
@@ -616,4 +616,13 @@ h2 {
     background: #241c38;
     color: #ECD189 !important;
     border-color: #ECD189;
+}
+
+.content-section.welcome-section,
+.content-section.welcome-section p,
+.content-section.lineup-preview-section,
+.content-section.lineup-preview-section p,
+.get-involved-section,
+.get-involved-section p {
+    color: #392F5A !important;
 }
