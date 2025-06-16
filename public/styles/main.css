@@ -11,13 +11,13 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #FFFDD0; /* Cream background */
-    color: hsl(120, 61%, 34%); /* Forest green text */
+    background-color: #ECD189; /* Updated cream background */
+    color: #AE1C33; /* Updated text color for contrast */
 }
 
 /* Header styles */
 .main-header {
-    background-color: #006400; /* Dark green background */
+    background-color: #AE1C33; /* Updated header color */
     color: white;
     padding: 2rem 0; /* Increased padding for larger header */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -303,8 +303,8 @@ h2 {
 
 /* Footer styles */
 .main-footer {
-    background-color: #006400; /* Dark green background */
-    color: #FFFDD0; /* Cream text */
+    background: #AE1C33; /* Updated footer color */
+    color: #fff;
     padding: 3rem 0 1rem;
     margin-top: 3rem;
 }

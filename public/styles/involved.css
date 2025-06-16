@@ -2,7 +2,7 @@
 
 .involved-main {
     padding: 2rem 0;
-    background: #FFFDD0; /* Match template background */
+    background: #ECD189; /* Updated background color */
     min-height: 100vh;
 }
 
@@ -32,7 +32,7 @@
 
 .involved-section-box .apply-btn {
     display: inline-block;
-    background: #006400; /* Dark green */
+    background: #AE1C33;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -43,12 +43,13 @@
     cursor: pointer;
 }
 .involved-section-box .apply-btn:hover {
-    background: #228c1d; /* Slightly lighter green on hover */
+    background: #8C1628;
+    color: #fff !important;
 }
 
 .involved-nav-link {
     display: inline-block;
-    background: #006400;
+    background: #AE1C33;
     color: #fff !important;
     border: none;
     border-radius: 8px;
@@ -60,7 +61,7 @@
     cursor: pointer;
 }
 .involved-nav-link:hover {
-    background: #228c1d;
+    background: #8C1628;
     color: #fff !important;
     text-decoration: none;
 }
