@@ -95,9 +95,9 @@ body {
 }
 
 .tickets-button:hover, .tickets-btn.active .tickets-button {
-    background: #006400;
+    background: #392F5A;
     color: #fff;
-    border: 2.5px solid #228B22;
+    border: 2.5px solid #ECD189;
     transform: scale(1.08); /* Removed rotate(-2deg) for no tilt */
     box-shadow: 0 6px 24px rgba(0, 100, 0, 0.25), 0 2px 8px rgba(0,0,0,0.12);
 }
