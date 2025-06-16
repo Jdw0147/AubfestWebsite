@@ -11,14 +11,14 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #ECD189; /* Updated cream background */
-    color: #AE1C33; /* Updated text color for contrast */
+    background-color: #ECD189; /* Updated background color */
+    color: #392F5A; /* Updated text color for contrast */
 }
 
 /* Header styles */
 .main-header {
-    background-color: #AE1C33; /* Updated header color */
-    color: white;
+    background-color: #AE1C33; /* Keep header color */
+    color: #ECD189;
     padding: 2rem 0; /* Increased padding for larger header */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -49,7 +49,7 @@ body {
 }
 
 .nav-links a {
-    color: white;
+    color: #ECD189;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -60,7 +60,7 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #FFFDD0; /* Cream color on hover and active */
+    color: #392F5A !important;
 }
 
 /* Tickets button styles */
@@ -71,9 +71,9 @@ body {
 }
 
 .tickets-button {
-    background: #fff;
-    color: #006400;
-    border: 2.5px solid #006400;
+    background: #392F5A;
+    color: #ECD189 !important;
+    border: 2.5px solid #ECD189;
     border-radius: 16px;
     font-size: 1.45em;
     font-weight: 900;
@@ -303,8 +303,8 @@ h2 {
 
 /* Footer styles */
 .main-footer {
-    background: #AE1C33; /* Updated footer color */
-    color: #fff;
+    background: #AE1C33; /* Keep footer color */
+    color: #ECD189;
     padding: 3rem 0 1rem;
     margin-top: 3rem;
 }
@@ -597,4 +597,23 @@ h2 {
 
 .get-involved-section {
     margin-top: 2.5em;
+}
+
+.tickets-btn .tickets-btn.active, .tickets-btn .tickets-button,
+.about-btn, .lineup-btn, .apply-btn, .involved-nav-link {
+    background: #392F5A;
+    color: #ECD189 !important;
+    border: 2px solid #ECD189;
+    border-radius: 8px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+.tickets-btn .tickets-btn.active:hover, .tickets-btn .tickets-button:hover,
+.about-btn:hover, .lineup-btn:hover, .apply-btn:hover, .involved-nav-link:hover {
+    background: #241c38;
+    color: #ECD189 !important;
+    border-color: #ECD189;
 }

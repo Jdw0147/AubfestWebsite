@@ -135,9 +135,9 @@
 } 
 
 .about-btn {
-    background: #006400;
-    color: #FFFDD0;
-    border: 2.5px solid #FFFDD0;
+    background: #392F5A;
+    color: #ECD189;
+    border: 2.5px solid #ECD189;
     border-radius: 18px;
     font-size: 1.18em;
     font-weight: bold;
@@ -153,19 +153,10 @@
     text-decoration: none;
 }
 
-.about-btn:hover {
-    background: #228B22;
-    color: #fff;
-    border: 2.5px solid #228B22;
-    transform: scale(1.06);
-    box-shadow: 0 4px 18px rgba(0, 100, 0, 0.18);
-    text-decoration: none;
-}
-
 .lineup-btn {
-    background: #228B22;
-    color: #FFFDD0;
-    border: 2.5px solid #FFFDD0;
+    background: #392F5A;
+    color: #ECD189;
+    border: 2.5px solid #ECD189;
     border-radius: 16px;
     font-size: 1.15em;
     font-weight: bold;
@@ -178,15 +169,6 @@
     box-shadow: 0 2px 10px rgba(34, 139, 34, 0.13);
     transition: background 0.2s, color 0.2s, border 0.2s, transform 0.1s, box-shadow 0.2s;
     display: inline-block;
-    text-decoration: none;
-}
-
-.lineup-btn:hover {
-    background: #006400;
-    color: #fff;
-    border: 2.5px solid #228B22;
-    transform: scale(1.06);
-    box-shadow: 0 4px 18px rgba(0, 100, 0, 0.18);
     text-decoration: none;
 }
 
