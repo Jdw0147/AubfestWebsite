@@ -185,6 +185,13 @@
     margin-top: 2.5em;
 }
 
+.main-content,
+.content-section,
+.content-section h2,
+.content-section p {
+    color: #111;
+}
+
 @media (max-width: 768px) {
     .about-btn {
         font-size: 1em;

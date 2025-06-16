@@ -12,7 +12,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: #ECD189; /* Updated background color */
-    color: #392F5A; /* Updated text color for contrast */
+    color: #111; /* Set body text to black */
 }
 
 /* Header styles */
