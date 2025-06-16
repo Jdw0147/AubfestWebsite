@@ -36,7 +36,8 @@ body {
 
 /* Aubfest Logo that appears on the left side of the header */
 .logo img {
-    height: 150px;
+    height: 100px !important;
+    width: auto !important;
     display: block;
 }
 
@@ -74,13 +75,13 @@ body {
     background: #392F5A;
     color: #ECD189 !important;
     border: 2.5px solid #ECD189;
-    border-radius: 16px;
-    font-size: 1.45em;
+    border-radius: 22px;
+    font-size: 2em;
     font-weight: 900;
     font-family: 'Fredoka', 'Montserrat', 'Arial Black', Arial, sans-serif;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    padding: 0.9em 2.4em;
+    padding: 1.2em 3em;
     margin-left: 0.5em;
     cursor: pointer;
     box-shadow: 0 4px 18px rgba(0, 100, 0, 0.18), 0 2px 8px rgba(0,0,0,0.10);
@@ -371,7 +372,7 @@ h2 {
     width: 28px;
     height: 4px;
     margin: 4px 0;
-    background: #fff;
+    background: #ECD189 !important; /* Tan color for hamburger icon */
     border-radius: 2px;
     transition: 0.3s;
 }
@@ -402,7 +403,7 @@ h2 {
     right: -320px;
     width: 280px;
     height: 100vh;
-    background: #006400;
+    background: #AE1C33 !important; /* Salmon color for sidebar */
     box-shadow: -2px 0 12px rgba(0,0,0,0.12);
     flex-direction: column;
     gap: 2rem;
@@ -427,6 +428,22 @@ h2 {
 }
 .nav-overlay.active {
     display: block;
+}
+
+.slide-menu a {
+    color: #ECD189 !important; /* Tan color for sidebar links */
+    text-decoration: none;
+    font-size: 1.35em;
+    font-weight: 500;
+    padding: 0.7em 0;
+    border-radius: 4px;
+    transition: color 0.3s;
+}
+
+.slide-menu a:hover,
+.slide-menu a.active {
+    color: #392F5A !important; /* Navy on hover/active for contrast */
+    text-decoration: none;
 }
 
 /* Responsive design */
@@ -481,12 +498,9 @@ h2 {
         width: auto;
     }
     .tickets-button {
-        font-size: 1.05em;
-        padding: 0.6em 1.2em;
-        border-radius: 10px;
-        letter-spacing: 0.10em;
-        margin-left: 0.3em;
-        box-shadow: 0 2px 8px rgba(0, 100, 0, 0.12);
+        font-size: 1.5em !important;
+        padding: 0.9em 2.2em !important;
+        border-radius: 18px !important;
     }
     .tickets-btn {
         position: static;
@@ -625,4 +639,17 @@ h2 {
 .get-involved-section,
 .get-involved-section p {
     color: #392F5A !important;
+}
+
+.nav-links a.active,
+.slide-menu a.active {
+    color: #BFA75A !important; /* Darker shade of tan for active page */
+    background: none;
+}
+
+@media (max-width: 900px) {
+    .logo img {
+        height: 140px !important;
+        width: auto !important;
+    }
 }
