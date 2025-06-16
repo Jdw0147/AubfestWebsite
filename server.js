@@ -39,10 +39,10 @@ app.get('/info', (req, res) => {
     });
 });
 
-app.get('/contact', (req, res) => {
-    res.render('pages/contact', {
-        title: 'Contact - Aubfest Music Festival',
-        page: 'contact'
+app.get('/involved', (req, res) => {
+    res.render('pages/involved', {
+        title: 'Get Involved - Aubfest Music Festival',
+        page: 'involved'
     });
 });
 

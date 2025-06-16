@@ -1,0 +1,53 @@
+/* involved.css - Styles for the Get Involved page components */
+
+.involved-main {
+    padding: 2rem 0;
+    background: #FFFDD0; /* Match template background */
+    min-height: 100vh;
+}
+
+.involved-section-box {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+    transition: box-shadow 0.2s;
+}
+.involved-section-box:hover {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+}
+
+.involved-section-box h2 {
+    margin-top: 0;
+    color: #1a1a1a;
+    font-size: 1.5rem;
+}
+
+.involved-section-box p {
+    color: #444;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+
+.involved-section-box .apply-btn {
+    display: inline-block;
+    background: #006400; /* Header dark green */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+.involved-section-box .apply-btn:hover {
+    background: #004d00; /* Even darker green for hover */
+}
+
+@media (max-width: 600px) {
+    .involved-section-box {
+        padding: 1.2rem 0.7rem;
+    }
+}
