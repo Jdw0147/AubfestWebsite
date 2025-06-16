@@ -55,7 +55,7 @@
     padding: 0.4rem 1.1rem;
     font-size: 1rem;
     text-decoration: none;
-    margin: 0 0.5em;
+    margin: 0 0.5em 0.5em 0.5em;
     transition: background 0.2s;
     cursor: pointer;
 }
@@ -68,5 +68,10 @@
 @media (max-width: 600px) {
     .involved-section-box {
         padding: 1.2rem 0.7rem;
+    }
+    .involved-section-box.involved-intro-section .involved-nav-link {
+        display: block;
+        margin: 0.5em auto;
+        width: 80%;
     }
 }
