@@ -1,8 +1,19 @@
 /* involved.css - Styles for the Get Involved page components */
 
+body {
+    color: #392F5A !important;
+}
+
+.content-section,
+.content-section p,
+.get-involved-section,
+.get-involved-section p {
+    color: #392F5A !important;
+}
+
 .involved-main {
     padding: 2rem 0;
-    background: #FFFDD0; /* Match template background */
+    background: #ECD189; /* Updated background color */
     min-height: 100vh;
 }
 
@@ -13,6 +24,9 @@
     padding: 2rem 1.5rem;
     margin-bottom: 2rem;
     transition: box-shadow 0.2s;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .involved-section-box:hover {
     box-shadow: 0 4px 24px rgba(0,0,0,0.13);
@@ -20,21 +34,21 @@
 
 .involved-section-box h2 {
     margin-top: 0;
-    color: #1a1a1a;
+    color: #392F5A;
     font-size: 1.5rem;
 }
 
 .involved-section-box p {
-    color: #444;
+    color: #392F5A;
     font-size: 1.1rem;
     margin-bottom: 1.2rem;
 }
 
-.involved-section-box .apply-btn {
+.involved-section-box .apply-btn, .involved-nav-link {
     display: inline-block;
-    background: #006400; /* Dark green */
-    color: #fff;
-    border: none;
+    background: #392F5A;
+    color: #ECD189 !important;
+    border: 2px solid #ECD189;
     border-radius: 8px;
     padding: 0.7rem 1.5rem;
     font-size: 1rem;
@@ -42,27 +56,27 @@
     transition: background 0.2s;
     cursor: pointer;
 }
-.involved-section-box .apply-btn:hover {
-    background: #228c1d; /* Slightly lighter green on hover */
+.involved-section-box .apply-btn:hover, .involved-nav-link:hover {
+    background: #241c38;
+    color: #ECD189 !important;
+    border-color: #ECD189;
 }
 
-.involved-nav-link {
-    display: inline-block;
-    background: #006400;
-    color: #fff !important;
-    border: none;
-    border-radius: 8px;
-    padding: 0.4rem 1.1rem;
-    font-size: 1rem;
-    text-decoration: none;
-    margin: 0 0.5em 0.5em 0.5em;
-    transition: background 0.2s;
-    cursor: pointer;
+/* Compress background images vertically in section boxes */
+.involved-section-box[style*="background-image"],
+.involved-section-box.has-bg {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
-.involved-nav-link:hover {
-    background: #228c1d;
-    color: #fff !important;
-    text-decoration: none;
+
+/* If images are used inside the box, compress their height */
+.involved-section-box img.bg-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 600px) {
@@ -74,4 +88,17 @@
         margin: 0.5em auto;
         width: 80%;
     }
+}
+
+@media (min-width: 901px) {
+  body.involved-page .involved-section-box p {
+    font-size: 1.7em !important;
+  }
+  body.involved-page,
+  body.involved-page .content-section,
+  body.involved-page .content-section p,
+  body.involved-page .get-involved-section,
+  body.involved-page .get-involved-section p {
+    font-size: 1.7em !important;
+  }
 }
