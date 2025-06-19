@@ -19,6 +19,38 @@
     display: flex;
     flex-direction: column;
 }
+
+.artist-white-fade {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.45); /* much lighter white overlay */
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.artist-card:hover .artist-white-fade {
+    opacity: 1;
+}
+
+.artist-card img.artist-overlay-img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.artist-card:hover img.artist-overlay-img {
+    opacity: 1;
+}
 .artist-card img {
     width: 100%;
     height: 100%;
