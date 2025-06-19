@@ -31,3 +31,11 @@ document.querySelectorAll('.go-to-photographer').forEach(link => {
     window.location.href = '/involved';
   });
 });
+
+document.querySelectorAll('.go-to-performer').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    sessionStorage.setItem('scrollToPerformer', 'true');
+    window.location.href = '/involved';
+  });
+});

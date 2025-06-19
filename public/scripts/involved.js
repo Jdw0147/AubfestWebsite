@@ -14,4 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const el = document.querySelector('#photographer');
     if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 100);
   }
+  if (sessionStorage.getItem('scrollToPerformer')) {
+    sessionStorage.removeItem('scrollToPerformer');
+    const el = document.querySelector('#performer');
+    if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 100);
+  }
 });
