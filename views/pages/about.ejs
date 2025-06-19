@@ -13,9 +13,10 @@
                     <span class="faq-arrow">&#9654;</span>
                 </button>
                 <div class="faq-answer">
-                    Tickets can be purchase here on the websire or on site.
-                    Click HERE to purchase tickets. $30 Early Bird, $35 At 
-                    Door, $50 for car camping.
+                    Tickets can be purchase here on the website or on site.
+                    Click <a href="/involved" style="color:inherit;">HERE</a> 
+                    to purchase tickets. $30 Early Bird, $35 At Door, $50 
+                    for car camping.
                 </div>
             </div>
             <div class="faq-item">
@@ -24,7 +25,12 @@
                     <span class="faq-arrow">&#9654;</span>
                 </button>
                 <div class="faq-answer">
-
+                    Tickets are transferable — you can send 
+                    your confirmation email to anyone and 
+                    it includes the qr code to get you in. 
+                    <br>
+                    Keep this information to yourself if 
+                    you don’t wish to transfer your ticket.
                 </div>
             </div>
             <div class="faq-item">
@@ -95,7 +101,7 @@
                 <div class="faq-answer">
                     You can apply to be a food/art vendor on the 
                     <a href="#" class="go-to-food-vendor" style="color:inherit;">"Getting Involved"</a>
-                    page or by accessing the forms directly below.
+                    page or by accessing the forms directly below.  
                     <br>
                     <br>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_ZNXI6QVssneZBH7hV03SNa95MxXIjzfQAl_FbZBbpYywIw/viewform" target="_blank" style="color:inherit;">Food/Beverage Vendor Form</a>
@@ -109,8 +115,8 @@
                     <span class="faq-arrow">&#9654;</span>
                 </button>
                 <div class="faq-answer">
-                    You can apply to photoghraph some of the bands at aubfest 
-                    by completing the Photograpgher Form found through <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4F6ibfQMTToYDKPiuNzMLhWmMRXFqTeSGqsG7vuy8sXvp7Q/viewform" target="_blank" style="color:inherit;">this link</a> 
+                    You can apply to become a photoghrapher at AubFest 
+                    by submiting your portfolio <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4F6ibfQMTToYDKPiuNzMLhWmMRXFqTeSGqsG7vuy8sXvp7Q/viewform" target="_blank" style="color:inherit;">here</a> 
                     or through the <a href="/involved" style="color:inherit;">"Getting Involved"</a> page.
                 </div>
             </div>
@@ -152,30 +158,4 @@
     </section>
 </main>
 <%- include('../partials/footer') %>
-<script>
-document.querySelectorAll('.go-to-volunteer').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    // Store the target in sessionStorage
-    sessionStorage.setItem('scrollToVolunteer', 'true');
-    // Navigate to /involved (no hash)
-    window.location.href = '/involved';
-  });
-});
-
-document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', function() {
-        this.classList.toggle('open');
-        const answer = this.nextElementSibling;
-        answer.classList.toggle('open');
-    });
-});
-
-document.querySelectorAll('.go-to-food-vendor').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    sessionStorage.setItem('scrollToFoodVendor', 'true');
-    window.location.href = '/involved';
-  });
-});
-</script>
+<script src="/scripts/about.js"></script>
