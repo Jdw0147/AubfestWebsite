@@ -46,6 +46,10 @@ app.get('/involved', (req, res) => {
     });
 });
 
+app.get('/about', (req, res) => {
+    res.render('pages/about', {title: 'About AubFest - Aubfest Music Festival',  page: 'about' });
+});
+
 // Start server
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);

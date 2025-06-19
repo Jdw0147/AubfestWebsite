@@ -1,0 +1,45 @@
+<%- include('../partials/header') %>
+<link rel="stylesheet" href="/styles/about.css">
+<main class="about-main">
+    <section class="about-header">
+        <h1>About Aubfest</h1>
+    </section>
+    <section class="faq-header">
+        <h1>FAQ</h1>
+    </section>
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">What is Aubfest?</button>
+                <div class="faq-answer">
+                    Aubfest is a celebration of Auburn and Opelika’s local artists, musicians, and community, bringing everyone together for a day of music, art, and fun!
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Where and when is Aubfest held?</button>
+                <div class="faq-answer">
+                    Aubfest is held annually in Auburn, Alabama. Check our homepage for this year’s date and location!
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">How can I get involved?</button>
+                <div class="faq-answer">
+                    You can volunteer, perform, sell art, or help out in many ways. Visit our Get Involved page for more info!
+                </div>
+            </div>
+            <!-- Add more FAQ items as needed -->
+        </div>
+    </section>
+</main>
+<%- include('../partials/footer') %>
+<script>
+    // Simple FAQ toggle
+    document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.classList.toggle('open');
+            const answer = this.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+</script>
