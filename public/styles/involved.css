@@ -102,3 +102,7 @@ body {
     font-size: 1.7em !important;
   }
 }
+
+html.scrolling-to-anchor {
+  scroll-behavior: auto !important;
+}
