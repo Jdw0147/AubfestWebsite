@@ -94,7 +94,7 @@
                 </button>
                 <div class="faq-answer">
                     You can apply to be a food/art vendor on the 
-                    <a href="/involved" style="color:inherit;">"Getting Involved"</a>
+                    <a href="#" class="go-to-food-vendor" style="color:inherit;">"Getting Involved"</a>
                     page or by accessing the forms directly below.
                     <br>
                     <br>
@@ -162,14 +162,20 @@ document.querySelectorAll('.go-to-volunteer').forEach(link => {
     window.location.href = '/involved';
   });
 });
-</script>
 
-<script>
-    document.querySelectorAll('.faq-question').forEach(btn => {
-        btn.addEventListener('click', function() {
-            this.classList.toggle('open');
-            const answer = this.nextElementSibling;
-            answer.classList.toggle('open');
-        });
+document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', function() {
+        this.classList.toggle('open');
+        const answer = this.nextElementSibling;
+        answer.classList.toggle('open');
     });
+});
+
+document.querySelectorAll('.go-to-food-vendor').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    sessionStorage.setItem('scrollToFoodVendor', 'true');
+    window.location.href = '/involved';
+  });
+});
 </script>
