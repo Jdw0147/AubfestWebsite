@@ -23,3 +23,11 @@ document.querySelectorAll('.go-to-food-vendor').forEach(link => {
     window.location.href = '/involved';
   });
 });
+
+document.querySelectorAll('.go-to-photographer').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    sessionStorage.setItem('scrollToPhotographer', 'true');
+    window.location.href = '/involved';
+  });
+});

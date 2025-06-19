@@ -9,4 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const el = document.querySelector('#food-vendor');
     if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 100);
   }
+  if (sessionStorage.getItem('scrollToPhotographer')) {
+    sessionStorage.removeItem('scrollToPhotographer');
+    const el = document.querySelector('#photographer');
+    if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 100);
+  }
 });
