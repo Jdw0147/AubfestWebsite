@@ -20,27 +20,10 @@
     letter-spacing: 0.04em;
 }
 
-.faq-header {
-    background: #392F5A;
-    color: #ECD189;
-    border-color: #AE1C33;
-    border-style: solid;
-    border-width: 2px 2px 2px 2px;
-    border-radius: 48px 48px 48px 48px;
-    padding: 3rem 1.5rem 2.5rem 1.5rem;
-    text-align: center;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-}
-
 .faq-section {
     max-width: 700px;
     margin: 0 auto;
-    background: #E78F8E;
-    border-color: #392F5A;
-    border-style: solid;
-    border-width: 5px 5px 5px 5px;
+    background: #fff;
     border-radius: 18px;
     box-shadow: 0 2px 16px rgba(0,0,0,0.08);
     padding: 2rem 1.5rem;
@@ -66,26 +49,54 @@
     color: #ECD189;
     border: none;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 1rem 2.5rem 1rem 1rem;
     font-size: 1.15rem;
     text-align: left;
     cursor: pointer;
     transition: background 0.2s;
     outline: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.faq-question.open,
-.faq-question:hover {
-    background: #241c38;
+.faq-question.open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.faq-answer.open {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-top: 0;
+}
+
+.faq-arrow {
+    display: inline-block;
+    transition: transform 0.3s;
+    font-size: 1.2em;
+    margin-left: 0.5em;
+}
+
+.faq-question.open .faq-arrow {
+    transform: rotate(90deg);
 }
 
 .faq-answer {
-    display: none;
-    background: #f9f7ef;
-    color: #392F5A;
+    max-height: 0;
+    overflow: hidden;
+    background: #2a3e7b;
+    color: #ECD189;
     border-radius: 0 0 8px 8px;
-    padding: 1rem;
+    padding: 0 1rem;
     margin-top: 0.2rem;
     font-size: 1rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s;
+}
+
+.faq-answer.open {
+    max-height: 300px;
+    padding: 1rem;
 }
