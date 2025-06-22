@@ -1,3 +1,19 @@
+.about-btn,
+.lineup-btn,
+.tickets-button,
+.apply-btn,
+.involved-nav-link {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.content-section.welcome-section,
+.content-section.lineup-preview-section,
+.get-involved-section {
+    text-align: center;
+}
 .carousel-container {
     position: relative;
     width: 100%;
@@ -273,16 +289,30 @@ body.homepage {
 
 @media (max-width: 600px) {
   .content-section.welcome-section,
-  .content-section.lineup-preview-section {
-    font-size: 0.92em;
+  .content-section.lineup-preview-section,
+  .get-involved-section {
+    font-size: 1.1rem !important; /* Slightly bigger body text */
   }
   .content-section.welcome-section h2,
-  .content-section.lineup-preview-section h2 {
-    font-size: 1.1em;
+  .content-section.lineup-preview-section h2,
+  .get-involved-section h2 {
+    font-size: 2.2rem !important; /* Much larger header size for mobile */
   }
   .content-section.welcome-section p,
-  .content-section.lineup-preview-section p {
-    font-size: 0.95em;
+  .content-section.lineup-preview-section p,
+  .get-involved-section p {
+    font-size: 1.2rem !important;
     font-weight: bold;
+  }
+  .about-btn,
+  .lineup-btn,
+  .tickets-button,
+  .apply-btn,
+  .involved-nav-link {
+    font-size: 1rem !important;
+    padding: 0.5rem 1.1rem !important;
+    border-radius: 10px;
+    min-width: 0 !important;
+    max-width: 90vw;
   }
 }
