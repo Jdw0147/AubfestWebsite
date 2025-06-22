@@ -14,12 +14,83 @@
 .get-involved-section {
     text-align: center;
 }
+
+.content-section.welcome-section,
+.content-section.lineup-preview-section,
+.get-involved-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    position: relative;
+    text-align: center;
+}
+
+.content-section.welcome-section,
+.content-section.lineup-preview-section,
+.get-involved-section {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+.content-section.welcome-section,
+.content-section.lineup-preview-section,
+.get-involved-section {
+    position: relative;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Make sections and overlays hit the edges of the page, even if inside a centered container */
+.content-section.welcome-section,
+.content-section.lineup-preview-section,
+.get-involved-section {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-align: center;
+}
+
+.content-section.welcome-section::before,
+.content-section.lineup-preview-section::before,
+.get-involved-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: rgba(255,255,255,0.5); /* or your desired overlay color */
+    z-index: 1;
+    border-radius: 0 !important;
+    pointer-events: none;
+}
+
 .carousel-container {
     position: relative;
     width: 100%;
     height: 600px;
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin-bottom: 20em;
 }
 
 .carousel {
@@ -178,14 +249,7 @@ body.homepage {
     overflow: hidden;
     font-size: 1.35em;
 }
-.content-section.welcome-section::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(255,255,255,0.6); /* soft white overlay */
-    z-index: 1;
-    border-radius: 12px;
-}
+
 .content-section.welcome-section > * {
     position: relative;
     z-index: 2;
@@ -210,14 +274,7 @@ body.homepage {
     overflow: hidden;
     font-size: 1.35em;
 }
-.content-section.lineup-preview-section::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(255,255,255,0.6); /* soft white overlay */
-    z-index: 1;
-    border-radius: 12px;
-}
+
 .content-section.lineup-preview-section > * {
     position: relative;
     z-index: 2;
@@ -245,14 +302,7 @@ body.homepage {
     margin-bottom: 2.5em;
     margin-top: 2.5em;
 }
-.get-involved-section::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(255,255,255,0.6);
-    z-index: 1;
-    border-radius: 12px;
-}
+
 .get-involved-section > * {
     position: relative;
     z-index: 2;
@@ -315,4 +365,11 @@ body.homepage {
     min-width: 0 !important;
     max-width: 90vw;
   }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
