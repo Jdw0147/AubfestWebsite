@@ -375,6 +375,19 @@ body {
 
 /* Media query for mobile font size adjustment */
 @media (max-width: 600px) {
+  .main-header .logo img,
+  .mobile-logo img {
+  max-width: 90px;
+  max-height: 90px;
+  }
+  .tickets-button {
+    font-size: 1.25rem !important;
+    padding: 0.4em 1em !important;
+    border-radius: 12px !important;
+  }
+  .tickets-btn {
+    padding: 0;
+  }
   .content-section.welcome-section,
   .content-section.lineup-preview-section,
   .get-involved-section {
