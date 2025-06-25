@@ -35,7 +35,9 @@ body {
 .involved-section-box h2 {
     margin-top: 0;
     color: #392F5A;
-    font-size: 1.5rem;
+    font-size: 2.2rem;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
 }
 
 .involved-section-box p {
@@ -87,6 +89,9 @@ body {
         display: block;
         margin: 0.5em auto;
         width: 80%;
+    }
+    .involved-section-box h2 {
+        font-size: 1.6rem;
     }
 }
 
