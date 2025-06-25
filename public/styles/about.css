@@ -19,6 +19,16 @@
     font-size: 2rem;
 }
 
+.general-info-section h2 {
+    color: #392F5A;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.general-info-section h3 {
+    font-size: 1.5rem;
+}
+
 .faq-list {
     margin-top: 1.5rem;
 }
@@ -83,4 +93,61 @@
 .faq-answer.open {
     max-height: 300px;
     padding: 1rem;
+}
+
+/* General Info section: match FAQ section color scheme (white background, dark text, border) */
+.general-info-section {
+    background: #fff;
+    color: #392F5A;
+    border-radius: 22px;
+    padding: 2.1rem 1.5rem 1.2rem 1.5rem;
+    box-shadow: 0 2px 12px 0 rgba(30,30,60,0.07);
+    border: 2.5px solid #e3e3f2;
+}
+
+.general-info-list a {
+    color: #392F5A;
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .general-info-section {
+    padding: 1.2rem 0.7rem 0.7rem 0.7rem;
+  }
+}
+
+/* Navy section headers with rounded top corners for About page */
+.navy-header {
+    background: #392F5A;
+    color: #fff;
+    font-family: 'Futura PT', 'Futura', 'Arial', sans-serif;
+    font-size: 2.1rem;
+    font-weight: 800;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0.85em 1.2em 0.6em 1.2em;
+    margin-bottom: -0.5rem;
+    position: relative;
+    z-index: 2;
+    letter-spacing: 0.01em;
+    box-shadow: 0 2px 8px 0 rgba(30,30,60,0.04);
+}
+@media (max-width: 600px) {
+  .navy-header {
+    font-size: 1.35rem;
+    padding: 0.7em 0.7em 0.5em 0.7em;
+  }
+}
+
+/* Remove top border-radius from section if preceded by .navy-header */
+.navy-header + .general-info-section,
+.navy-header + .faq-section {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+/* Remove top margin from first child in section to avoid gap */
+.general-info-section > *, .faq-section > * {
+    margin-top: 0;
 }
