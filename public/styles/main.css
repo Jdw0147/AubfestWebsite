@@ -350,7 +350,7 @@ body {
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
     .nav-container {
         position: relative;
         display: flex;
@@ -411,7 +411,7 @@ body {
     }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 950px) {
     .slide-menu, .nav-overlay, .hamburger {
         display: none !important;
     }
@@ -431,20 +431,43 @@ body {
     }
 }
 
+.tickets-button {
+  font-size: 1.5em !important;
+  padding: 0.9em 2.2em !important;
+  border-radius: 18px !important;
+}
+
+@media (min-width: 900px) {
+  .main-header .logo img,
+  .logo img {
+    height: 140px !important;
+    max-width: 180px !important;
+    width: auto !important;
+  }
+}
+
+@media(min-width: 530px) {
+.hamburger {
+    width: 56px;
+    height: 56px;
+  }
+  .hamburger span {
+    width: 38px;
+    height: 6px;
+  }
+}
 /* Media query for mobile font size adjustment */
-@media (max-width: 600px) {
+@media (max-width: 530px) {
   .main-header .logo img,
   .mobile-logo img {
   max-width: 90px;
   max-height: 90px;
+  width: auto;
   }
   .tickets-button {
     font-size: 1.25rem !important;
     padding: 0.4em 1em !important;
     border-radius: 12px !important;
-  }
-  .tickets-btn {
-    padding: 0;
   }
 }
 

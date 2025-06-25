@@ -1,37 +1,36 @@
 <%- include('../partials/header') %>
-<div class="page-header">
-    <h1>Home</h1>
-</div>
-<main class="main-content">
-    <div class="carousel-container">
-        <div class="carousel-overlay">
-            <!--<img src="/images/logo1.png" alt="Aubfest Logo" class="overlay-logo">-->
-        </div>
-        <div class="carousel">
-            <div class="carousel-slide active">
-                <img src="/images/6-crowd1.jpg" alt="Festival Image 1">
+<link rel="stylesheet" href="/styles/home.css">
+    <div class="carousel-header-container">
+        <div class="carousel-container">
+            <div class="carousel-overlay">
+                <img src="/images/Aubfest2025.png" alt="Aubfest Logo" class="overlay-logo">
             </div>
-            <div class="carousel-slide">
-                <img src="/images/6-crowd3.JPG" alt="Festival Image 2">
+            <div class="carousel">
+                <div class="carousel-slide active">
+                    <img src="/images/6-crowd1.jpg" alt="Festival Image 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="/images/6-crowd3.JPG" alt="Festival Image 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="/images/6-crowd5.jpg" alt="Festival Image 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="/images/6-crowd6.jpg" alt="Festival Image 4">
+                </div>
+                <div class="carousel-slide">
+                    <img src="/images/2-normas-crowd.jpg" alt="Festival Image 5">
+                </div>
             </div>
-            <div class="carousel-slide">
-                <img src="/images/6-crowd5.jpg" alt="Festival Image 3">
+            <button class="carousel-button prev">&lt;</button>
+            <button class="carousel-button next">&gt;</button>
+            <div class="carousel-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
             </div>
-            <div class="carousel-slide">
-                <img src="/images/6-crowd6.jpg" alt="Festival Image 4">
-            </div>
-            <div class="carousel-slide">
-                <img src="/images/2-normas-crowd.jpg" alt="Festival Image 5">
-            </div>
-        </div>
-        <button class="carousel-button prev">&lt;</button>
-        <button class="carousel-button next">&gt;</button>
-        <div class="carousel-dots">
-            <span class="dot active" data-index="0"></span>
-            <span class="dot" data-index="1"></span>
-            <span class="dot" data-index="2"></span>
-            <span class="dot" data-index="3"></span>
-            <span class="dot" data-index="4"></span>
         </div>
     </div>
 
@@ -67,6 +66,5 @@
         <a href="/about" class="about-btn">More About Aubfest</a>
     </section>
 
-</main>
 
 <%- include('../partials/footer') %>
