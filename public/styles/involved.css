@@ -81,7 +81,7 @@ body {
     margin-bottom: 1rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 530px) {
     .involved-section-box {
         padding: 1.2rem 0.7rem;
     }
