@@ -174,26 +174,6 @@
     object-fit: contain;
 }
 
-@media (max-width: 900px) {
-  .overlay-logo {
-    max-width: 380px;
-    max-height: 140px;
-    width: 95vw;
-    min-width: 120px;
-    aspect-ratio: 3.2/1;
-  }
-}
-
-@media (max-width: 600px) {
-  .overlay-logo {
-    max-width: 200px;
-    max-height: 70px;
-    width: 99vw;
-    min-width: 80px;
-    aspect-ratio: 3/1;
-  }
-}
-
 .carousel-button {
     position: absolute;
     top: 50%;
@@ -384,7 +364,7 @@ body.homepage .carousel-header-container {
     line-height: 1.7;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .carousel-header-container, .carousel-container {
     border-bottom-left-radius: 28px;
     border-bottom-right-radius: 28px;
@@ -398,9 +378,16 @@ body.homepage .carousel-header-container {
     max-height: 180px;
     height: 100%;
   }
+  .overlay-logo {
+    max-width: 380px;
+    max-height: 140px;
+    width: 95vw;
+    min-width: 120px;
+    aspect-ratio: 3.2/1;
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 530px) {
   .carousel-header-container, .carousel-container {
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
@@ -413,6 +400,13 @@ body.homepage .carousel-header-container {
     min-height: 110px;
     max-height: 110px;
     height: 100%;
+  }
+  .overlay-logo {
+    max-width: 200px;
+    max-height: 70px;
+    width: 99vw;
+    min-width: 80px;
+    aspect-ratio: 3/1;
   }
 }
 
@@ -442,26 +436,4 @@ body.homepage .main-header {
     border-bottom-right-radius: 0 !important;
 }
 
-/* Ticket button: small on desktop until 1000px, then large */
-.tickets-button {
-  font-size: 1.5em !important;
-  padding: 0.9em 2.2em !important;
-  border-radius: 18px !important;
-}
-@media (max-width: 600px) {
-  .tickets-button {
-    font-size: 1.25rem !important;
-    padding: 0.4em 1em !important;
-    border-radius: 12px !important;
-  }
-}
 
-/* Logo: stay the same size after 900px, only increase ticket button at 1000px */
-@media (min-width: 900px) {
-  .main-header .logo img,
-  .logo img {
-    height: 140px !important;
-    max-width: 180px !important;
-    width: auto !important;
-  }
-}
