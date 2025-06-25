@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Futara';
     line-height: 1.6;
     background-color: #ECD189; /* Updated background color */
     color: #392F5A; /* Set body text to navy */
@@ -135,6 +135,20 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+}
+
+.social-row {
+  display: flex;
+  gap: 1.5em;
+  justify-content: center;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 1em;
 }
 
 .footer-section h3 {
@@ -264,6 +278,50 @@ body {
     text-decoration: none;
 }
 
+/* Reusable dropdown-style page header for all main pages */
+.page-header {
+    width: 100%;
+    background: #AE1C33;
+    color: #ECD189;
+    border-radius: 0 0 48px 48px;
+    padding: 3rem 1.5rem 2.5rem 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    position: relative;
+    z-index: 2;
+}
+.page-header h1 {
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 0.04em;
+    font-family: 'Futara';
+    font-weight: bold;
+}
+@media (max-width: 600px) {
+  .page-header {
+    padding: 2rem 0.5rem 1.5rem 0.5rem;
+    border-radius: 0 0 28px 28px;
+  }
+  .page-header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Use Futura for all major headers for consistency with the rest of the site */
+.page-header h1,
+.lineup-preview-section h2,
+.get-involved-section h2,
+.welcome-section h2,
+.about-main h1,
+.faq-section h2,
+.involved-section-box h1,
+.involved-section-box h2 {
+    font-family: 'Futura PT';
+    font-weight: bold;
+    letter-spacing: 0.04em;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .nav-container {
@@ -292,7 +350,7 @@ body {
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
     .nav-container {
         position: relative;
         display: flex;
@@ -353,7 +411,7 @@ body {
     }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 950px) {
     .slide-menu, .nav-overlay, .hamburger {
         display: none !important;
     }
@@ -373,28 +431,43 @@ body {
     }
 }
 
+.tickets-button {
+  font-size: 1.5em !important;
+  padding: 0.9em 2.2em !important;
+  border-radius: 18px !important;
+}
+
+@media (min-width: 900px) {
+  .main-header .logo img,
+  .logo img {
+    height: 140px !important;
+    max-width: 180px !important;
+    width: auto !important;
+  }
+}
+
+@media(min-width: 530px) {
+.hamburger {
+    width: 56px;
+    height: 56px;
+  }
+  .hamburger span {
+    width: 38px;
+    height: 6px;
+  }
+}
 /* Media query for mobile font size adjustment */
-@media (max-width: 600px) {
-  .content-section.welcome-section,
-  .content-section.lineup-preview-section,
-  .get-involved-section {
-    font-size: 0.92em;
+@media (max-width: 530px) {
+  .main-header .logo img,
+  .mobile-logo img {
+  max-width: 90px;
+  max-height: 90px;
+  width: auto;
   }
-  .content-section.welcome-section h2,
-  .content-section.lineup-preview-section h2,
-  .get-involved-section h2 {
-    font-size: 1.1em;
-  }
-  .content-section.welcome-section p,
-  .content-section.lineup-preview-section p,
-  .get-involved-section p {
-    font-size: 0.95em;
-    font-weight: bold;
-  }
-  .lineup-btn {
-    font-size: 0.92em;
-    padding: 0.5em 1.1em;
-    border-radius: 10px;
+  .tickets-button {
+    font-size: 1.25rem !important;
+    padding: 0.4em 1em !important;
+    border-radius: 12px !important;
   }
 }
 
