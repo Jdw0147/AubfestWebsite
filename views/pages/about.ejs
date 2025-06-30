@@ -5,10 +5,13 @@
     <h1>About Aubfest</h1>
 </div>
 <main class="about-main">
+    <div class="about-sections-row">
+        <section class="general-info-section-main">
+            
     <div class="section-header navy-header">
             General Info
         </div>
-    <section class="general-info-section" style="margin-bottom:2.5rem;">
+    <div class="general-info-section">
         <h2>When?</h2>
             <li>Friday, October 3rd from 4pm-12am</li>
             <li>Saturday, October 4th from 11am-12am</li>
@@ -18,7 +21,9 @@
         <a href="https://www.google.com/maps/place/Boggin'+On+The+Plains/@32.5115425,-85.5362886,17z/data=!3m1!4b1!4m6!3m5!1s0x888cf7e14c98a571:0xc20d1f5a21db016b!8m2!3d32.5115425!4d-85.5362886!16s%2Fg%2F11f5v8xj_2?entry=ttu&g_ep=EgoyMDI1MDYyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" style="color:inherit;">
             <li>3935 US-29, Auburn, AL 36830</li></a>
         <br>
-        <h2>Rules</h2>
+        </div>
+        <div class="general-info-section">
+            <h2>Rules</h2>
         <h3>Kids Policy </h3>
         <li>Kids 12 and under are free with 
             an adult. We recommend ear 
@@ -61,6 +66,8 @@
             unlimited re-entry into the festival.
         </li>
         <br>
+        </div>
+        <div class="general-info-end-section general-info-section">
         <h2>Other Useful Information</h2>
         <h3>Food & Vendors</h3>
         <li>Expect food trucks, snacks, drinks, 
@@ -86,8 +93,10 @@
             charging options closer to the 
             festival date.
         </li>
+        </div>
     </section>
 
+    <section class="faq-section-main">
     <div class="section-header navy-header">FAQ</div>
     <section class="faq-section">
         <h2>Tickets</h2>
@@ -250,7 +259,7 @@
         </div>
     </section>
 
-    <section class="faq-section">
+    <section class="faq-section faq-travel-section">
         <h2>Travel & Accommodations</h2>
         <div class="faq-list">
             <div class="faq-item">
@@ -285,6 +294,8 @@
             </div>
         </div>
     </section>
+    </section>
+</div>
 </main>
 <%- include('../partials/footer') %>
 <script src="/scripts/about.js"></script>
