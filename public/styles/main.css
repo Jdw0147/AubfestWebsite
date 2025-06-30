@@ -437,6 +437,15 @@ body {
   border-radius: 18px !important;
 }
 
+.footer-content, 
+footer, 
+.footer-content p, 
+.footer-content a {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (min-width: 900px) {
   .main-header .logo img,
   .logo img {
