@@ -1,7 +1,8 @@
 .about-main {
-    background: #ECD189;
     min-height: 100vh;
     padding-bottom: 3rem;
+    position: relative;
+    z-index: 1;
 }
 
 .about-sections-row {
@@ -219,4 +220,24 @@
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+/* Fixed background image for About page */
+.body-bg-fixed {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1000;
+    background: url('/images/aubfest-background3.png') center center / cover no-repeat fixed;
+    pointer-events: none;
+}
+
+body, html {
+    background: none !important;
+}
+
+.page-header, .main-header, .about-main, .involved-main, footer {
+    position: relative;
+    z-index: 1;
 }
