@@ -220,7 +220,7 @@ body {
     color: #fff;
     font-size: 2.2em;
     font-weight: bold;
-    z-index: 1301;
+    z-index: 100000 !important; /* Ensure close button is above sidebar */
     cursor: pointer;
     transition: color 0.2s;
 }
@@ -240,7 +240,7 @@ body {
     flex-direction: column;
     gap: 2rem;
     padding: 100px 2rem 2rem 2rem;
-    z-index: 1300; /* Increased z-index to go above logo and tickets button */
+    z-index: 99999 !important; /* Ensure sidebar is always on top */
     transition: right 0.35s cubic-bezier(0.77,0.2,0.05,1.0);
     display: flex;
 }
@@ -253,7 +253,7 @@ body {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background: rgba(0,0,0,0.3);
-    z-index: 1299; /* Ensure overlay is just below the menu */
+    z-index: 99998 !important; /* Overlay just below sidebar */
     width: 100vw;
     height: 100vh;
     cursor: pointer;
@@ -270,6 +270,7 @@ body {
     padding: 0.7em 0;
     border-radius: 4px;
     transition: color 0.3s;
+    z-index: 1000;
 }
 
 .slide-menu a:hover,
@@ -514,4 +515,12 @@ footer,
         height: 140px !important;
         width: auto !important;
     }
+}
+
+.main-header,
+.page-header,
+.about-main,
+.involved-main,
+footer {
+    z-index: auto !important;
 }

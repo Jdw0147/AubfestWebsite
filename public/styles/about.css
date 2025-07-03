@@ -59,8 +59,8 @@
     border-radius: 0;
     box-shadow: none !important;
     background: #fff; /* or your desired background */
-    padding-left: 2.5vw !important;
-    padding-right: 2.5vw !important;
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
     padding-top: 1.5rem !important;
     padding-bottom: 1.5rem !important;
     border-top: 2.5px solid #e3e3f2;
