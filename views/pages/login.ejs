@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Aubfest</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <style>
+        body { display: flex; align-items: center; justify-content: center; min-height: 100vh; /* background: #ECD189; */ }
+        .login-container {
+            /* background: #AE1C33; */
+            border-radius: 18px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+            padding: 2.5rem 2rem 2rem 2rem;
+            max-width: 350px;
+            width: 100%;
+            text-align: center;
+            border: 2.5px solid #ECD189;
+            position: relative;
+            z-index: 1;
+            color: #ECD189;
+        }
+        .login-container h1 { font-size: 2rem; margin-bottom: 1.5rem; color: #ECD189; }
+        .login-container input {
+            width: 100%;
+            padding: 0.8em;
+            margin-bottom: 1.2em;
+            border: 1.5px solid #ECD189;
+            border-radius: 8px;
+            font-size: 1.1em;
+            background: #fff;
+            color: #AE1C33;
+        }
+        .login-container input:focus {
+            border-color: #392F5A;
+            outline: none;
+        }
+        .login-container button {
+            background: #392F5A;
+            color: #ECD189;
+            border: none;
+            border-radius: 8px;
+            padding: 0.8em 2em;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .login-container button:hover { background: #241c38; color: #ECD189; }
+        .login-error { color: #ECD189; margin-bottom: 1em; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="body-bg-fixed login-bg"></div>
+    <div class="login-container login-container-bg">
+        <img src="/images/Aubfest2025.png" alt="Aubfest Logo" style="max-width: 240px; width: 95%; margin-bottom: 1.2rem; display: block; margin-left: auto; margin-right: auto;">
+        <% if (error) { %>
+            <div class="login-error"><%= error %></div>
+        <% } %>
+        <form method="POST" action="/login">
+            <input type="text" name="username" placeholder="Username" required autocomplete="username">
+            <input type="password" name="password" placeholder="Password" required autocomplete="current-password">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script>
+        // Log out user when they close or navigate away from the page
+        window.addEventListener('unload', function() {
+            if (navigator.sendBeacon) {
+                navigator.sendBeacon('/logout');
+            } else {
+                // Fallback for older browsers
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', '/logout', false);
+                xhr.send();
+            }
+        });
+    </script>
+</body>
+</html>
