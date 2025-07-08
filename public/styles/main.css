@@ -104,6 +104,7 @@ body {
     box-shadow: 0 4px 18px rgba(0, 100, 0, 0.18), 0 2px 8px rgba(0,0,0,0.10);
     transition: background 0.2s, color 0.2s, border 0.2s, transform 0.1s, box-shadow 0.2s;
     animation: tickets-pulse 1.5s infinite alternate;
+    text-decoration: none !important;
 }
 
 @keyframes tickets-pulse {
@@ -119,7 +120,8 @@ body {
     box-shadow: 0 6px 24px rgba(0, 100, 0, 0.25), 0 2px 8px rgba(0,0,0,0.12);
 }
 
-.tickets-btn a {
+.tickets-btn a,
+.tickets-btn a .tickets-button {
     text-decoration: none !important;
 }
 
