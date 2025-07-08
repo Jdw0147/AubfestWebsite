@@ -120,9 +120,39 @@ body {
     box-shadow: 0 6px 24px rgba(0, 100, 0, 0.25), 0 2px 8px rgba(0,0,0,0.12);
 }
 
+/* Remove underline from tickets button in all states with high specificity */
 .tickets-btn a,
-.tickets-btn a .tickets-button {
+.tickets-btn a:link,
+.tickets-btn a:visited,
+.tickets-btn a:focus,
+.tickets-btn a:hover,
+.tickets-btn a:active,
+.tickets-btn > a > .tickets-button,
+.tickets-button:focus,
+.tickets-button:active {
     text-decoration: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove underline from tickets button in all possible states and selectors */
+.tickets-btn a,
+.tickets-btn a:visited,
+.tickets-btn a:active,
+.tickets-btn a:focus,
+.tickets-btn a:hover,
+.tickets-btn .tickets-button,
+.tickets-btn .tickets-button:visited,
+.tickets-btn .tickets-button:active,
+.tickets-btn .tickets-button:focus,
+.tickets-btn .tickets-button:hover,
+.tickets-btn a .tickets-button,
+.tickets-btn a .tickets-button:visited,
+.tickets-btn a .tickets-button:active,
+.tickets-btn a .tickets-button:focus,
+.tickets-btn a .tickets-button:hover {
+    text-decoration: none !important;
+    box-shadow: none;
 }
 
 /* Main content styles */

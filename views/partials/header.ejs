@@ -18,7 +18,7 @@
                 </a>
             </div>
             <div>
-                <a href="/tickets" class="tickets-btn <%= page === 'tickets' ? 'active' : '' %>"><button class="tickets-button">Tickets</button></a>
+                <button class="tickets-btn tickets-button<%= page === 'tickets' ? ' active' : '' %>" onclick="window.location.href='/tickets'" type="button">Tickets</button>
             </div>
             <button class="hamburger" id="hamburger-menu" aria-label="Open navigation menu">
                 <span></span>
