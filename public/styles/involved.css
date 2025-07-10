@@ -142,3 +142,19 @@ html {
 html.scrolling-to-anchor {
   scroll-behavior: auto !important;
 }
+
+@media (hover: none) and (pointer: coarse) {
+  .body-bg-fixed {
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+  .involved-section-box,
+  .involved-section-box.has-bg {
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+}

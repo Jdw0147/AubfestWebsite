@@ -443,4 +443,12 @@ body.homepage .main-header {
     border-bottom-right-radius: 0 !important;
 }
 
-
+@media (hover: none) and (pointer: coarse) {
+  .content-section.welcome-section,
+  .content-section.lineup-preview-section,
+  .get-involved-section {
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+}
