@@ -18,6 +18,7 @@ app.use(session({
     cookie: { maxAge: 24 * 60 * 60 * 1000 }
 }));
 
+/*
 function requireLogin(req, res, next) {
     if (req.session && req.session.loggedIn) {
         return next();
@@ -49,6 +50,7 @@ app.get('/logout', (req, res) => {
 // Protect all routes except /login and static assets
 app.use((req, res, next) => {
     if (
+        
         req.path === '/login' ||
         req.path === '/logout' ||
         req.path.startsWith('/styles') ||
@@ -61,6 +63,7 @@ app.use((req, res, next) => {
     }
     return requireLogin(req, res, next);
 });
+*/
 
 // Routes
 app.get('/', (req, res) => {
