@@ -9,6 +9,53 @@ html {
     background: none;
 }
 
+/* Section backgrounds for Get Involved page - ensure full coverage and overlay for readability */
+.section-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 32px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.section-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: 32px;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.65); /* white overlay for readability */
+}
+.section-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 2.2rem 1.2rem 1.2rem 1.2rem;
+  text-align: center;
+}
+
+/* Set only the background image in these classes */
+.volunteer-bg { background-image: url('/images/Volunteer.jpg'); }
+.photographer-bg { background-image: url('/images/photo.jpeg'); }
+.art-vendor-bg { background-image: url('/images/vendor1.jpg'); }
+.food-vendor-bg { background-image: url('/images/Food.jpg'); }
+.performer-bg { background-image: url('/images/Hunter.jpg'); }
+.involved-intro-bg { background-image: url('/images/involved-1.jpeg'); }
+
+.section-bg.involved-intro-bg {
+  background-image: url('/images/involved-1.jpeg');
+}
+
+/* All positioning, z-index, and sizing handled by .section-bg */
+/* .section-bg already defined above */
+
+/* Remove any duplicate .involved-bg, .volunteer-bg, .photographer-bg, .art-vendor-bg, .food-vendor-bg, .performer-bg, .involved-intro-bg rules that set position, inset, z-index, or background directly. */
+
 .body-bg-fixed {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -48,16 +95,15 @@ html {
 }
 
 .involved-section-box {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-    padding: 2rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px;
+    border: 3px solid #392F5A;
     margin-bottom: 2rem;
-    transition: box-shadow 0.2s;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    border: 3px solid #392F5A;
+    background: none !important;
 }
 .involved-section-box:hover {
     box-shadow: 0 4px 24px rgba(0,0,0,0.13);
@@ -152,6 +198,31 @@ html.scrolling-to-anchor {
   }
   .involved-section-box,
   .involved-section-box.has-bg {
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+}
+
+/* Remove parallax on mobile */
+@media (hover: none) and (pointer: coarse) {
+  .section-bg,
+  .volunteer-bg,
+  .photographer-bg,
+  .art-vendor-bg,
+  .food-vendor-bg,
+  .performer-bg,
+  .involved-intro-bg {
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .involved-section-box > div[style*="fixed"] {
     background-attachment: scroll !important;
     background-position: center center !important;
     background-size: cover !important;
