@@ -11,11 +11,13 @@
         if (timeoutId) clearTimeout(timeoutId);
         // Only follow link if it's not a placeholder
         if (!link.classList.contains('artist-card-placeholder')) {
-          // Open link in a new tab on second tap
+          // Prevent default and open link in a new tab
+          e.preventDefault();
           window.open(link.href, '_blank');
+        } else {
+          // Prevent navigation for placeholders
+          e.preventDefault();
         }
-        // Prevent navigation for placeholders
-        e.preventDefault();
         return;
       }
       // First tap: show overlays and set timer
