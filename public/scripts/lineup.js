@@ -11,8 +11,8 @@
         if (timeoutId) clearTimeout(timeoutId);
         // Only follow link if it's not a placeholder
         if (!link.classList.contains('artist-card-placeholder')) {
-          // Manually follow the link on second tap
-          window.location.href = link.href;
+          // Open link in a new tab on second tap
+          window.open(link.href, '_blank');
         }
         // Prevent navigation for placeholders
         e.preventDefault();
