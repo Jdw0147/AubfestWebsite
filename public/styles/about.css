@@ -146,8 +146,9 @@
 }
 
 .faq-answer.open {
-    max-height: 300px;
+    max-height: 1000px;
     padding: 1rem;
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s;
 }
 
 /* General Info section: match FAQ section color scheme (white background, dark text, border) */
@@ -243,7 +244,10 @@ body, html {
 }
 
 @media (hover: none) and (pointer: coarse) {
-  .faq-bg, .faq-section, .your-faq-background-class {
+  .body-bg-fixed,
+  .faq-bg,
+  .faq-section,
+  .your-faq-background-class {
     background-attachment: scroll !important;
     background-position: center center !important;
     background-size: cover !important;
