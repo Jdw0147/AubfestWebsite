@@ -11,7 +11,7 @@
         if (timeoutId) clearTimeout(timeoutId);
         // Only follow link if it's not a placeholder
         if (!link.classList.contains('artist-card-placeholder')) {
-          // Prevent default and open link in a new tab
+          // Prevent default FIRST, then open link in a new tab
           e.preventDefault();
           window.open(link.href, '_blank');
         } else {
