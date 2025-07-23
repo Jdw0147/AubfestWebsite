@@ -1,4 +1,8 @@
+// =========================
+// Scroll to Section on Page Load (from About Page)
+// =========================
 document.addEventListener("DOMContentLoaded", function() {
+  // Check for scroll target in sessionStorage and scroll to section if needed
   if (sessionStorage.getItem('scrollToVolunteer')) {
     sessionStorage.removeItem('scrollToVolunteer');
     const el = document.querySelector('#volunteer');

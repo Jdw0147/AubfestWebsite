@@ -1,7 +1,10 @@
-// Log to verify script loading
-console.log('Carousel script loaded');
-
+// =========================
+// Wait for DOM to be fully loaded
+// =========================
 document.addEventListener('DOMContentLoaded', function() {
+    // =========================
+    // Carousel Element and State Variables
+    // =========================
     const carousel = document.querySelector('.carousel');
     const slides = document.querySelectorAll('.carousel-slide');
     const dots = document.querySelectorAll('.dot');
@@ -10,7 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentSlide = 0;
     let autoplayInterval;
 
-    // Function to update the active slide
+    // =========================
+    // Function to update the active slide and dot
+    // =========================
     function updateSlide(index) {
         // Remove active class from all slides and dots
         slides.forEach(slide => slide.classList.remove('active'));
@@ -22,30 +27,37 @@ document.addEventListener('DOMContentLoaded', function() {
         currentSlide = index;
     }
 
+    // =========================
     // Function to go to next slide
+    // =========================
     function nextSlide() {
         currentSlide = (currentSlide + 1) % slides.length;
         updateSlide(currentSlide);
     }
 
+    // =========================
     // Function to go to previous slide
+    // =========================
     function prevSlide() {
         currentSlide = (currentSlide - 1 + slides.length) % slides.length;
         updateSlide(currentSlide);
     }
 
+    // =========================
     // Event listeners for navigation buttons
+    // =========================
     nextButton.addEventListener('click', () => {
         nextSlide();
         resetAutoplay();
     });
-
     prevButton.addEventListener('click', () => {
         prevSlide();
         resetAutoplay();
     });
 
-    // Event listeners for dots
+    // =========================
+    // Event listeners for dots (slide indicators)
+    // =========================
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             updateSlide(index);
@@ -53,42 +65,50 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // =========================
     // Autoplay functionality
+    // =========================
     function startAutoplay() {
         autoplayInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
     }
-
     function resetAutoplay() {
         clearInterval(autoplayInterval);
         startAutoplay();
     }
 
-    // Start autoplay
+    // Start autoplay on load
     startAutoplay();
 
+    // =========================
     // Pause autoplay when hovering over carousel
+    // =========================
     carousel.addEventListener('mouseenter', () => {
         clearInterval(autoplayInterval);
     });
 
+    // =========================
     // Resume autoplay when mouse leaves carousel
+    // =========================
     carousel.addEventListener('mouseleave', () => {
         startAutoplay();
     });
 
-    // Touch support for mobile devices
+    // =========================
+    // Touch support for mobile devices (swipe left/right)
+    // =========================
     let touchStartX = 0;
     let touchEndX = 0;
-
     carousel.addEventListener('touchstart', (e) => {
         touchStartX = e.changedTouches[0].screenX;
     });
-
     carousel.addEventListener('touchend', (e) => {
         touchEndX = e.changedTouches[0].screenX;
         handleSwipe();
     });
 
+    // =========================
+    // Handle swipe gestures for carousel navigation
+    // =========================
     function handleSwipe() {
         const swipeThreshold = 50; // minimum distance for swipe
         const difference = touchStartX - touchEndX;

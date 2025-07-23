@@ -1,3 +1,6 @@
+// =========================
+// Scroll to Volunteer Section Link Handler
+// =========================
 document.querySelectorAll('.go-to-volunteer').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
@@ -8,6 +11,9 @@ document.querySelectorAll('.go-to-volunteer').forEach(link => {
   });
 });
 
+// =========================
+// FAQ Accordion Toggle Handler
+// =========================
 document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', function() {
         this.classList.toggle('open');
@@ -16,6 +22,9 @@ document.querySelectorAll('.faq-question').forEach(btn => {
     });
 });
 
+// =========================
+// Scroll to Food Vendor Section Link Handler
+// =========================
 document.querySelectorAll('.go-to-food-vendor').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
@@ -24,17 +33,25 @@ document.querySelectorAll('.go-to-food-vendor').forEach(link => {
   });
 });
 
+// =========================
+// Scroll to Photographer Section Link Handler
+// =========================
 document.querySelectorAll('.go-to-photographer').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
+    // Store the target in sessionStorage for use on /involved page
     sessionStorage.setItem('scrollToPhotographer', 'true');
     window.location.href = '/involved';
   });
 });
 
+// =========================
+// Scroll to Performer Section Link Handler
+// =========================
 document.querySelectorAll('.go-to-performer').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
+    // Store the target in sessionStorage for use on /involved page
     sessionStorage.setItem('scrollToPerformer', 'true');
     window.location.href = '/involved';
   });
