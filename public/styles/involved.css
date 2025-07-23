@@ -1,15 +1,17 @@
-/* involved.css - Styles for the Get Involved page components */
-
+/* =========================
+   Base Styles for Get Involved Page
+   ========================= */
 body {
     min-height: 100vh;
     color: #392F5A !important;
 }
-
 html {
     background: none;
 }
 
-/* Section backgrounds for Get Involved page - ensure full coverage and overlay for readability */
+/* =========================
+   Section Backgrounds and Overlays
+   ========================= */
 .section-bg {
   position: absolute;
   inset: 0;
@@ -39,7 +41,9 @@ html {
   text-align: center;
 }
 
-/* Set only the background image in these classes */
+/* =========================
+   Section Background Images for Each Involvement Type
+   ========================= */
 .volunteer-bg { background-image: url('/images/Volunteer.jpg'); }
 .photographer-bg { background-image: url('/images/photo.jpeg'); }
 .art-vendor-bg { background-image: url('/images/vendor1.jpg'); }
@@ -47,15 +51,14 @@ html {
 .performer-bg { background-image: url('/images/Hunter.jpg'); }
 .involved-intro-bg { background-image: url('/images/involved-1.jpeg'); }
 
+/* Special case for intro section background */
 .section-bg.involved-intro-bg {
   background-image: url('/images/involved-1.jpeg');
 }
 
-/* All positioning, z-index, and sizing handled by .section-bg */
-/* .section-bg already defined above */
-
-/* Remove any duplicate .involved-bg, .volunteer-bg, .photographer-bg, .art-vendor-bg, .food-vendor-bg, .performer-bg, .involved-intro-bg rules that set position, inset, z-index, or background directly. */
-
+/* =========================
+   Fixed Body Background for the Page
+   ========================= */
 .body-bg-fixed {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -66,17 +69,24 @@ html {
     pointer-events: none;
 }
 
-/* Make sure your main content is above the overlay */
+/* =========================
+   Ensure Main Content is Above Background
+   ========================= */
 .involved-main, .page-header, .main-header, footer {
     position: relative;
     z-index: 1;
 }
 
-/* Remove background from .involved-main if you want the image to show through */
+/* =========================
+   Remove Background from Main Content for Transparency
+   ========================= */
 .involved-main, .container {
     background: transparent !important;
 }
 
+/* =========================
+   Main Content Layout
+   ========================= */
 .involved-main {
     padding: 2rem 0;
     min-height: 100vh;
@@ -89,11 +99,9 @@ html {
     color: #392F5A !important;
 }
 
-.involved-main {
-    padding: 2rem 0;
-    min-height: 100vh;
-}
-
+/* =========================
+   Section Box Styles
+   ========================= */
 .involved-section-box {
     position: relative;
     overflow: hidden;
@@ -109,6 +117,9 @@ html {
     box-shadow: 0 4px 24px rgba(0,0,0,0.13);
 }
 
+/* =========================
+   Section Box Headings and Paragraphs
+   ========================= */
 .involved-section-box h2 {
     margin-top: 0;
     color: #392F5A;
@@ -116,13 +127,15 @@ html {
     line-height: 1.1;
     letter-spacing: 0.01em;
 }
-
 .involved-section-box p {
     color: #392F5A;
     font-size: 1.1rem;
     margin-bottom: 1.2rem;
 }
 
+/* =========================
+   Apply Button and Navigation Link Styles
+   ========================= */
 .involved-section-box .apply-btn, .involved-nav-link {
     display: inline-block;
     background: #392F5A;
@@ -141,7 +154,9 @@ html {
     border-color: #ECD189;
 }
 
-/* Compress background images vertically in section boxes */
+/* =========================
+   Section Box Background Image Compression
+   ========================= */
 .involved-section-box[style*="background-image"],
 .involved-section-box.has-bg {
     background-size: contain;
@@ -149,7 +164,9 @@ html {
     background-position: center top;
 }
 
-/* If images are used inside the box, compress their height */
+/* =========================
+   Section Box Image Compression
+   ========================= */
 .involved-section-box img.bg-img {
     width: 100%;
     height: 120px;
@@ -158,6 +175,9 @@ html {
     margin-bottom: 1rem;
 }
 
+/* =========================
+   Responsive Styles for Section Boxes and Navigation
+   ========================= */
 @media (max-width: 530px) {
     .involved-section-box {
         padding: 1.2rem 0.7rem;
@@ -172,6 +192,9 @@ html {
     }
 }
 
+/* =========================
+   Larger Font for Desktop
+   ========================= */
 @media (min-width: 901px) {
   body.involved-page .involved-section-box p {
     font-size: 1.7em !important;
@@ -185,10 +208,16 @@ html {
   }
 }
 
+/* =========================
+   Disable Smooth Scroll for Anchor Links
+   ========================= */
 html.scrolling-to-anchor {
   scroll-behavior: auto !important;
 }
 
+/* =========================
+   Mobile Background Attachment Fixes
+   ========================= */
 @media (hover: none) and (pointer: coarse) {
   .body-bg-fixed {
     background-attachment: scroll !important;
@@ -205,7 +234,9 @@ html.scrolling-to-anchor {
   }
 }
 
-/* Remove parallax on mobile */
+/* =========================
+   Remove Parallax on Mobile for Section Backgrounds
+   ========================= */
 @media (hover: none) and (pointer: coarse) {
   .section-bg,
   .volunteer-bg,
@@ -221,6 +252,9 @@ html.scrolling-to-anchor {
   }
 }
 
+/* =========================
+   Remove Parallax on Mobile for Inline Backgrounds
+   ========================= */
 @media (hover: none) and (pointer: coarse) {
   .involved-section-box > div[style*="fixed"] {
     background-attachment: scroll !important;
