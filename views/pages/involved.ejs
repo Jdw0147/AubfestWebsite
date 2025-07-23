@@ -1,12 +1,34 @@
+<!-- =========================
+     Get Involved Page
+     This page features multiple 
+     ways in which atendees can get
+     involved with Aubfest. The page
+     includes a top section with 
+     navigation llinks to each sub-
+     section, woth each section being 
+     a different way to get involved.
+     ========================= -->
+
 <html>
 <body>
+
+<!-- Header Inclusion-->
 <%- include('../partials/header') %>
 
+<!-- Stylesheet-->
 <link rel="stylesheet" href="/styles/involved.css">
+
+<!-- Header -->
 <div class="body-bg-fixed"></div>
 <div class="page-header">
     <h1>Get Involved</h1>
 </div>
+
+<!-- =========================
+    Main Content of Page
+    ========================= -->
+
+<!-- Overview Section -->
 <main class="container involved-main">
     <section class="involved-section-box involved-intro-section">
         <div class="section-bg involved-intro-bg"></div>
@@ -24,6 +46,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Volunteer Section-->
     <section id="volunteer" class="section involved-section-box volunteer-section">
         <div class="section-bg volunteer-bg"></div>
         <div class="section-overlay"></div>
@@ -42,6 +66,7 @@
         </div>
     </section>
 
+    <!-- Photographer Section-->
     <section id="photographer" class="section involved-section-box photographer-section">
         <div class="section-bg photographer-bg"></div>
         <div class="section-overlay"></div>
@@ -61,6 +86,7 @@
         </div>
     </section>
 
+    <!-- Art Vendor Section-->
     <section id="art-vendor" class="section involved-section-box art-vendor-section">
         <div class="section-bg art-vendor-bg"></div>
         <div class="section-overlay"></div>
@@ -79,6 +105,8 @@
         </div>
     </section>
 
+
+    <!-- Food/Beverage Vendor Section -->
     <section id="food-vendor" class="section involved-section-box food-vendor-section">
         <div class="section-bg food-vendor-bg"></div>
         <div class="section-overlay"></div>
@@ -97,6 +125,7 @@
         </div>
     </section>
     
+    <!-- Performer Section -->
     <section id="performer" class="section involved-section-box performer-section">
         <div class="section-bg performer-bg"></div>
         <div class="section-overlay"></div>
@@ -116,7 +145,11 @@
         </div>
     </section>
 </main>
+
+<!-- Footer Inclusion -->
 <%- include('../partials/footer') %>
+
+<!-- Script for involved page -->
 <script src="/scripts/involved.js"></script>
 </body>
 </html>

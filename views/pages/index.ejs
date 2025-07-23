@@ -1,5 +1,21 @@
+<!-- =========================
+     Home Page
+     This is the landing page for 
+     the website.  It includes a 
+     carousel featuring festival
+     images, as well as brief
+     descriptions and links to 
+     pages containing the lineup,
+     getting involved, and about.
+     ========================= -->
+
+<!-- Including Header -->
 <%- include('../partials/header') %>
+
+<!-- Stylesheet -->
 <link rel="stylesheet" href="/styles/home.css">
+
+<!-- Carousel -->
     <div class="carousel-header-container">
         <div class="carousel-container">
             <div class="carousel">
@@ -47,6 +63,15 @@
         </div>
     </div>
 
+    <!-- =========================
+     Preview Sections
+     These sections provide a brief
+     overview of the different sub-pages
+     of the festival with links to each
+     of them.
+     ========================= -->
+
+     <!-- Lineup Preview Section -->
     <section class="content-section lineup-preview-section">
         <h2>Fall Lineup</h2>
         <p>AubFest’s Fall lineup features 20+ unique artists, from 
@@ -56,6 +81,7 @@
         <a href="/lineup" class="lineup-btn">See the Fall Lineup</a>
     </section>
 
+    <!-- Get Involved Preview Section-->
     <section class="content-section get-involved-section">
         <h2>Get Involved</h2>
         <p> Everyone is welcome to build this festival up! 
@@ -66,6 +92,7 @@
         <a href="#" class="about-btn">Opportunities</a>
     </section>
 
+    <!-- About Aubfest Preview Section-->
     <section class="content-section welcome-section">
         <h2>About</h2>
         <p>AubFest's mission is to support underrepresented 
@@ -80,10 +107,9 @@
             discipline; music, art, photography, comedy, design, 
             and lots more unique talents that make our local 
             culture vibrant. 
-</p>
-        
+</p>  
         <a href="/about" class="about-btn">More About Aubfest</a>
     </section>
 
-
+    <!-- Footer Inclusion -->
 <%- include('../partials/footer') %>
