@@ -63,9 +63,12 @@ body {
    Logo Styles
    ========================= */
 .logo img {
-    height: 100px !important;
-    width: auto !important;
     display: block;
+    max-width: 440px;      
+    max-height: 144px;      
+    width: auto;
+    height: auto;
+    object-fit: contain;   
 }
 
 /* =========================
@@ -400,6 +403,45 @@ body {
     }
 }
 
+@media (max-width: 720px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding: 0 12px;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.6rem;
+    width: 100%;
+  }
+  .header-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+    width: 100%;
+  }
+  .tickets-btn {
+    margin-left: 0;
+  }
+  .hamburger {
+    position: static;
+    top: auto;
+    right: auto;
+  }
+  .logo img {
+    max-width: 140px;
+    max-height: 40px;
+    width: auto;
+    height: auto;
+  }
+}
+
 @media (max-width: 950px) {
     .nav-container {
         position: relative;
@@ -497,34 +539,62 @@ footer,
 @media (min-width: 900px) {
   .main-header .logo img,
   .logo img {
-    height: 140px !important;
-    max-width: 180px !important;
-    width: auto !important;
+    max-width: 320px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
   }
 }
 
-@media(min-width: 530px) {
-.hamburger {
-    width: 56px;
-    height: 56px;
-  }
-  .hamburger span {
-    width: 38px;
-    height: 6px;
-  }
-}
 /* Media query for mobile font size adjustment */
-@media (max-width: 530px) {
-  .main-header .logo img,
-  .mobile-logo img {
-  max-width: 90px;
-  max-height: 90px;
-  width: auto;
+/* =========================
+   Mobile Header Layout (530px and below)
+   ========================= */
+@media (max-width: 615px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding: 0 12px;
   }
-  .tickets-button {
-    font-size: 1.25rem !important;
-    padding: 0.4em 1em !important;
-    border-radius: 12px !important;
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Use clamp to scale margin smoothly */
+    margin-bottom: clamp(0.4rem, 4vw, 1.2rem);
+    width: 100%;
+  }
+  .header-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* Increase gap for more space between buttons */
+    gap: clamp(4rem, 24vw, 8rem);
+    margin-bottom: clamp(0.4rem, 4vw, 1.2rem);
+    width: 100%;
+  }
+  .tickets-btn {
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hamburger {
+    position: static;
+    top: auto;
+    right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo img {
+    max-width: 120px;
+    max-height: 40px;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -571,8 +641,10 @@ footer,
    ========================= */
 @media (max-width: 900px) {
     .logo img {
-        height: 140px !important;
-        width: auto !important;
+        max-width: 320px;
+        max-height: 100px;
+        width: auto;
+        height: auto;
     }
 }
 

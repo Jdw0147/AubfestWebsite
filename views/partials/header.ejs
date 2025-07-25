@@ -12,19 +12,15 @@
 <body>
     <header class="main-header" style="background-color: #AE1C33; color: #ECD189;">
         <nav class="nav-container">
-            <div class="logo mobile-logo">
-                <a href="/">
-                    <img src="/images/Quick_logo.png" />
-                </a>
-            </div>
-            <div>
-                <button class="tickets-btn tickets-button<%= page === 'tickets' ? ' active' : '' %>" onclick="window.location.href='/tickets'" type="button">Tickets</button>
-            </div>
-            <button class="hamburger" id="hamburger-menu" aria-label="Open navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="logo">
+    <a href="/"><img src="/images/Aubfest2025.png" alt="Aubfest Logo"></a>
+  </div>
+  <div class="header-actions">
+    <button class="tickets-btn tickets-button">Tickets</button>
+    <button class="hamburger" id="hamburger-menu" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
             <button class="close-menu" id="close-menu" aria-label="Close navigation menu">&times;</button>
             <div class="nav-overlay" id="nav-overlay"></div>
             <!-- Desktop nav links -->
