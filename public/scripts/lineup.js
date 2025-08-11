@@ -60,3 +60,17 @@
     });
   });
 })();
+
+// Open both Treybaby and Mourning Dove Instagram profiles in new tabs when the card is clicked
+document.addEventListener('DOMContentLoaded', function() {
+  const treybabyLink = document.querySelector('.treybaby-mourning-link');
+  if (treybabyLink) {
+    treybabyLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.open('https://www.instagram.com/heytreybaby/?hl=en', '_blank');
+      setTimeout(function() {
+        window.open('https://www.instagram.com/ilovethatdove/?igsh=MTR1ZnU0NXAzOXZ3OA%3D%3D#', '_blank');
+      }, 100);
+    });
+  }
+});
