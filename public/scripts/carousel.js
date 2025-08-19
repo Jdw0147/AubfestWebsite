@@ -125,3 +125,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 }); 
+
+
+// Custom carousel functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const imgs = document.querySelectorAll('.carousel-3d-img');
+  const prevBtn = document.querySelector('.carousel-3d-btn.prev-btn');
+  const nextBtn = document.querySelector('.carousel-3d-btn.next-btn');
+  let idx = 0;
+
+  function updateCarousel3D() {
+    imgs.forEach((img, i) => {
+      img.classList.remove('active', 'left', 'right');
+      img.style.display = 'block';
+    });
+
+    const total = imgs.length;
+    imgs[idx].classList.add('active');
+
+    // Only show left/right on desktop
+    if (window.innerWidth > 700) {
+      const leftIdx = (idx - 1 + total) % total;
+      const rightIdx = (idx + 1) % total;
+      imgs[leftIdx].classList.add('left');
+      imgs[rightIdx].classList.add('right');
+    }
+  }
+
+  prevBtn.addEventListener('click', () => {
+    idx = (idx - 1 + imgs.length) % imgs.length;
+    updateCarousel3D();
+  });
+  nextBtn.addEventListener('click', () => {
+    idx = (idx + 1) % imgs.length;
+    updateCarousel3D();
+  });
+  window.addEventListener('resize', updateCarousel3D);
+
+  updateCarousel3D();
+});
