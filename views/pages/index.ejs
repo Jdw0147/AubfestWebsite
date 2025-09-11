@@ -12,10 +12,10 @@
 <!-- Including Header -->
 <%- include('../partials/header') %>
 
-<!-- Stylesheet -->
-<link rel="stylesheet" href="/styles/home.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/styles/home.css">
 
-<!-- Carousel -->
+    <!-- Carousel -->
     <div class="carousel-header-container">
         <div class="carousel-container">
             <div class="carousel">
@@ -65,17 +65,22 @@
 
 
     <!-- Carousel for new images -->
-<div class="carousel-3d-container" style="margin-top: 1rem; margin-bottom: 2rem;">
-  <button class="carousel-3d-btn prev-btn">&#10094;</button>
-  <div class="carousel-3d">
-    <a href="/lineup" style="color:inherit;"><img src="/images/flyer1.jpg" alt="Flyer 1" class="carousel-3d-img"></a>
-    <a href="https://www.tickettailor.com/events/aubfest/1783954" target="_blank" style="color:inherit;"><img src="/images/boyscott-poster.png" alt="Boyscott Poster" class="carousel-3d-img"></a>
-    <a href="/lineup" style="color:inherit;"><img src="/images/flyer2.jpg" alt="Flyer 2" class="carousel-3d-img"></a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKPI2g4vd8PXrHs_iTXxpH23Ko7lTVEEoUccf7TS72V_yvgw/viewform?pli=1" target="_blank" style="color:inherit;"><img src="/images/shirt-design.jpg" alt="Shirt Design" class="carousel-3d-img"></a>
+    <div class="carousel-3d-container" style="margin-top: 1rem; margin-bottom: 2rem;">
+        <button class="carousel-3d-btn prev-btn">&#10094;</button>
+        <div class="carousel-3d">
+            <a href="/lineup" style="color:inherit;"><img src="/images/flyer1.jpg" alt="Flyer 1"
+                    class="carousel-3d-img"></a>
+            <a href="https://www.tickettailor.com/events/aubfest/1783954" target="_blank" style="color:inherit;"><img
+                    src="/images/boyscott-poster.png" alt="Boyscott Poster" class="carousel-3d-img"></a>
+            <a href="/lineup" style="color:inherit;"><img src="/images/flyer2.jpg" alt="Flyer 2"
+                    class="carousel-3d-img"></a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKPI2g4vd8PXrHs_iTXxpH23Ko7lTVEEoUccf7TS72V_yvgw/viewform?pli=1"
+                target="_blank" style="color:inherit;"><img src="/images/shirt-design.jpg" alt="Shirt Design"
+                    class="carousel-3d-img"></a>
 
-  </div>
-  <button class="carousel-3d-btn next-btn">&#10095;</button>
-</div>
+        </div>
+        <button class="carousel-3d-btn next-btn">&#10095;</button>
+    </div>
 
     <!-- =========================
      Preview Sections
@@ -85,45 +90,48 @@
      of them.
      ========================= -->
 
-     <!-- Lineup Preview Section -->
+    <!-- Lineup Preview Section -->
     <section class="content-section lineup-preview-section">
-        <h2>Fall Lineup</h2>
-        <p>AubFest’s Fall lineup features 20+ unique artists, from 
-            regional breakthroughs to Auburn hometown legends! 
-            Click here to learn more about the roster.
-        </p>
-        <a href="/lineup" class="lineup-btn">See the Fall Lineup</a>
+        <div class="lineup-inner">
+            <h2>Fall Lineup</h2>
+            <hr class="lineup-divider">
+            <p>AubFest’s Fall lineup features 25+ unique artists,
+                from regional breakthroughs to Auburn hometown legends.
+                Click here for more info on each artist.
+            </p>
+            <hr class="lineup-divider-reverse">
+            <a href="/lineup" class="about-btn">See the Fall Lineup</a>
+        </div>
     </section>
 
     <!-- Get Involved Preview Section-->
     <section class="content-section get-involved-section">
-        <h2>Get Involved</h2>
-        <p> Everyone is welcome to build this festival up! 
-            Vending, performing, and volunteering are a few 
-            great ways to leave your mark on one of the most 
-            unique traditions to ever take place in Auburn.
-</p>
-        <a href="#" class="about-btn">Opportunities</a>
+        <div class="get-involved-inner">
+            <h2>Get Involved</h2>
+            <hr class="get-involved-divider">
+            <p> Everyone is welcome to build this festival up!
+                Vending, performing, and volunteering are a few
+                great ways to leave your mark on one of the most
+                unique traditions to ever take place in Auburn.
+            </p>
+            <hr class="get-involved-divider-reverse">
+            <a href="/involved" class="about-btn">Opportunities</a>
     </section>
 
     <!-- About Aubfest Preview Section-->
     <section class="content-section welcome-section">
-        <h2>About</h2>
-        <p>AubFest's mission is to support underrepresented 
-            artists and grow the local creative scene through 
-            inclusive, community-driven events and programs 
-            in Auburn–Opelika. Every semester, young music 
-            enthusiasts gather to create an outdoor space 
-            dedicated to celebrating local musicians, artists, 
-            and the community at large. With the goal in mind 
-            to raise up Auburn’s vibrant sound, the festival 
-            stands to give its best efforts to every creative 
-            discipline; music, art, photography, comedy, design, 
-            and lots more unique talents that make our local 
-            culture vibrant. 
-</p>  
-        <a href="/about" class="about-btn">More About Aubfest</a>
+        <div class="welcome-inner">
+            <h2>About</h2>
+            <hr class="welcome-divider">
+            <p>AubFest's mission is to uplift and support
+                independent musicians, artists, and artisans
+                in the Auburn-Opelika community through
+                event promotion and community development.
+            </p>
+            <hr class="welcome-divider-reverse">
+            <a href="/about" class="about-btn">More About Aubfest</a>
+        </div>
     </section>
 
     <!-- Footer Inclusion -->
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
