@@ -1,0 +1,59 @@
+/* Photos Page Styles */
+.photos-section {
+  max-width: 900px;
+  margin: 40px auto 60px auto;
+  padding: 0 20px;
+  border-radius: 12px;
+}
+
+.photos-year {
+  margin-bottom: 48px;
+}
+
+.photos-title {
+  color: #AE1C33;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.photos-title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #AE1C33;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+.photos-photographers {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.photographer-btn {
+  background: #AE1C33;
+  color: #ECD189;
+  font-weight: 600;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(174,28,51,0.08);
+  cursor: pointer;
+}
+
+.photographer-btn:hover {
+  background: #ECD189;
+  color: #AE1C33;
+  box-shadow: 0 4px 16px rgba(174,28,51,0.18);
+  border: 2px solid #AE1C33;
+}

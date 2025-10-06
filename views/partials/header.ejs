@@ -8,6 +8,9 @@
     <% if (page === 'home') { %>
     <link rel="stylesheet" href="/styles/home.css">
     <% } %>
+    <% if (page === 'photos') { %>
+    <link rel="stylesheet" href="/styles/photos.css">
+    <% } %>
 </head>
 <body>
     <header class="main-header" style="background-color: #AE1C33; color: #ECD189;">
@@ -32,6 +35,7 @@
                 <li><a href="/" class="<%= page === 'home' ? 'active' : '' %>" style="color: #ECD189;">Home</a></li>
                 <li><a href="/lineup" class="<%= page === 'lineup' ? 'active' : '' %>" style="color: #ECD189;">Lineup</a></li>
                 <li><a href="/involved" class="<%= page === 'involved' ? 'active' : '' %>" style="color: #ECD189;">Get Involved</a></li>
+                <li><a href="/photos" class="<%= page === 'photos' ? 'active' : '' %>" style="color: #ECD189;">Photos</a></li>
                 <li><a href="/about" class="<%= page === 'about' ? 'active' : '' %>" style="color: #ECD189;">FAQ</a></li>
             </ul>
             <!-- Mobile slide-in menu -->
@@ -39,6 +43,7 @@
                 <li><a href="/" class="<%= page === 'home' ? 'active' : '' %>" style="color: #ECD189;">Home</a></li>
                 <li><a href="/lineup" class="<%= page === 'lineup' ? 'active' : '' %>" style="color: #ECD189;">Lineup</a></li>
                 <li><a href="/involved" class="<%= page === 'involved' ? 'active' : '' %>" style="color: #ECD189;">Get Involved</a></li>
+                <li><a href="/photos" class="<%= page === 'photos' ? 'active' : '' %>" style="color: #ECD189;">Photos</a></li>
                 <li><a href="/about" class="<%= page === 'about' ? 'active' : '' %>" style="color: #ECD189;">FAQ</a></li>
             </ul>
         </nav>

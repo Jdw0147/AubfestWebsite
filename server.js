@@ -101,8 +101,16 @@ app.get('/involved', (req, res) => {
     });
 });
 
+
 app.get('/about', (req, res) => {
     res.render('pages/about', {title: 'About AubFest - Aubfest Music Festival',  page: 'about' });
+});
+
+app.get('/photos', (req, res) => {
+    res.render('pages/photos', {
+        title: 'Photos - Aubfest Music Festival',
+        page: 'photos'
+    });
 });
 
 // Start server
