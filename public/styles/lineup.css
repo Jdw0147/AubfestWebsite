@@ -1,4 +1,38 @@
 /* =========================
+   View Past Lineups Button Card
+   ========================= */
+.view-past-lineups-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #AE1C33;
+  box-shadow: 0 2px 12px rgba(174,28,51,0.10);
+  min-height: 0;
+  position: relative;
+}
+
+.view-past-lineups-btn {
+  background: #AE1C33;
+  color: #ECD189;
+  border: none;
+  border-radius: 32px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  padding: 1.2em 2.5em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(174,28,51,0.10);
+  letter-spacing: 0.04em;
+  transition: background 0.18s, color 0.18s, transform 0.12s;
+  outline: none;
+  text-transform: uppercase;
+}
+.view-past-lineups-btn:hover, .view-past-lineups-btn:focus {
+  background: #ECD189;
+  color: #AE1C33;
+  border: 2px solid #AE1C33;
+  transform: scale(1.06);
+}
+/* =========================
    Artist Card Grid Container
    ========================= */
 .card-container {
