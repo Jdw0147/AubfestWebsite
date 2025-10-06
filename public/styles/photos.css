@@ -46,6 +46,15 @@
   padding: 12px 28px;
   font-size: 1.1rem;
   text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(174,28,51,0.08);
   cursor: pointer;
+}
+
+.photographer-btn:hover {
+  background: #ECD189;
+  color: #AE1C33;
+  box-shadow: 0 4px 16px rgba(174,28,51,0.18);
+  border: 2px solid #AE1C33;
 }
 
