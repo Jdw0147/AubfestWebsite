@@ -32,16 +32,9 @@
 .content-section.welcome-section,
 .content-section.lineup-preview-section,
 .get-involved-section {
-  text-align: center;
   width: 100% !important;
   max-width: 100% !important;
-  margin: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
   position: relative;
-  text-align: center;
   margin-bottom: 0 !important;
   margin-top: 0 !important;
   left: 50%;

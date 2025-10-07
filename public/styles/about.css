@@ -1,4 +1,60 @@
 /* =========================
+   New About Card Layout
+   ========================= */
+.about-card {
+    background: #ECD189;
+    border-radius: 22px;
+    box-shadow: 0 2px 12px 0 rgba(30,30,60,0.07);
+    margin: 2.2rem 0;
+    padding: 0;
+    overflow: hidden;
+}
+.about-card-header {
+    background: #AE1C33;
+    color: #ECD189;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 1.1em 1.5em 0.8em 1.5em;
+    letter-spacing: 0.03em;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+    box-shadow: 0 2px 8px 0 rgba(174,28,51,0.04);
+}
+.about-card-body {
+    background: #fff;
+    padding: 2.2rem 2rem 1.5rem 2rem;
+    color: #392F5A;
+    font-size: 1.1rem;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+}
+.about-card-body h2, .about-card-body h3 {
+    color: #AE1C33;
+    margin-bottom: 0.5em;
+    font-weight: 800;
+}
+.about-card-body a {
+    color: #AE1C33;
+    text-decoration: underline;
+}
+.about-card-body ul {
+    margin-bottom: 1.2em;
+}
+
+@media (max-width: 700px) {
+    .about-card-body {
+        padding: 1.2rem 0.7rem 0.7rem 0.7rem;
+    }
+    .about-card-header {
+        font-size: 1.3rem;
+        padding: 0.7em 0.7em 0.5em 0.7em;
+    }
+}
+/* =========================
    Main About Page Layout
    ========================= */
 .about-main {
@@ -18,67 +74,6 @@
 /* =========================
    General Info Section Styles
    ========================= */
-.general-info-section-main {
-    flex: 1 1 350px;
-    max-width: 500px;
-    min-width: 300px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 12px 0 rgba(30,30,60,0.07);    
-    border-radius: 22px;
-}
-.general-info-section {
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    background: #fff; /* or your desired background */
-    padding-left: 2.5vw !important;
-    padding-right: 2.5vw !important;
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
-    border-top: 2.5px solid #e3e3f2;
-    border-left: 2.5px solid #e3e3f2;
-    border-right: 2.5px solid #e3e3f2;
-}
-.general-info-end-section {
-    border-bottom: 2.5px solid #e3e3f2;
-    border-radius: 0 0 22px 22px !important;
-}
-.general-info-section h2 {
-    color: #392F5A;
-    margin-bottom: 0.5rem;
-    font-size: 2rem;
-}
-.general-info-section h3 {
-    font-size: 1.5rem;
-}
-
-/* =========================
-   FAQ Section Styles
-   ========================= */
-.faq-section-main {
-    flex: 1 1 350px;
-    max-width: 500px;
-    min-width: 300px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 12px 0 rgba(30,30,60,0.07);
-    border-radius: 22px;
-}
-.faq-travel-section {
-    border-radius: 0 0 22px 22px !important;
-    border-bottom: 2.5px solid #e3e3f2;
-}
-.faq-section {
-    position: relative;
-    border-radius: 0;
-    box-shadow: none !important;
-    background: #fff; /* or your desired background */
-    padding-left: 2.5rem !important;
-    padding-right: 2.5rem !important;
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
-    border-top: 2.5px solid #e3e3f2;
-    border-left: 2.5px solid #e3e3f2;
-    border-right: 2.5px solid #e3e3f2;
-}
 .faq-section h2 {
     color: #392F5A;
     margin-bottom: 1.5rem;
@@ -158,27 +153,6 @@
 /* =========================
    General Info Section (White Card)
    ========================= */
-.general-info-section {
-    background: #fff;
-    color: #392F5A;
-    border-radius: 22px;
-    padding: 2.1rem 1.5rem 1.2rem 1.5rem;
-    box-shadow: 0 2px 12px 0 rgba(30,30,60,0.07);
-    border: 2.5px solid #e3e3f2;
-}
-.general-info-list a {
-    color: #392F5A;
-    text-decoration: underline;
-}
-
-/* =========================
-   Responsive Padding for General Info Section
-   ========================= */
-@media (max-width: 600px) {
-  .general-info-section {
-    padding: 1.2rem 0.7rem 0.7rem 0.7rem;
-  }
-}
 
 /* =========================
    Navy Section Headers
@@ -241,24 +215,26 @@
     }
 }
 
+
 /* =========================
-   Fixed Background Image for About Page
+   Tan Background for About Page
    ========================= */
-.body-bg-fixed {
+body::before {
+    content: "";
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -1000;
-    background: url('/images/aubfest-background3.png') center center / cover no-repeat fixed;
+    background: rgba(236, 209, 137, 0.7); /* tan with 70% opacity */
     pointer-events: none;
+    z-index: 0;
 }
-
-/* =========================
-   Remove Default Background for About Page
-   ========================= */
 body, html {
-    background: none !important;
+    position: relative;
+    z-index: 1;
+    background-color: #ECD189 !important;
+    background-image: url('/images/paper.jpg');
+    background-repeat: repeat;
 }
 
 /* =========================
