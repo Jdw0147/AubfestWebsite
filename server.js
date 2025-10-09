@@ -48,20 +48,10 @@ app.get('/logout', (req, res) => {
     });
 });
 
-// Protect all routes except /login and static assets
-app.use((req, res, next) => {
-    if (
-        req.path === '/login' ||
-        req.path === '/logout' ||
-        req.path.startsWith('/styles') ||
-        req.path.startsWith('/images') ||
-        req.path.startsWith('/scripts') ||
-        req.path.startsWith('/favicon') ||
-        req.path.startsWith('/public')
-    ) {
-        return next();
-    }
-    return requireLogin(req, res, next);
+
+// Only protect /admin route (and future admin routes)
+app.get('/admin', requireLogin, (req, res) => {
+    res.render('pages/admin', { title: 'Admin Dashboard', page: 'admin' });
 });
 
 // Routes
