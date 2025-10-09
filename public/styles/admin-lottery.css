@@ -25,7 +25,13 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, transform 0.18s;
+  will-change: transform;
+}
+.lottery-card:hover {
+  box-shadow: 0 8px 24px rgba(57,47,90,0.18);
+  transform: translateY(-6px) scale(1.04) rotate(-2deg);
+  z-index: 3;
 }
 .lottery-card.add-card {
   background: #2ecc40;
