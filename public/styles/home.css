@@ -775,3 +775,15 @@ body.homepage .main-header {
   pointer-events: none;
 }
 }
+
+@media (max-width: 1700px) {
+  #carousel-flair-left,
+  #carousel-flair-right {
+    display: none !important;
+  }
+  .carousel-flair-row {
+    justify-content: center !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

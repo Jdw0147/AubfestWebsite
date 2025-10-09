@@ -64,21 +64,22 @@
     </div>
 
 
-    <!-- Carousel for new images -->
-    <div class="carousel-3d-container" style="margin-top: 1rem; margin-bottom: 2rem;">
-        <button class="carousel-3d-btn prev-btn">&#10094;</button>
-        <div class="carousel-3d">
-            <a href="/lineup" style="color:inherit;"><img src="/images/flyer1.jpg" alt="Flyer 1"
-                    class="carousel-3d-img"></a>
-            <a href="/lineup" style="color:inherit;"><img src="/images/flyer4.png" alt="Flyer 2"
-                    class="carousel-3d-img"></a>
-            <a href="/lineup" style="color:inherit;"><img src="/images/flyer2.jpg" alt="Flyer 1"
-                    class="carousel-3d-img"></a>
-            <a href="/lineup" style="color:inherit;"><img src="/images/flyer3.jpg" alt="Flyer 1"
-                    class="carousel-3d-img"></a>
-
+    <!-- Flair Squares + Poster Carousel Row (horizontal layout, edge-aligned) -->
+    <div class="carousel-flair-row" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100vw; max-width: 100vw; margin: 2rem 0; padding: 0 3vw; box-sizing: border-box;">
+      <div class="about-flair-stack" id="carousel-flair-left" style="margin-right: 4vw;"></div>
+      <div style="flex: 0 1 auto; min-width: 0;">
+        <div class="carousel-3d-container" style="margin: 0;">
+          <button class="carousel-3d-btn prev-btn">&#10094;</button>
+          <div class="carousel-3d">
+            <a href="/lineup" style="color:inherit;"><img src="/images/flyer1.jpg" alt="Flyer 1" class="carousel-3d-img"></a>
+            <a href="/lineup" style="color:inherit;"><img src="/images/flyer4.png" alt="Flyer 2" class="carousel-3d-img"></a>
+            <a href="/lineup" style="color:inherit;"><img src="/images/flyer2.jpg" alt="Flyer 1" class="carousel-3d-img"></a>
+            <a href="/lineup" style="color:inherit;"><img src="/images/flyer3.jpg" alt="Flyer 1" class="carousel-3d-img"></a>
+          </div>
+          <button class="carousel-3d-btn next-btn">&#10095;</button>
         </div>
-        <button class="carousel-3d-btn next-btn">&#10095;</button>
+      </div>
+      <div class="about-flair-stack" id="carousel-flair-right" style="margin-left: 4vw;"></div>
     </div>
 
     <!-- =========================
