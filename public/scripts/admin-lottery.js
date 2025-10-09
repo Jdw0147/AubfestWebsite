@@ -13,12 +13,12 @@ function renderGrid() {
   grid.appendChild(addCard);
 
   // Image cards
-  lotteryImages.forEach((img, idx) => {
+  lotteryImages.forEach((imgObj, idx) => {
     const card = document.createElement('div');
     card.className = 'lottery-card';
     const image = document.createElement('img');
-    image.src = `/images/lottery/${img}`;
-    image.alt = img;
+    image.src = `/images/lottery/${imgObj.filename}`;
+    image.alt = imgObj.filename;
     card.appendChild(image);
     // Delete button
     const delBtn = document.createElement('button');
@@ -27,7 +27,7 @@ function renderGrid() {
     delBtn.title = 'Delete image';
     delBtn.onclick = (e) => {
       e.stopPropagation();
-      if (confirm(`Delete ${img} from lottery?`)) {
+      if (confirm(`Delete ${imgObj.filename} from lottery?`)) {
         alert('Delete functionality coming soon!');
       }
     };
