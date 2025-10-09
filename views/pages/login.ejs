@@ -1,5 +1,4 @@
-<!-- Login Page for when page is testing only/under maintinence -->
-<!--
+<!-- Admin Login Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +7,8 @@
     <title>Login - Aubfest</title>
     <link rel="stylesheet" href="/styles/main.css">
     <style>
-        body { display: flex; align-items: center; justify-content: center; min-height: 100vh; /* background: #ECD189; */ }
+        body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
         .login-container {
-            /* background: #AE1C33; */
             border-radius: 18px;
             box-shadow: 0 2px 16px rgba(0,0,0,0.10);
             padding: 2.5rem 2rem 2rem 2rem;
@@ -60,24 +58,9 @@
             <div class="login-error"><%= error %></div>
         <% } %>
         <form method="POST" action="/login">
-            <input type="text" name="username" placeholder="Username" required autocomplete="username">
             <input type="password" name="password" placeholder="Password" required autocomplete="current-password">
             <button type="submit">Login</button>
         </form>
     </div>
-    <script>
-        // Log out user when they close or navigate away from the page
-        window.addEventListener('unload', function() {
-            if (navigator.sendBeacon) {
-                navigator.sendBeacon('/logout');
-            } else {
-                // Fallback for older browsers
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', '/logout', false);
-                xhr.send();
-            }
-        });
-    </script>
 </body>
 </html>
--->

@@ -18,7 +18,7 @@ app.use(session({
     cookie: { maxAge: 24 * 60 * 60 * 1000 }
 }));
 
-/*
+
 function requireLogin(req, res, next) {
     if (req.session && req.session.loggedIn) {
         return next();
@@ -32,12 +32,13 @@ app.get('/login', (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-    const { username, password } = req.body;
-    if (username === 'AubFestAdmin' && password === 'AubFestTesting2025') {
+    const { password } = req.body;
+    // Only check password, since login.ejs only asks for password
+    if (password === 'AubFestTesting2025') {
         req.session.loggedIn = true;
         return res.redirect('/');
     } else {
-        return res.render('pages/login', { error: 'Invalid username or password.' });
+        return res.render('pages/login', { error: 'Invalid password.' });
     }
 });
 
@@ -50,7 +51,6 @@ app.get('/logout', (req, res) => {
 // Protect all routes except /login and static assets
 app.use((req, res, next) => {
     if (
-        
         req.path === '/login' ||
         req.path === '/logout' ||
         req.path.startsWith('/styles') ||
@@ -63,7 +63,6 @@ app.use((req, res, next) => {
     }
     return requireLogin(req, res, next);
 });
-*/
 
 // Routes
 app.get('/', (req, res) => {
