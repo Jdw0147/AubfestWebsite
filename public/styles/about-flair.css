@@ -1,3 +1,15 @@
+/* Column sizing for about page */
+.about-main-column-left,
+.about-main-column-right {
+  max-width: 700px;
+  margin: 0 1rem;
+  flex: 1 1 200px;
+}
+
+.about-main-column-center {
+  margin: 0 2vw;
+  flex: 3 1 700px;
+}
 /* Vertical stack for flair squares */
 .about-flair-stack {
   display: flex;
