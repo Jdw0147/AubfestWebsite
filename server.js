@@ -36,7 +36,7 @@ app.post('/login', (req, res) => {
     // Only check password, since login.ejs only asks for password
     if (password === 'AubFestTesting2025') {
         req.session.loggedIn = true;
-        return res.redirect('/');
+        return res.redirect('/admin');
     } else {
         return res.render('pages/login', { error: 'Invalid password.' });
     }
@@ -44,62 +44,79 @@ app.post('/login', (req, res) => {
 
 app.get('/logout', (req, res) => {
     req.session.destroy(() => {
-        res.redirect('/login');
+        res.redirect('/');
     });
 });
 
 
 // Only protect /admin route (and future admin routes)
 app.get('/admin', requireLogin, (req, res) => {
-    res.render('pages/admin', { title: 'Admin Dashboard', page: 'admin' });
+    res.render('pages/admin', { title: 'Admin Dashboard', page: 'admin', loggedIn: req.session.loggedIn });
+});
+
+// Admin lottery page (protected)
+app.get('/admin/lottery', requireLogin, (req, res) => {
+    res.render('pages/admin-lottery', { title: 'Edit Lottery', page: 'admin-lottery', loggedIn: req.session.loggedIn });
 });
 
 // Routes
 app.get('/', (req, res) => {
     res.render('pages/index', {
         title: 'Home - Aubfest Music Festival',
-        page: 'home'
+        page: 'home',
+        loggedIn: req.session && req.session.loggedIn
     });
 });
 
 app.get('/lineup', (req, res) => {
     res.render('pages/lineup', {
         title: 'Lineup - Aubfest Music Festival',
-        page: 'lineup'
+        page: 'lineup',
+        loggedIn: req.session && req.session.loggedIn
     });
 });
 
 app.get('/tickets', (req, res) => {
     res.render('pages/tickets', {
         title: 'Tickets - Aubfest Music Festival',
-        page: 'tickets'
+        page: 'tickets',
+        loggedIn: req.session && req.session.loggedIn
     });
 });
 
 app.get('/info', (req, res) => {
     res.render('pages/info', {
         title: 'Info - Aubfest Music Festival',
-        page: 'info'
+        page: 'info',
+        loggedIn: req.session && req.session.loggedIn
     });
 });
 
 app.get('/involved', (req, res) => {
     res.render('pages/involved', {
         title: 'Get Involved - Aubfest Music Festival',
-        page: 'involved'
+        page: 'involved',
+        loggedIn: req.session && req.session.loggedIn
     });
 });
 
 
 app.get('/about', (req, res) => {
-    res.render('pages/about', {title: 'About AubFest - Aubfest Music Festival',  page: 'about' });
+    res.render('pages/about', {title: 'About AubFest - Aubfest Music Festival',  page: 'about', loggedIn: req.session && req.session.loggedIn });
 });
 
 app.get('/photos', (req, res) => {
     res.render('pages/photos', {
         title: 'Photos - Aubfest Music Festival',
-        page: 'photos'
+        page: 'photos',
+        loggedIn: req.session && req.session.loggedIn
     });
+});
+
+// Pass loggedIn to all views
+app.use((req, res, next) => {
+    res.locals.loggedIn = req.session && req.session.loggedIn;
+    next();
 });
 
 // Start server

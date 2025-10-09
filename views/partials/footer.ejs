@@ -33,7 +33,11 @@
                     <li><a href="/about" style="color:inherit;">FAQ</a></li>
                     <li><a href="https://linktr.ee/aubfest" target="_blank" style="color:inherit;">Photos & Press</a></li>
                     <li><a href="https://www.signupgenius.com/go/10C054BABAB2BA6FFC34-58292017-aubfest" target="_blank" style="color:inherit;">Volunteer</a></li>
-                    <li><a href="/login" style="color:inherit;">Admin</a></li>
+                    <% if (loggedIn) { %>
+                        <li><a href="/logout" style="color:inherit;">Logout</a></li>
+                    <% } else { %>
+                        <li><a href="/login" style="color:inherit;">Admin</a></li>
+                    <% } %>
                 </ul>
             </div>
         </div>

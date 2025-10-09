@@ -37,6 +37,9 @@
                 <li><a href="/involved" class="<%= page === 'involved' ? 'active' : '' %>" style="color: #ECD189;">Get Involved</a></li>
                 <li><a href="/photos" class="<%= page === 'photos' ? 'active' : '' %>" style="color: #ECD189;">Photos</a></li>
                 <li><a href="/about" class="<%= page === 'about' ? 'active' : '' %>" style="color: #ECD189;">FAQ</a></li>
+                <% if (typeof loggedIn !== 'undefined' && loggedIn) { %>
+                <li><a href="/admin" class="<%= page === 'admin' ? 'active' : '' %>" style="color: #ECD189;">Admin</a></li>
+                <% } %>
             </ul>
             <!-- Mobile slide-in menu -->
             <ul class="slide-menu" id="slide-menu">
@@ -45,6 +48,9 @@
                 <li><a href="/involved" class="<%= page === 'involved' ? 'active' : '' %>" style="color: #ECD189;">Get Involved</a></li>
                 <li><a href="/photos" class="<%= page === 'photos' ? 'active' : '' %>" style="color: #ECD189;">Photos</a></li>
                 <li><a href="/about" class="<%= page === 'about' ? 'active' : '' %>" style="color: #ECD189;">FAQ</a></li>
+                <% if (typeof loggedIn !== 'undefined' && loggedIn) { %>
+                <li><a href="/admin" class="<%= page === 'admin' ? 'active' : '' %>" style="color: #ECD189;">Admin</a></li>
+                <% } %>
             </ul>
         </nav>
     </header>
