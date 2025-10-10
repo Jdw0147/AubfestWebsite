@@ -161,11 +161,38 @@ function handleFiles(fileList) {
 }
 
 // (Future) Submit handler for uploading images
-submitImagesBtn && submitImagesBtn.addEventListener('click', () => {
-  // For now, just close modal and clear
-  addImageModal.style.display = 'none';
-  selectedFiles = [];
-  imageListContainer.innerHTML = '';
-  submitImagesBtn.style.display = 'none';
-  alert('Image upload functionality coming soon!');
+submitImagesBtn && submitImagesBtn.addEventListener('click', async () => {
+  if (!selectedFiles.length) return;
+  submitImagesBtn.disabled = true;
+  submitImagesBtn.textContent = 'Uploading...';
+
+  // Prepare form data
+  const formData = new FormData();
+  selectedFiles.forEach((file, idx) => {
+    formData.append('images', file);
+    formData.append('photographers', file.photographer || '');
+  });
+
+  try {
+    const res = await fetch('/admin/lottery/upload', {
+      method: 'POST',
+      body: formData,
+      credentials: 'include'
+    });
+    const data = await res.json();
+    if (data.success) {
+      alert('Images uploaded!');
+      addImageModal.style.display = 'none';
+      selectedFiles = [];
+      imageListContainer.innerHTML = '';
+      submitImagesBtn.style.display = 'none';
+      renderGrid();
+    } else {
+      alert('Upload failed.');
+    }
+  } catch (err) {
+    alert('Upload error.');
+  }
+  submitImagesBtn.disabled = false;
+  submitImagesBtn.textContent = 'Add to Library';
 });

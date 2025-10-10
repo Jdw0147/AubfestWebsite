@@ -1,6 +1,9 @@
 const express = require('express');
 const path = require('path');
 const session = require('express-session');
+
+const multer = require('multer');
+const fs = require('fs');
 const app = express();
 const port = 3001;
 
@@ -11,11 +14,42 @@ app.set('views', path.join(__dirname, 'views'));
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+// Multer setup for image uploads
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, path.join(__dirname, 'public', 'images', 'lottery'));
+    },
+    filename: function (req, file, cb) {
+        // Use original filename
+        cb(null, file.originalname);
+    }
+});
+const upload = multer({ storage });
+
+// Upload route for admin lottery images
+app.post('/admin/lottery/upload', requireLogin, upload.array('images'), (req, res) => {
+    // Debug: log session info
+    console.log('SESSION:', req.session);
+    // req.files: [{ filename, originalname, ... }]
+    // req.body.photographers: array of photographer names (same order as files)
+    const files = req.files;
+    let photographers = req.body.photographers;
+    if (!Array.isArray(photographers)) {
+        photographers = photographers ? [photographers] : [];
+    }
+    // Save metadata if needed (for now, just respond)
+    res.json({ success: true, files: files.map((f, i) => ({ filename: f.filename, photographer: photographers[i] || '' })) });
+});
 app.use(session({
     secret: 'aubfest_secret_key', // Change this for production
     resave: false,
     saveUninitialized: false,
-    cookie: { maxAge: 24 * 60 * 60 * 1000 }
+    cookie: {
+        maxAge: 24 * 60 * 60 * 1000,
+        sameSite: 'lax',
+        secure: false // must be false for http
+    }
 }));
 
 
