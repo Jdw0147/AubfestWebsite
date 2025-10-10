@@ -83,7 +83,7 @@ if (dropArea && fileInput && imageListContainer && submitImagesBtn && closeModal
 }
 
 function handleFiles(fileList) {
-  selectedFiles = Array.from(fileList);
+  selectedFiles = Array.from(fileList).map(f => Object.assign(f, { photographer: '' }));
   imageListContainer.innerHTML = '';
   if (selectedFiles.length > 0) {
     submitImagesBtn.style.display = 'block';
@@ -133,6 +133,28 @@ function handleFiles(fileList) {
     photogInput.addEventListener('input', (e) => {
       selectedFiles[idx].photographer = e.target.value;
     });
+
+    // Remove button
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = '✕';
+    removeBtn.title = 'Remove';
+    removeBtn.style.marginLeft = '0.7rem';
+    removeBtn.style.background = '#AE1C33';
+    removeBtn.style.color = '#fff';
+    removeBtn.style.border = 'none';
+    removeBtn.style.borderRadius = '50%';
+    removeBtn.style.width = '32px';
+    removeBtn.style.height = '32px';
+    removeBtn.style.fontSize = '1.2rem';
+    removeBtn.style.cursor = 'pointer';
+    removeBtn.style.display = 'flex';
+    removeBtn.style.alignItems = 'center';
+    removeBtn.style.justifyContent = 'center';
+    removeBtn.addEventListener('click', () => {
+      selectedFiles.splice(idx, 1);
+      handleFiles(selectedFiles);
+    });
+    row.appendChild(removeBtn);
 
     imageListContainer.appendChild(row);
   });
