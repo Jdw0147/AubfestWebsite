@@ -118,6 +118,19 @@ app.get('/admin/lottery', requireLogin, (req, res) => {
     res.render('pages/admin-lottery', { title: 'Edit Lottery', page: 'admin-lottery', loggedIn: req.session.loggedIn });
 });
 
+// Public endpoint for flair squares and other public uses
+app.get('/lottery/images', (req, res) => {
+    const jsonPath = path.join(__dirname, 'public', 'images', 'lottery', 'lotteryImages.json');
+    fs.readFile(jsonPath, 'utf8', (err, data) => {
+        if (err) return res.status(500).json({ success: false, error: 'Could not read image library.' });
+        let images = [];
+        try {
+            images = JSON.parse(data);
+        } catch (e) {}
+        res.json({ success: true, images });
+    });
+});
+
 // Routes
 app.get('/', (req, res) => {
     res.render('pages/index', {
