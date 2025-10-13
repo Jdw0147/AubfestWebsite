@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
+
 const session = require('express-session');
+const SQLiteStore = require('connect-sqlite3')(session);
 
 const multer = require('multer');
 const fs = require('fs');
@@ -17,13 +19,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Move session middleware here (before any routes or multer)
 app.use(session({
+    store: new SQLiteStore({ db: 'sessions.sqlite', dir: './db' }),
     secret: 'aubfest_secret_key', // Change this for production
     resave: false,
     saveUninitialized: false,
     cookie: {
         maxAge: 24 * 60 * 60 * 1000,
         sameSite: 'lax',
-        secure: false // must be false for http
+        secure: false // must be false for http unless using https
     }
 }));
 
