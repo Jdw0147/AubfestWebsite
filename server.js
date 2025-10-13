@@ -15,6 +15,18 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// Move session middleware here (before any routes or multer)
+app.use(session({
+    secret: 'aubfest_secret_key', // Change this for production
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        maxAge: 24 * 60 * 60 * 1000,
+        sameSite: 'lax',
+        secure: false // must be false for http
+    }
+}));
+
 // Multer setup for image uploads
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -27,31 +39,44 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
+// GET endpoint to fetch the current image library
+app.get('/admin/lottery/images', requireLogin, (req, res) => {
+    const jsonPath = path.join(__dirname, 'public', 'images', 'lottery', 'lotteryImages.json');
+    fs.readFile(jsonPath, 'utf8', (err, data) => {
+        if (err) return res.status(500).json({ success: false, error: 'Could not read image library.' });
+        let images = [];
+        try {
+            images = JSON.parse(data);
+        } catch (e) {}
+        res.json({ success: true, images });
+    });
+});
+
 // Upload route for admin lottery images
 app.post('/admin/lottery/upload', requireLogin, upload.array('images'), (req, res) => {
-    // Debug: log session info
-    console.log('SESSION:', req.session);
-    // req.files: [{ filename, originalname, ... }]
-    // req.body.photographers: array of photographer names (same order as files)
     const files = req.files;
     let photographers = req.body.photographers;
     if (!Array.isArray(photographers)) {
         photographers = photographers ? [photographers] : [];
     }
-    // Save metadata if needed (for now, just respond)
-    res.json({ success: true, files: files.map((f, i) => ({ filename: f.filename, photographer: photographers[i] || '' })) });
+    const jsonPath = path.join(__dirname, 'public', 'images', 'lottery', 'lotteryImages.json');
+    // Read current list
+    fs.readFile(jsonPath, 'utf8', (err, data) => {
+        let images = [];
+        if (!err && data) {
+            try { images = JSON.parse(data); } catch (e) {}
+        }
+        // Add new images
+        files.forEach((f, i) => {
+            images.push({ filename: f.filename, photographer: photographers[i] || '' });
+        });
+        // Write back
+        fs.writeFile(jsonPath, JSON.stringify(images, null, 2), (err2) => {
+            if (err2) return res.status(500).json({ success: false, error: 'Could not update image library.' });
+            res.json({ success: true, files: files.map((f, i) => ({ filename: f.filename, photographer: photographers[i] || '' })) });
+        });
+    });
 });
-app.use(session({
-    secret: 'aubfest_secret_key', // Change this for production
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-        maxAge: 24 * 60 * 60 * 1000,
-        sameSite: 'lax',
-        secure: false // must be false for http
-    }
-}));
-
 
 function requireLogin(req, res, next) {
     if (req.session && req.session.loggedIn) {

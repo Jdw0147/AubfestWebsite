@@ -1,4 +1,4 @@
-import { lotteryImages } from './lotteryImages.js';
+import { lotteryImages, fetchLotteryImages } from './lotteryImages.js';
 
 const grid = document.getElementById('lottery-grid');
 const addImageModal = document.getElementById('add-image-modal');
@@ -10,7 +10,8 @@ const closeModalBtn = document.getElementById('close-modal-btn');
 
 let selectedFiles = [];
 
-function renderGrid() {
+async function renderGrid() {
+  await fetchLotteryImages();
   grid.innerHTML = '';
   // Add card
   const addCard = document.createElement('div');

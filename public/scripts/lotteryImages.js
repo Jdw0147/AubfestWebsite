@@ -1,77 +1,16 @@
-// List of all lottery images (relative to /images/lottery/)
-export const lotteryImages = [
-  { filename: 'ellie-1.JPG', photographer: 'Ellie Man' },
-  { filename: 'ellie-2.JPG', photographer: 'Ellie Man' },
-  { filename: 'ellie-3.JPG', photographer: 'Ellie Man' },
-  { filename: 'ellie-4.JPG', photographer: 'Ellie Man' },
-  { filename: 'ellie-5.JPG', photographer: 'Ellie Man' },
-  { filename: 'ellie-6.JPG', photographer: 'Ellie Man' },
-  { filename: 'ellie-7.JPG', photographer: 'Ellie Man' },
-  { filename: 'hannah-1.JPG', photographer: 'Hannah Matthews' },
-  { filename: 'hannah-2.JPG', photographer: 'Hannah Matthews' },
-  { filename: 'hannah-3.JPG', photographer: 'Hannah Matthews' },
-  { filename: 'hannah-4.JPG', photographer: 'Hannah Matthews' },
-  { filename: 'hannah-5.JPG', photographer: 'Hannah Matthews' },
-  { filename: 'hannah-6.JPG', photographer: 'Hannah Matthews' },
-  { filename: 'hannah-7.JPG', photographer: 'Hannah Matthews' },
-  { filename: 'hannah-8.JPG', photographer: 'Hannah Matthews' },
-  { filename: 'hannah-9.JPG', photographer: 'Hannah Matthews' },
-  { filename: 'hannah-10.JPG', photographer: 'Hannah Matthews' },
-  { filename: 'hannah-11.JPG', photographer: 'Hannah Matthews' },
-  { filename: 'hannah-12.JPG', photographer: 'Hannah Matthews' },
-  { filename: 'hannah-13.JPG', photographer: 'Hannah Matthews' },
-  { filename: 'hannah-14.JPG', photographer: 'Hannah Matthews' },
-  { filename: 'hannah-15.JPG', photographer: 'Hannah Matthews' },
-  { filename: 'hannah-16.JPG', photographer: 'Hannah Matthews' },
-  { filename: 'regis-1.JPG', photographer: 'Regis Go' },
-  { filename: 'regis-2.JPG', photographer: 'Regis Go' },
-  { filename: 'regis-3.JPG', photographer: 'Regis Go' },
-  { filename: 'regis-4.JPG', photographer: 'Regis Go' },
-  { filename: 'regis-5.JPG', photographer: 'Regis Go' },
-  { filename: 'regis-6.JPG', photographer: 'Regis Go' },
-  { filename: 'regis-7.JPG', photographer: 'Regis Go' },
-  { filename: 'warren-1.jpg', photographer: 'Regis Go' },
-  { filename: 'warren-2.jpg', photographer: 'Regis Go' },
-  { filename: 'warren-3.jpg', photographer: 'Regis Go' },
-  { filename: 'warren-4.jpg', photographer: 'Regis Go' },
-  { filename: 'warren-5.jpg', photographer: 'Regis Go' },
-  { filename: 'warren-6.jpg', photographer: 'Regis Go' },
-  { filename: 'warren-7.jpg', photographer: 'Regis Go' },
-  { filename: 'caroline-1.jpg', photographer: 'Caroline Chesnut' },
-  { filename: 'carrington-1.jpg', photographer: 'Carrington Allen' },
-  { filename: 'carrington-2.jpg', photographer: 'Carrington Allen' },
-  { filename: 'carrington-3.jpg', photographer: 'Carrington Allen' },
-  { filename: 'carrington-4.jpg', photographer: 'Carrington Allen' },
-  { filename: 'carrington-5.jpg', photographer: 'Carrington Allen' },
-  { filename: 'carrington-6.jpg', photographer: 'Carrington Allen' },
-  { filename: 'carrington-7.jpg', photographer: 'Carrington Allen' },
-  { filename: 'carrington-8.jpg', photographer: 'Carrington Allen' },
-  { filename: 'carrington-9.jpg', photographer: 'Carrington Allen' },
-  { filename: 'carrington-10.jpg', photographer: 'Carrington Allen' },
-  { filename: 'carrington-11.jpg', photographer: 'Carrington Allen' },
-  { filename: 'carrington-12.jpg', photographer: 'Carrington Allen' },
-  { filename: 'carrington-13.jpg', photographer: 'Carrington Allen' },
-  { filename: 'carrington-14.jpg', photographer: 'Carrington Allen' },
-  { filename: 'nordista-1.JPG', photographer: 'Nordista Freeze' },
-  { filename: 'nordista-2.JPG', photographer: 'Nordista Freeze' },
-  { filename: 'nordista-3.JPG', photographer: 'Nordista Freeze' },
-  { filename: 'nordista-4.JPG', photographer: 'Nordista Freeze' },
-  { filename: 'nordista-5.JPG', photographer: 'Nordista Freeze' },
-  { filename: 'nordista-6.JPG', photographer: 'Nordista Freeze' },
-  { filename: 'nordista-7.JPG', photographer: 'Nordista Freeze' },
-  { filename: 'nordista-8.JPG', photographer: 'Nordista Freeze' },
-  { filename: 'piper-1.jpeg', photographer: 'Piper Doyle' },
-  { filename: 'piper-2.jpeg', photographer: 'Piper Doyle' },
-  { filename: 'piper-3.jpeg', photographer: 'Piper Doyle' },
-  { filename: 'piper-4.jpeg', photographer: 'Piper Doyle' },
-  { filename: 'piper-5.jpeg', photographer: 'Piper Doyle' },
-  { filename: 'trey-1.jpg', photographer: 'Trey Hibbard' },
-  { filename: 'trey-2.jpg', photographer: 'Trey Hibbard' },
-  { filename: 'trey-3.jpg', photographer: 'Trey Hibbard' },
-  { filename: 'trey-4.jpg', photographer: 'Trey Hibbard' },
-  { filename: 'trey-5.jpg', photographer: 'Trey Hibbard' },
-  { filename: 'trey-6.jpg', photographer: 'Trey Hibbard' },
-  { filename: 'justin-1.jpg', photographer: 'Justin Harris' },
-  { filename: 'justin-2.jpg', photographer: 'Justin Harris' },
-  { filename: 'justin-3.jpg', photographer: 'Justin Harris' }
-];
+// Replace import with dynamic fetch
+export let lotteryImages = [];
+
+export async function fetchLotteryImages() {
+  try {
+    const res = await fetch('/admin/lottery/images', { credentials: 'include' });
+    const data = await res.json();
+    if (data.success) {
+      lotteryImages = data.images;
+    } else {
+      lotteryImages = [];
+    }
+  } catch (e) {
+    lotteryImages = [];
+  }
+}
