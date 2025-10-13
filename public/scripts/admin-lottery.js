@@ -39,10 +39,31 @@ async function renderGrid() {
     delBtn.className = 'delete-btn';
     delBtn.innerHTML = '&minus;';
     delBtn.title = 'Delete image';
-    delBtn.onclick = (e) => {
+    delBtn.onclick = async (e) => {
       e.stopPropagation();
       if (confirm(`Delete ${imgObj.filename} from lottery?`)) {
-        alert('Delete functionality coming soon!');
+        delBtn.disabled = true;
+        delBtn.textContent = '...';
+        try {
+          const res = await fetch('/admin/lottery/delete', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'include',
+            body: JSON.stringify({ filename: imgObj.filename })
+          });
+          const data = await res.json();
+          if (data.success) {
+            renderGrid();
+          } else {
+            alert('Delete failed: ' + (data.error || 'Unknown error'));
+            delBtn.disabled = false;
+            delBtn.textContent = '&minus;';
+          }
+        } catch (err) {
+          alert('Delete error.');
+          delBtn.disabled = false;
+          delBtn.textContent = '&minus;';
+        }
       }
     };
     card.appendChild(delBtn);

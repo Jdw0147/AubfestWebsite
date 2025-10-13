@@ -78,6 +78,35 @@ app.post('/admin/lottery/upload', requireLogin, upload.array('images'), (req, re
     });
 });
 
+// Delete route for admin lottery images
+app.post('/admin/lottery/delete', requireLogin, (req, res) => {
+    const { filename } = req.body;
+    if (!filename) return res.status(400).json({ success: false, error: 'No filename provided.' });
+    const jsonPath = path.join(__dirname, 'public', 'images', 'lottery', 'lotteryImages.json');
+    const imgPath = path.join(__dirname, 'public', 'images', 'lottery', filename);
+    // Read current list
+    fs.readFile(jsonPath, 'utf8', (err, data) => {
+        let images = [];
+        if (!err && data) {
+            try { images = JSON.parse(data); } catch (e) {}
+        }
+        // Remove image from array
+        const newImages = images.filter(img => img.filename !== filename);
+        // Write back
+        fs.writeFile(jsonPath, JSON.stringify(newImages, null, 2), (err2) => {
+            if (err2) return res.status(500).json({ success: false, error: 'Could not update image library.' });
+            // Delete file from disk
+            fs.unlink(imgPath, (err3) => {
+                if (err3 && err3.code !== 'ENOENT') {
+                    // Only error if not file-not-found
+                    return res.status(500).json({ success: false, error: 'Could not delete image file.' });
+                }
+                res.json({ success: true });
+            });
+        });
+    });
+});
+
 function requireLogin(req, res, next) {
     if (req.session && req.session.loggedIn) {
         return next();
