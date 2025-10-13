@@ -10,6 +10,79 @@ const closeModalBtn = document.getElementById('close-modal-btn');
 
 let selectedFiles = [];
 
+
+// --- Edit Modal Elements ---
+let editModalOverlay, editModalBox, editModalImg, editModalFilename, editModalPhotog, editModalSave, editModalCancel;
+function ensureEditModal() {
+  if (editModalOverlay) return;
+  editModalOverlay = document.createElement('div');
+  editModalOverlay.className = 'edit-modal-overlay';
+  editModalOverlay.style.display = 'none';
+  editModalOverlay.innerHTML = `
+    <div class="edit-modal-box">
+      <img class="edit-modal-img" src="" alt="" />
+      <div class="edit-modal-filename"></div>
+      <label for="edit-modal-photog">Photographer</label>
+      <input type="text" id="edit-modal-photog" class="edit-modal-photog" />
+      <div class="edit-modal-actions">
+        <button class="save-btn">Save</button>
+        <button class="cancel-btn">Cancel</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(editModalOverlay);
+  editModalBox = editModalOverlay.querySelector('.edit-modal-box');
+  editModalImg = editModalOverlay.querySelector('.edit-modal-img');
+  editModalFilename = editModalOverlay.querySelector('.edit-modal-filename');
+  editModalPhotog = editModalOverlay.querySelector('.edit-modal-photog');
+  editModalSave = editModalOverlay.querySelector('.save-btn');
+  editModalCancel = editModalOverlay.querySelector('.cancel-btn');
+}
+
+function openEditModal(imgObj) {
+  ensureEditModal();
+  editModalImg.src = `/images/lottery/${imgObj.filename}`;
+  editModalImg.alt = imgObj.filename;
+  editModalFilename.textContent = imgObj.filename;
+  editModalPhotog.value = imgObj.photographer || '';
+  editModalOverlay.style.display = 'flex';
+  editModalSave.disabled = false;
+  editModalSave.textContent = 'Save';
+
+  function close() {
+    editModalOverlay.style.display = 'none';
+    editModalSave.onclick = null;
+    editModalCancel.onclick = null;
+  }
+  editModalCancel.onclick = close;
+  editModalOverlay.onclick = (e) => { if (e.target === editModalOverlay) close(); };
+  editModalSave.onclick = async () => {
+    editModalSave.disabled = true;
+    editModalSave.textContent = 'Saving...';
+    try {
+      const res = await fetch('/admin/lottery/edit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ filename: imgObj.filename, photographer: editModalPhotog.value })
+      });
+      const data = await res.json();
+      if (data.success) {
+        close();
+        renderGrid();
+      } else {
+        alert('Edit failed: ' + (data.error || 'Unknown error'));
+        editModalSave.disabled = false;
+        editModalSave.textContent = 'Save';
+      }
+    } catch (err) {
+      alert('Edit error.');
+      editModalSave.disabled = false;
+      editModalSave.textContent = 'Save';
+    }
+  };
+}
+
 async function renderGrid() {
   await fetchLotteryImages();
   grid.innerHTML = '';
@@ -34,6 +107,16 @@ async function renderGrid() {
     image.src = `/images/lottery/${imgObj.filename}`;
     image.alt = imgObj.filename;
     card.appendChild(image);
+    // Edit button
+    const editBtn = document.createElement('button');
+    editBtn.className = 'edit-btn';
+    editBtn.title = 'Edit photographer';
+    editBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.7 2.29a1 1 0 0 1 1.42 0l1.59 1.59a1 1 0 0 1 0 1.42l-9.3 9.3-2.83.71.71-2.83 9.3-9.3zM3 17h14v2H3v-2z" fill="currentColor"/></svg>';
+    editBtn.onclick = (e) => {
+      e.stopPropagation();
+      openEditModal(imgObj);
+    };
+    card.appendChild(editBtn);
     // Delete button
     const delBtn = document.createElement('button');
     delBtn.className = 'delete-btn';

@@ -78,6 +78,32 @@ app.post('/admin/lottery/upload', requireLogin, upload.array('images'), (req, re
     });
 });
 
+// Edit route for admin lottery images (photographer only)
+app.post('/admin/lottery/edit', requireLogin, (req, res) => {
+    const { filename, photographer } = req.body;
+    if (!filename) return res.status(400).json({ success: false, error: 'No filename provided.' });
+    const jsonPath = path.join(__dirname, 'public', 'images', 'lottery', 'lotteryImages.json');
+    fs.readFile(jsonPath, 'utf8', (err, data) => {
+        let images = [];
+        if (!err && data) {
+            try { images = JSON.parse(data); } catch (e) {}
+        }
+        let found = false;
+        images = images.map(img => {
+            if (img.filename === filename) {
+                found = true;
+                return { ...img, photographer: photographer || '' };
+            }
+            return img;
+        });
+        if (!found) return res.status(404).json({ success: false, error: 'Image not found.' });
+        fs.writeFile(jsonPath, JSON.stringify(images, null, 2), (err2) => {
+            if (err2) return res.status(500).json({ success: false, error: 'Could not update image library.' });
+            res.json({ success: true });
+        });
+    });
+});
+
 // Delete route for admin lottery images
 app.post('/admin/lottery/delete', requireLogin, (req, res) => {
     const { filename } = req.body;
