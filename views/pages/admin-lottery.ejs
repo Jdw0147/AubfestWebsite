@@ -1,0 +1,48 @@
+
+<%- include('../partials/header') %>
+
+
+
+
+<div class="page-header">
+  <h1>Admin</h1>
+</div>
+<div style="color: #392F5A; font-size: 2rem; font-weight: 800; margin: 1.2rem 0 0.5rem 0; text-align: left; max-width: 1200px; margin-left: auto; margin-right: auto;">
+  Edit Library
+</div>
+<div style="max-width: 1200px; margin: 0 0 1.5rem 0; text-align: left; padding-left: 20px; padding-right: 20px;">
+  <a href="/admin" class="back-to-admin-btn" style="background: #392F5A; color: #ECD189; padding: 0.7em 1.5em; border-radius: 10px; font-size: 1.1rem; font-weight: 700; text-decoration: none; box-shadow: 0 2px 8px rgba(0,0,0,0.10); transition: background 0.18s, color 0.18s, transform 0.15s; display: inline-block;">
+    ← Back to Admin
+  </a>
+</div>
+<div class="admin-lottery-page">
+  <div class="lottery-grid" id="lottery-grid">
+    <!-- JS will render the add button and all images here -->
+  </div>
+</div>
+
+<!-- Modal for adding images -->
+<div id="add-image-modal" class="modal-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.45); z-index:10000; justify-content:center; align-items:center;">
+  <div class="modal-box" style="background:#fff; border-radius:18px; max-width:520px; width:95vw; padding:2.5rem 2rem 2rem 2rem; box-shadow:0 8px 32px rgba(0,0,0,0.18); position:relative;">
+    <button id="close-modal-btn" style="position:absolute; top:18px; right:18px; background:none; border:none; font-size:2rem; color:#AE1C33; cursor:pointer;">&times;</button>
+    <div id="drop-area" style="border:2.5px dashed #392F5A; border-radius:14px; min-height:160px; display:flex; flex-direction:column; align-items:center; justify-content:center; margin-bottom:1.5rem; cursor:pointer; background:#f7f7f7;">
+      <span style="font-size:3rem; color:#392F5A;">&#128247;</span>
+      <span style="font-size:1.2rem; color:#392F5A; font-weight:700;">Choose or drag image(s) to add</span>
+      <input id="file-input" type="file" accept="image/*" multiple style="display:none;" />
+    </div>
+    <div id="image-list-container"></div>
+    <style>
+      #image-list-container {
+        max-height: 260px;
+        overflow-y: auto;
+        margin-bottom: 0.5rem;
+      }
+    </style>
+    <button id="submit-images-btn" style="margin-top:1.5rem; width:100%; background:#392F5A; color:#ECD189; font-size:1.2rem; font-weight:700; border:none; border-radius:10px; padding:0.9em 0; cursor:pointer; display:none;">Add to Library</button>
+  </div>
+</div>
+
+<link rel="stylesheet" href="/styles/admin-lottery.css">
+<script type="module" src="/scripts/admin-lottery.js"></script>
+
+<%- include('../partials/footer') %>
