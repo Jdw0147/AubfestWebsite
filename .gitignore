@@ -1,3 +1,6 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
 # Node modules
 node_modules/
 
@@ -18,3 +21,5 @@ Thumbs.db
 
 # VSCode settings
 .vscode/
+db/sessions.sqlite
+

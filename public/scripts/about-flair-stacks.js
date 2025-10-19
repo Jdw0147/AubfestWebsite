@@ -18,6 +18,12 @@
   }
 
   function getNumSquares() {
+    // Detect page by body class or URL
+    if (window.location.pathname.includes('/involved')) {
+      return 6;
+    } else if (window.location.pathname.includes('/photos')) {
+      return 5;
+    }
     return 10;
   }
 

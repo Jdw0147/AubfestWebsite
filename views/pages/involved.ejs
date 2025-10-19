@@ -12,138 +12,147 @@
 <html>
 <body>
 
+
 <!-- Header Inclusion-->
+
 <%- include('../partials/header') %>
 
 <!-- Stylesheet-->
+<link rel="stylesheet" href="/styles/about.css">
 <link rel="stylesheet" href="/styles/involved.css">
+<link rel="stylesheet" href="/styles/about-flair.css">
 
 <!-- Header -->
-<div class="body-bg-fixed"></div>
+
 <div class="page-header">
     <h1>Get Involved</h1>
 </div>
 
-<!-- =========================
-    Main Content of Page
-    ========================= -->
-
-<!-- Overview Section -->
-<main class="container involved-main">
+<main class="about-main-flex">
+  <div class="about-main-column about-main-column-left" style="max-width: 700px; margin: 0 1rem; flex: 1 1 200px;">
+    <div class="about-flair-row">
+      <div class="about-flair-stack" id="flair-stack-left"></div>
+    </div>
+  </div>
+  <div class="about-main-column about-main-column-center" style="margin: 0 2vw; flex: 3 1 700px;">
+    <!-- Overview Section -->
     <section class="involved-section-box involved-intro-section">
-        <div class="section-bg involved-intro-bg"></div>
-        <div class="section-overlay"></div>
-        <div class="section-content">
-            <h2 style="margin-bottom:1rem">Ways to Get Involved</h2>
-            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 0.4em;">
-                <a href="#volunteer" class="involved-nav-link">Volunteer</a>
-                <a href="#photographer" class="involved-nav-link">Photograph</a>
-                <a href="#art-vendor" class="involved-nav-link">Art</a>
-            </div>
-            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 0.4em;">
-                <a href="#food-vendor" class="involved-nav-link">Food/Beverage</a>
-                <a href="#performer" class="involved-nav-link">Perform</a>
-            </div>
+      <div class="section-bg involved-intro-bg"></div>
+      <div class="section-overlay"></div>
+      <div class="section-content">
+        <h2>Ways to Get Involved</h2>
+        <br>
+        <p>
+          Explore the many ways you can participate in Aubfest! Use the links below to jump to each section.
+        </p>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 0.4em; margin-bottom: 0.5em;">
+          <a href="#volunteer" class="involved-nav-link">Volunteer</a>
+          <a href="#photographer" class="involved-nav-link">Photograph</a>
+          <a href="#art-vendor" class="involved-nav-link">Art</a>
         </div>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 0.4em;">
+          <a href="#food-vendor" class="involved-nav-link">Food/Beverage</a>
+          <a href="#performer" class="involved-nav-link">Perform</a>
+        </div>
+      </div>
     </section>
-
     <!-- Volunteer Section-->
     <section id="volunteer" class="section involved-section-box volunteer-section">
-        <div class="section-bg volunteer-bg"></div>
-        <div class="section-overlay"></div>
-        <div class="section-content">
-            <h2>Volunteer</h2>
-            <br>
-            <p>
-                <i style="font-size: 1.4rem">Ever wondered what’s behind the scenes?</i>
-                <br>
-                Join a family of amazing volunteers/staff and help make 
-                AubFest come to life! Volunteers may assist 
-                with event setup, guest services, activities, 
-                and more.
-            </p>
-            <a href="https://www.signupgenius.com/go/10C054BABAB2BA6FFC34-58292017-aubfest"  target="_blank" class="btn apply-btn">Submit Interest</a>
-        </div>
+  <div class="section-bg volunteer-bg"></div>
+  <div class="section-overlay"></div>
+      <div class="section-content">
+        <h2>Volunteer</h2>
+        <br>
+        <p>
+          <i style="font-size: 1.4rem">Ever wondered what’s behind the scenes?</i>
+          <br>
+          Join a family of amazing volunteers/staff and help make 
+          AubFest come to life! Volunteers may assist 
+          with event setup, guest services, activities, 
+          and more.
+        </p>
+        <a href="https://www.signupgenius.com/go/10C054BABAB2BA6FFC34-58292017-aubfest"  target="_blank" class="btn apply-btn">Submit Interest</a>
+      </div>
     </section>
-
     <!-- Photographer Section-->
     <section id="photographer" class="section involved-section-box photographer-section">
-        <div class="section-bg photographer-bg"></div>
-        <div class="section-overlay"></div>
-        <div class="section-content">
-            <h2>Photographers</h2>
-            <br>
-            <p>
-                <i style="font-size: 1.4rem">Love turning moments into memories?</i>
-                <br>
-                AubFest is looking for passionate photographers to 
-                document the festival’s energy, performances, 
-                and community. Whether you’re a professional 
-                or an enthusiastic hobbyist, come share your 
-                perspective!
-            </p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4F6ibfQMTToYDKPiuNzMLhWmMRXFqTeSGqsG7vuy8sXvp7Q/viewform" target="_blank" class="btn apply-btn">Apply as Photographer</a>
-        </div>
+  <div class="section-bg photographer-bg"></div>
+  <div class="section-overlay"></div>
+      <div class="section-content">
+        <h2>Photographers</h2>
+        <br>
+        <p>
+          <i style="font-size: 1.4rem">Love turning moments into memories?</i>
+          <br>
+          AubFest is looking for passionate photographers to 
+          document the festival’s energy, performances, 
+          and community. Whether you’re a professional 
+          or an enthusiastic hobbyist, come share your 
+          perspective!
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4F6ibfQMTToYDKPiuNzMLhWmMRXFqTeSGqsG7vuy8sXvp7Q/viewform" target="_blank" class="btn apply-btn">Apply as Photographer</a>
+      </div>
     </section>
-
     <!-- Art Vendor Section-->
     <section id="art-vendor" class="section involved-section-box art-vendor-section">
-        <div class="section-bg art-vendor-bg"></div>
-        <div class="section-overlay"></div>
-        <div class="section-content">
-            <h2>Art Vendors</h2>
-            <br>
-            <p>
-                <i style="font-size: 1.4rem">Showcase your art, crafts, or handmade goods at 
-                Aubfest!</i>
-                <br>
-                There’s a special space for artisans and makers in the 
-                heart of this festival. Connect with the community and 
-                reserve your spot now!
-
-            </p>
-            <a href="https://docs.google.com/forms/d/1WoEYG2tYH7yi5mAssLDieqIhE1D6vBPyTZdWETuWWhM/viewform?edit_requested=true" target="_blank" class="btn apply-btn">Apply as Art Vendor</a>
-        </div>
+  <div class="section-bg art-vendor-bg"></div>
+  <div class="section-overlay"></div>
+      <div class="section-content">
+        <h2>Art Vendors</h2>
+        <br>
+        <p>
+          <i style="font-size: 1.4rem">Showcase your art, crafts, or handmade goods at 
+          Aubfest!</i>
+          <br>
+          There’s a special space for artisans and makers in the 
+          heart of this festival. Connect with the community and 
+          reserve your spot now!
+        </p>
+        <a href="https://docs.google.com/forms/d/1WoEYG2tYH7yi5mAssLDieqIhE1D6vBPyTZdWETuWWhM/viewform?edit_requested=true" target="_blank" class="btn apply-btn">Apply as Art Vendor</a>
+      </div>
     </section>
-
-
     <!-- Food/Beverage Vendor Section -->
     <section id="food-vendor" class="section involved-section-box food-vendor-section">
-        <div class="section-bg food-vendor-bg"></div>
-        <div class="section-overlay"></div>
-        <div class="section-content">
-            <h2>Food/Beverage Vendors</h2>
-            <br>
-            <p>
-                <i style="font-size: 1.4rem">Are you interested in sharing your delicious 
-                food and beverages with the Aubfest community?</i>
-                <br>
-                Aubfest welcomes a variety of food trucks and 
-                booths. Apply now to serve your specialties 
-                to the loveliest community on the plains!
-            </p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_ZNXI6QVssneZBH7hV03SNa95MxXIjzfQAl_FbZBbpYywIw/viewform" target="_blank" class="btn apply-btn">Apply as Food/Beverage Vendor</a>
-        </div>
+  <div class="section-bg food-vendor-bg"></div>
+  <div class="section-overlay"></div>
+      <div class="section-content">
+        <h2>Food/Beverage Vendors</h2>
+        <br>
+        <p>
+          <i style="font-size: 1.4rem">Are you interested in sharing your delicious 
+          food and beverages with the Aubfest community?</i>
+          <br>
+          Aubfest welcomes a variety of food trucks and 
+          booths. Apply now to serve your specialties 
+          to the loveliest community on the plains!
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_ZNXI6QVssneZBH7hV03SNa95MxXIjzfQAl_FbZBbpYywIw/viewform" target="_blank" class="btn apply-btn">Apply as Food/Beverage Vendor</a>
+      </div>
     </section>
-    
     <!-- Performer Section -->
     <section id="performer" class="section involved-section-box performer-section">
-        <div class="section-bg performer-bg"></div>
-        <div class="section-overlay"></div>
-        <div class="section-content">
-            <h2>Performers</h2>
-            <br>
-            <p>
-                <i style="font-size: 1.4rem">Calling all artists and entertainers!</i> 
-                <br>
-                from all genres, backgrounds, and styles. Whether you’re emerging 
-                or established, this is your chance to grow your audience, 
-                connect with fellow artists, and be part of the region’s most 
-                vibrant creative atmosphere. 
-            </p>
-            <a href="mailto:aubfest@gmail.com?subject=Performance%20Application%20for%20Aubfest" class="btn apply-btn">Apply to Perform</a>
-        </div>
+  <div class="section-bg performer-bg"></div>
+  <div class="section-overlay"></div>
+      <div class="section-content">
+        <h2>Performers</h2>
+        <br>
+        <p>
+          <i style="font-size: 1.4rem">Calling all artists and entertainers!</i> 
+          <br>
+          from all genres, backgrounds, and styles. Whether you’re emerging 
+          or established, this is your chance to grow your audience, 
+          connect with fellow artists, and be part of the region’s most 
+          vibrant creative atmosphere. 
+        </p>
+        <a href="mailto:aubfest@gmail.com?subject=Performance%20Application%20for%20Aubfest" class="btn apply-btn">Apply to Perform</a>
+      </div>
     </section>
+  </div>
+  <div class="about-main-column about-main-column-right" style="max-width: 700px; margin: 0 1rem; flex: 1 1 200px;">
+    <div class="about-flair-row">
+      <div class="about-flair-stack" id="flair-stack-right"></div>
+    </div>
+  </div>
 </main>
 
 <!-- Footer Inclusion -->
@@ -151,5 +160,6 @@
 
 <!-- Script for involved page -->
 <script src="/scripts/involved.js"></script>
+<script src="/scripts/about-flair-stacks.js"></script>
 </body>
 </html>
