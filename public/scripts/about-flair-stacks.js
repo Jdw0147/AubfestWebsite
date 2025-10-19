@@ -24,7 +24,7 @@
     } else if (window.location.pathname.includes('/photos')) {
       return 5;
     }
-    return 11;
+    return 10;
   }
 
   function createFlairSquare(imgSrc) {
