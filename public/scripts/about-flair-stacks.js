@@ -18,7 +18,7 @@
   }
 
   function getNumSquares() {
-    return 11;
+    return 10;
   }
 
   function createFlairSquare(imgSrc) {
