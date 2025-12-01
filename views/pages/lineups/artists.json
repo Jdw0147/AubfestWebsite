@@ -201,40 +201,40 @@
 
     {
         "name": "DJ Treybaby and Mourning Dove",
-        "image": "/images/treybaby-mourning-dove.jpg",
-        "title": "/images/treybaby-mourning-dove-title.png",
+        "image": "/images/artists/treybaby-mourning-dove.jpg",
+        "title": "/images/artists/treybaby-mourning-dove-title.png",
         "festivals": ["7"],
         "link": "#"
     },
 
     {
         "name": "Varsity Blues",
-        "image": "/images/varsity-blues.JPG",
-        "title": "/images/varsity-blues-title.png",
+        "image": "/images/artists/varsity-blues.JPG",
+        "title": "/images/artists/varsity-blues-title.png",
         "festivals": ["7"],
         "link": "https://varsityblues.bandcamp.com/"
     },
 
     {
         "name": "Warhol",
-        "image": "/images/warhol.JPG",
-        "title": "/images/warhol-title.PNG",
+        "image": "/images/artists/warhol.JPG",
+        "title": "/images/artists/warhol-title.PNG",
         "festivals": ["7"],
         "link": "https://linktr.ee/thewarholband?fbclid=PAZXh0bgNhZW0CMTEAAaf4MNmdhXxY2RekOxtZaf3D4SenxwFgMUmUKA7lRCbDEqzYZuF51fPC5kE-qg_aem_3g7rw0ALT-zrIT6-lCyHTg"
     },
 
     {
         "name": "Yes Daddy",
-        "image": "/images/yes-daddy.jpg",
-        "title": "/images/yes-daddy-title.png",
+        "image": "/images/artists/yes-daddy.jpg",
+        "title": "/images/artists/yes-daddy-title.png",
         "festivals": ["7"],
         "link": "https://www.whotfisyesdaddy.com/"
     },
 
     {
         "name": "Yes Dear",
-        "image": "/images/yes-dear.JPG",
-        "title": "/images/yes-dear-title.PNG",
+        "image": "/images/artists/yes-dear.JPG",
+        "title": "/images/artists/yes-dear-title.PNG",
         "festivals": ["7"],
         "link": "https://www.instagram.com/yesdearband/?hl=en"
     }
