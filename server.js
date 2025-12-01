@@ -241,13 +241,23 @@ function stripThe(name) {
 app.get('/lineups/fest7lineup', (req, res) => {
   const artists = JSON.parse(fs.readFileSync(path.join(__dirname, '/views/pages/lineups/artists.json')));
   const fest7Artists = artists
-    .filter(artist => artist.festivals && artist.festivals.includes("7"))
-    .sort((a, b) => a.name.localeCompare(stripThe(b.name)));
+    .filter(artist => artist.festivals && artist.festivals.includes("7"));
+  const sort = req.query.sort || 'festival';
+
+  let sortedArtists;
+  if (sort === 'alpha') {
+    sortedArtists = [...fest7Artists].sort((a, b) => stripThe(a.name).localeCompare(stripThe(b.name)));
+  } else {
+    // Festival order: as in JSON
+    sortedArtists = fest7Artists;
+  }
+
   res.render('pages/lineups/fest7lineup', { 
     title: 'AubFest VII Lineup - Aubfest Music Festival', 
     page: 'aubfest vii lineup', 
     loggedIn: req.session && req.session.loggedIn,
-    artists: fest7Artists });
+    artists: sortedArtists,
+    sort,});
 });
 
 app.get('/past-lineups', (req, res) => {
