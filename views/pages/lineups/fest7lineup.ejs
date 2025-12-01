@@ -2,30 +2,37 @@
 
 <%- include('../../partials/header') %>
 
-<!-- Stylesheet-->
-<link rel="stylesheet" href="../styles/about.css">
-<link rel="stylesheet" href="../styles/lineup.css">
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="../styles/about.css">
+    <link rel="stylesheet" href="../styles/lineup.css">
 
-<div class="page-header">
+    <div class="page-header">
         <h1>AubFest VII Lineup</h1>
-</div>
-
-<main class="main-content lineup page">
-    <div class="card-container">
-
-        <% artists.forEach(function(artist) { %>
-            <% if (artist.link) { %>
-                <a href="<%= artist.link %>" target="_blank" rel="noopener noreferrer" class="artist-card-link">
-                    <div class="artist-card">
-                        <img src="<%= artist.image %>" alt="<%= artist.name %>">
-                        <div class="artist-white-fade"></div>
-                        <img src="<%= artist.title %>" alt="<%= artist.name %> Title" class="artist-overlay-img">
-                    </div>
-                </a>
-            <% } %>
-        <% }); %>
-
     </div>
-</main>
 
-<%- include('../../partials/footer') %>
+    <main class="main-content lineup page">
+        <div class="card-container">
+            <form method="get" id="sortForm">
+                <label for="sort">Sort by:</label>
+                <select name="sort" id="sort" onchange="document.getElementById('sortForm').submit()">
+                    <option value="festival" <%=sort==='festival' ? 'selected' : '' %>>Festival Order</option>
+                    <option value="alpha" <%=sort==='alpha' ? 'selected' : '' %>>Alphabetical</option>
+                </select>
+            </form>
+            
+            <% artists.forEach(function(artist) { %>
+                <% if (artist.link) { %>
+                    <a href="<%= artist.link %>" target="_blank" rel="noopener noreferrer" class="artist-card-link">
+                        <div class="artist-card">
+                            <img src="<%= artist.image %>" alt="<%= artist.name %>">
+                            <div class="artist-white-fade"></div>
+                            <img src="<%= artist.title %>" alt="<%= artist.name %> Title" class="artist-overlay-img">
+                        </div>
+                    </a>
+                    <% } %>
+                        <% }); %>
+
+        </div>
+    </main>
+
+    <%- include('../../partials/footer') %>
