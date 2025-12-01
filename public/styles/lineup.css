@@ -133,6 +133,38 @@
 }
 
 /* =========================
+   Sorting Card for past Lineups
+   ========================= */
+.sort-card {
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  padding: 1.5em 1em;
+  margin: 0;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  grid-column: auto;
+}
+.sort-card label {
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  font-size: 1.45em;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+}
+.sort-card input[type="radio"] {
+  accent-color: #AE1C33;
+}
+
+/* =========================
    Responsive Grid for Artist Cards
    ========================= */
 @media (max-width: 900px) {
