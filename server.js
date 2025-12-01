@@ -235,6 +235,14 @@ app.get('/about', (req, res) => {
     res.render('pages/about', {title: 'About AubFest - Aubfest Music Festival',  page: 'about', loggedIn: req.session && req.session.loggedIn });
 });
 
+app.get('/fest7lineup', (req, res) => {
+  res.render('pages/fest7lineup');
+});
+
+app.get('/past-lineups', (req, res) => {
+  res.render('pages/past-lineups');
+});
+
 app.get('/photos', (req, res) => {
     res.render('pages/photos', {
         title: 'Photos - Aubfest Music Festival',
