@@ -261,7 +261,11 @@ app.get('/lineups/fest7lineup', (req, res) => {
 });
 
 app.get('/past-lineups', (req, res) => {
-  res.render('pages/past-lineups');
+  res.render('pages/past-lineups', {
+    title: 'Past Aubfest Lineups - Aubfest Music Festival', 
+    page: 'past lineups', 
+    loggedIn: req.session && req.session.loggedIn,
+  });
 });
 
 app.get('/photos', (req, res) => {
