@@ -235,13 +235,16 @@ app.get('/about', (req, res) => {
     res.render('pages/about', {title: 'About AubFest - Aubfest Music Festival',  page: 'about', loggedIn: req.session && req.session.loggedIn });
 });
 
-app.get('/fest7lineup', (req, res) => {
-  const artists = JSON.parse(fs.readFileSync(path.join(__dirname, 'db/lineups/artists.json')));
-  // Filter for Fest 7 artists if needed
+app.get('/lineups/fest7lineup', (req, res) => {
+  const artists = JSON.parse(fs.readFileSync(path.join(__dirname, '/views/pages/lineups/artists.json')));
   const fest7Artists = artists
-    .filter(artist => artist.year === 2024)
-    .sort((a, b) => a.name.localeCompare(b.name)); // Sort alphabetically by name
-  res.render('pages/fest7lineup', { artists: fest7Artists });
+    .filter(artist => artist.festivals && artist.festivals.includes("7"))
+    .sort((a, b) => a.name.localeCompare(b.name));
+  res.render('pages/lineups/fest7lineup', { 
+    title: 'AubFest VII Lineup - Aubfest Music Festival', 
+    page: 'aubfest vii lineup', 
+    loggedIn: req.session && req.session.loggedIn,
+    artists: fest7Artists });
 });
 
 app.get('/past-lineups', (req, res) => {
