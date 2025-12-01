@@ -12,14 +12,21 @@
 
     <main class="main-content lineup page">
         <div class="card-container">
-            <form method="get" id="sortForm">
-                <label for="sort">Sort by:</label>
-                <select name="sort" id="sort" onchange="document.getElementById('sortForm').submit()">
-                    <option value="festival" <%=sort==='festival' ? 'selected' : '' %>>Festival Order</option>
-                    <option value="alpha" <%=sort==='alpha' ? 'selected' : '' %>>Alphabetical</option>
-                </select>
+            <form class="artist-card sort-card" method="get" id="sortForm"
+                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div style="font-weight: bold; font-size: 1.8em; margin-bottom: 1em;">Sort By</div>
+                <label style="display: flex; align-items: center; margin-bottom: 0.5em;">
+                    <input type="radio" name="sort" value="alpha" <%=sort==='alpha' ? 'checked' : '' %>
+                    onchange="document.getElementById('sortForm').submit()" style="margin-right: 0.5em;">
+                    Alphabetical Order
+                </label>
+                <label style="display: flex; align-items: center;">
+                    <input type="radio" name="sort" value="festival" <%=sort==='festival' ? 'checked' : '' %>
+                    onchange="document.getElementById('sortForm').submit()" style="margin-right: 0.5em;">
+                    Festival Order
+                </label>
             </form>
-            
+
             <% artists.forEach(function(artist) { %>
                 <% if (artist.link) { %>
                     <a href="<%= artist.link %>" target="_blank" rel="noopener noreferrer" class="artist-card-link">
