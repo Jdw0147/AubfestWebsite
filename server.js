@@ -236,7 +236,12 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/fest7lineup', (req, res) => {
-  res.render('pages/fest7lineup');
+  const artists = JSON.parse(fs.readFileSync(path.join(__dirname, 'db/lineups/artists.json')));
+  // Filter for Fest 7 artists if needed
+  const fest7Artists = artists
+    .filter(artist => artist.year === 2024)
+    .sort((a, b) => a.name.localeCompare(b.name)); // Sort alphabetically by name
+  res.render('pages/fest7lineup', { artists: fest7Artists });
 });
 
 app.get('/past-lineups', (req, res) => {
