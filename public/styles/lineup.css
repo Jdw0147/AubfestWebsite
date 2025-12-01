@@ -164,6 +164,54 @@
   accent-color: #AE1C33;
 }
 
+
+/* =========================
+   TBA Styling
+   ========================= */
+
+.lineup-tba-section {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+}
+
+.lineup-tba-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #AE1C33;
+  margin-bottom: 2rem;
+  letter-spacing: 0.04em;
+}
+
+.lineup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.lineup-btn {
+  background: #AE1C33;
+  color: #ECD189;
+  border: none;
+  border-radius: 32px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  padding: 1.2em 2.5em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(174,28,51,0.10);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s, transform 0.12s;
+  outline: none;
+}
+
+.lineup-btn:hover, .lineup-btn:focus {
+  background: #ECD189;
+  color: #AE1C33;
+  border: 2px solid #AE1C33;
+  transform: scale(1.06);
+}
+
 /* =========================
    Responsive Grid for Artist Cards
    ========================= */
