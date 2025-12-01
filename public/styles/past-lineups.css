@@ -1,0 +1,27 @@
+.lineup-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.btn {
+  padding: 0.75rem 1.5rem;
+  background: #222;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.past-lineups-gallery {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.poster-btn {
+  width: 150px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.poster-btn:hover {
+  transform: scale(1.05);
+}
