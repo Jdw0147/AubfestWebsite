@@ -1,26 +1,31 @@
 <!-- filepath: views/pages/lineups/fest7lineup.ejs -->
 
-<%- include('../partials/header') %>
+<%- include('../../partials/header') %>
 
 <!-- Stylesheet-->
-<link rel="stylesheet" href="/styles/about.css">
-<link rel="stylesheet" href="/styles/lineup.css">
+<link rel="stylesheet" href="../styles/about.css">
+<link rel="stylesheet" href="../styles/lineup.css">
 
 <div class="page-header">
         <h1>AubFest VII Lineup</h1>
 </div>
 
-<div class="artist-cards">
-  <% artists.forEach(function(artist) { %>
-    <div class="artist-card">
-      <img src="<%= artist.image %>" alt="<%= artist.name %>">
-      <h2><%= artist.name %></h2>
-      <p><%= artist.bio %></p>
-      <% if (artist.links && artist.links.instagram) { %>
-        <a href="<%= artist.links.instagram %>" target="_blank">Instagram</a>
-      <% } %>
-    </div>
-  <% }); %>
-</div>
+<main class="main-content lineup page">
+    <div class="card-container">
 
-<%- include('../partials/footer') %>
+        <% artists.forEach(function(artist) { %>
+            <% if (artist.link) { %>
+                <a href="<%= artist.link %>" target="_blank" rel="noopener noreferrer" class="artist-card-link">
+                    <div class="artist-card">
+                        <img src="<%= artist.image %>" alt="<%= artist.name %>">
+                        <div class="artist-white-fade"></div>
+                        <img src="<%= artist.title %>" alt="<%= artist.name %> Title" class="artist-overlay-img">
+                    </div>
+                </a>
+            <% } %>
+        <% }); %>
+
+    </div>
+</main>
+
+<%- include('../../partials/footer') %>
