@@ -10,6 +10,17 @@
         <h1>AubFest VII Lineup</h1>
 </div>
 
-<!-- Add your Fest 7 lineup content here, e.g., artist cards, images, etc. -->
- 
+<div class="artist-cards">
+  <% artists.forEach(function(artist) { %>
+    <div class="artist-card">
+      <img src="<%= artist.image %>" alt="<%= artist.name %>">
+      <h2><%= artist.name %></h2>
+      <p><%= artist.bio %></p>
+      <% if (artist.links && artist.links.instagram) { %>
+        <a href="<%= artist.links.instagram %>" target="_blank">Instagram</a>
+      <% } %>
+    </div>
+  <% }); %>
+</div>
+
 <%- include('../partials/footer') %>
