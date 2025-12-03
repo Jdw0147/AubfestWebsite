@@ -28,7 +28,7 @@
         "name": "Carmine Sun",
         "image": "/images/artists/carmine-sun.jpg",
         "title": "/images/artists/carmine-sun-title.png",
-        "festivals": ["7"],
+        "festivals": ["6","7"],
         "link": "https://linktr.ee/carminesun"
     },
 
@@ -100,7 +100,7 @@
         "name": "Jombi",
         "image": "/images/artists/Jombi.jpeg",
         "title": "/images/artists/jombi-title.PNG",
-        "festivals": ["7"],
+        "festivals": ["6","7"],
         "link": "https://jombiofficial.com/"
     },
 
@@ -124,7 +124,7 @@
         "name": "County Road Basement",
         "image": "/images/artists/county-rd-basement.JPG",
         "title": "/images/artists/county-rd-title.png",
-        "festivals": ["7"],
+        "festivals": ["6","7"],
         "link": "https://www.instagram.com/county.rd.basement/?hl=en"
     },
 
@@ -239,4 +239,84 @@
         "festivals": ["7"],
         "link": "https://linktr.ee/post_mourning?fbclid=PAZXh0bgNhZW0CMTEAAaffj6w3Sgm-oThvB8D6LR1PDTqOAI68A_rjtio706jqIHZ_KNOSU0p0okNayQ_aem_sCD2-9obzvYW-FrQhvOSdA"
     }
+
+    {
+        "name": "Bruh Collective",
+        "image": "/images/artists/bruh-collective.jpg",
+        "title": "/images/artists/bruh-collective-title.png",
+        "festivals": ["6"],
+        "link": "https://bruhcollective.bandcamp.com/"
+    },
+
+    {
+        "name": "Lawn Dog",
+        "image": "/images/artists/lawn-dog.jpg",
+        "title": "/images/artists/lawn-dog-title.png",
+        "festivals": ["6"],
+        "link": "https://lawndogmusic.com/home"
+    },
+
+    {
+        "name": "Weary Pursuit",
+        "image": "/images/artists/weary-pursuit.jpg",
+        "title": "/images/artists/weary-pursuit-title.png",
+        "festivals": ["6"],
+        "link": "https://linktr.ee/wearypursuit?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnfYcLgM0ZLQc2cLjUHiMHsW7up4az_z36bB8Jo0-WjG3dw-613lsDEl5Lt4o_aem_6wYOII39_2gobcpgIOlIqQ"
+    },
+
+    {
+        "name": "Brunch With Rosie",
+        "image": "/images/artists/brunch-with-rosie.jpg",
+        "title": "/images/artists/brunch-with-rosie-title.png",
+        "festivals": ["6"],
+        "link": "https://brunchwithrosie.bandcamp.com/"
+    },
+
+    {
+        "name": "Lunar Parque",
+        "image": "/images/artists/lunar-parque.jpg",
+        "title": "/images/artists/lunar-parque-title.png",
+        "festivals": ["6"],
+        "link": "https://lunarparque.bandcamp.com/"
+    },
+
+    {
+        "name": "BLXCK SHEEP",
+        "image": "/images/artists/blxck-sheep.jpg",
+        "title": "/images/artists/blxck-sheep-title.png",
+        "festivals": ["6"],
+        "link": "https://www.instagram.com/blxcksheepband/?hl=en"
+    },
+
+    {
+        "name": "Blood Moon Riot",
+        "image": "/images/artists/blood-moon.jpg",
+        "title": "/images/artists/blood-moon-title.png",
+        "festivals": ["6"],
+        "link": "https://www.instagram.com/bloodmoonriot/?hl=en"
+    },
+
+    {
+        "name": "Timothy Rose",
+        "image": "/images/artists/timothy-rose.jpg",
+        "title": "/images/artists/timothy-rose-title.png",
+        "festivals": ["6"],
+        "link": "https://linktr.ee/timothyrosemusic?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnZwXROlaoEqLYwDtmAD9srKwdz5ZEO2zk9hdBy8L9Wg1IrWPnRD-6m1NWcOY_aem_Xf_6H08vNYtdGuya__lTtw"
+    },
+
+    {
+        "name": "Nordista Freeze",
+        "image": "/images/artists/nordista-freeze.jpg",
+        "title": "/images/artists/nordista-freeze-title.png",
+        "festivals": ["6"],
+        "link": "https://www.nordistafreeze.com/"
+    },
+
+    {
+        "name": "Speak Easy",
+        "image": "/images/artists/speak-easy.jpg",
+        "title": "/images/artists/speak-easy-title.png",
+        "festivals": ["6"],
+        "link": "https://www.speakeasylive.biz/"
+    },
 ]
