@@ -260,6 +260,28 @@ app.get('/lineups/fest7lineup', (req, res) => {
     sort,});
 });
 
+app.get('/lineups/fest6lineup', (req, res) => {
+  const artists = JSON.parse(fs.readFileSync(path.join(__dirname, '/views/pages/lineups/artists.json')));
+  const fest6Artists = artists
+    .filter(artist => artist.festivals && artist.festivals.includes("6"));
+  const sort = req.query.sort || 'festival';
+
+  let sortedArtists;
+  if (sort === 'alpha') {
+    sortedArtists = [...fest6Artists].sort((a, b) => stripThe(a.name).localeCompare(stripThe(b.name)));
+  } else {
+    // Festival order: as in JSON
+    sortedArtists = fest6Artists;
+  }
+
+  res.render('pages/lineups/fest6lineup', { 
+    title: 'AubFest VI Lineup - Aubfest Music Festival', 
+    page: 'aubfest vi lineup', 
+    loggedIn: req.session && req.session.loggedIn,
+    artists: sortedArtists,
+    sort,});
+});
+
 app.get('/past-lineups', (req, res) => {
   res.render('pages/past-lineups', {
     title: 'Past Aubfest Lineups - Aubfest Music Festival', 
