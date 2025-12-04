@@ -244,7 +244,7 @@
         "name": "Bruh Collective",
         "image": "/images/artists/bruh-collective.jpg",
         "title": "/images/artists/bruh-collective-title.png",
-        "festivals": ["6"],
+        "festivals": ["5","6"],
         "link": "https://bruhcollective.bandcamp.com/"
     },
 
@@ -268,7 +268,7 @@
         "name": "Brunch With Rosie",
         "image": "/images/artists/brunch-with-rosie.jpg",
         "title": "/images/artists/brunch-with-rosie-title.png",
-        "festivals": ["6"],
+        "festivals": ["5","6"],
         "link": "https://brunchwithrosie.bandcamp.com/"
     },
 
@@ -276,7 +276,7 @@
         "name": "Lunar Parque",
         "image": "/images/artists/lunar-parque.jpg",
         "title": "/images/artists/lunar-parque-title.png",
-        "festivals": ["6"],
+        "festivals": ["5","6"],
         "link": "https://lunarparque.bandcamp.com/"
     },
 
@@ -284,7 +284,7 @@
         "name": "BLXCK SHEEP",
         "image": "/images/artists/blxck-sheep.jpg",
         "title": "/images/artists/blxck-sheep-title.png",
-        "festivals": ["6"],
+        "festivals": ["5", "6"],
         "link": "https://www.instagram.com/blxcksheepband/?hl=en"
     },
 
@@ -318,5 +318,69 @@
         "title": "/images/artists/speak-easy-title.png",
         "festivals": ["6"],
         "link": "https://www.speakeasylive.biz/"
+    },
+
+    {
+        "name": "The Review",
+        "image": "/images/artists/the-review.png",
+        "title": "/images/artists/the-review-title.png",
+        "festivals": ["5"],
+        "link": "https://linktr.ee/_the_review?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn3ijkaUpfBiltAg-oNiunoOaIHz540eHR-jL6qWClVZUssebKDb4VUhNTVzU_aem_n99u_njNYt7BEU2d04B_Ig"
+    },
+
+    {
+        "name": "The Official Bard of Baldwin County",
+        "image": "/images/artists/bard.png",
+        "title": "/images/artists/bard-title.png",
+        "festivals": ["5"],
+        "link": "https://bardofbaldwincounty.bandcamp.com/"
+    },
+
+    {
+        "name": "Khari Allen Lee",
+        "image": "/images/artists/khari-allen-lee.png",
+        "title": "/images/artists/khari-allen-lee-title.png",
+        "festivals": ["5"],
+        "link": "https://www.khariallenlee.com/"
+    },
+
+    {
+        "name": "Walter Lloyd",
+        "image": "/images/artists/walter-lloyd.jpg",
+        "title": "/images/artists/walter-lloyd-title.png",
+        "festivals": ["5"],
+        "link": "https://walterlloydmusic.com/"
+    },
+
+    {
+        "name": "TR!CK D!CE",
+        "image": "/images/artists/trick-dice.png",
+        "title": "/images/artists/trick-dice-title.png",
+        "festivals": ["5"],
+        "link": "https://trckdce.bandcamp.com/"
+    },
+
+    {
+        "name": "Trey Hibbard",
+        "image": "/images/artists/trey-hibbard.png",
+        "title": "/images/artists/trey-hibbard-title.png",
+        "festivals": ["5"],
+        "link": "https://www.instagram.com/treyhibbard/?hl=en"
+    },
+
+    {
+        "name": "STRXNGE",
+        "image": "/images/artists/strxnge.png",
+        "title": "/images/artists/strxnge-title.png",
+        "festivals": ["5"],
+        "link": "https://linktr.ee/STRXNGE?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnKS7IXBpscuzIhhlEzCVDsPq-WXXurHQBupdDQaihEq8duDJZb9N7ZUEozEI_aem_vHnWeh59uooNcdc-kd73eAn"
+    },
+
+    {
+        "name": "Circle Nine",
+        "image": "/images/artists/circle-nine.png",
+        "title": "/images/artists/circle-nine-title.png",
+        "festivals": ["5"],
+        "link": "https://www.instagram.com/averygreyy/"
     }
 ]
