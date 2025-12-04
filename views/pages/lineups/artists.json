@@ -52,7 +52,7 @@
         "name": "The Band Silhouette",
         "image": "/images/artists/band-silhouette.JPG",
         "title": "/images/artists/band-silhouette-title.PNG",
-        "festivals": ["7"],
+        "festivals": ["5", "7"],
         "link": "https://thebandsilhouette.com/"
     },
 
