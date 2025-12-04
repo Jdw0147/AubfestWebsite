@@ -240,8 +240,8 @@ function stripThe(name) {
 }
 app.get('/lineups/fest7lineup', (req, res) => {
   const artists = JSON.parse(fs.readFileSync(path.join(__dirname, '/views/pages/lineups/artists.json')));
-  const fest7Artists = artists
-    .filter(artist => artist.festivals && artist.festivals.includes("7"));
+  const festNum = 7
+  const fest7Artists = artists.filter(artist => artist.festivals && artist.festivals[festNum]);
   const sort = req.query.sort || 'festival';
 
   let sortedArtists;
@@ -249,7 +249,7 @@ app.get('/lineups/fest7lineup', (req, res) => {
     sortedArtists = [...fest7Artists].sort((a, b) => stripThe(a.name).localeCompare(stripThe(b.name)));
   } else {
     // Festival order: as in JSON
-    sortedArtists = fest7Artists;
+    sortedArtists = [...fest7Artists].sort((a, b) => a.festivals[festNum] - b.festivals[festNum]);
   }
 
   res.render('pages/lineups/fest7lineup', { 
@@ -262,8 +262,8 @@ app.get('/lineups/fest7lineup', (req, res) => {
 
 app.get('/lineups/fest6lineup', (req, res) => {
   const artists = JSON.parse(fs.readFileSync(path.join(__dirname, '/views/pages/lineups/artists.json')));
-  const fest6Artists = artists
-    .filter(artist => artist.festivals && artist.festivals.includes("6"));
+  const festNum = 6
+  const fest6Artists = artists.filter(artist => artist.festivals && artist.festivals[festNum]);
   const sort = req.query.sort || 'festival';
 
   let sortedArtists;
@@ -271,7 +271,7 @@ app.get('/lineups/fest6lineup', (req, res) => {
     sortedArtists = [...fest6Artists].sort((a, b) => stripThe(a.name).localeCompare(stripThe(b.name)));
   } else {
     // Festival order: as in JSON
-    sortedArtists = fest6Artists;
+    sortedArtists = [...fest6Artists].sort((a, b) => a.festivals[festNum] - b.festivals[festNum]);
   }
 
   res.render('pages/lineups/fest6lineup', { 
@@ -284,8 +284,8 @@ app.get('/lineups/fest6lineup', (req, res) => {
 
 app.get('/lineups/fest5lineup', (req, res) => {
   const artists = JSON.parse(fs.readFileSync(path.join(__dirname, '/views/pages/lineups/artists.json')));
-  const fest5Artists = artists
-    .filter(artist => artist.festivals && artist.festivals.includes("5"));
+  const festNum = 5
+  const fest5Artists = artists.filter(artist => artist.festivals && artist.festivals[festNum]);
   const sort = req.query.sort || 'festival';
 
   let sortedArtists;
@@ -293,7 +293,7 @@ app.get('/lineups/fest5lineup', (req, res) => {
     sortedArtists = [...fest5Artists].sort((a, b) => stripThe(a.name).localeCompare(stripThe(b.name)));
   } else {
     // Festival order: as in JSON
-    sortedArtists = fest5Artists;
+    sortedArtists = [...fest5Artists].sort((a, b) => a.festivals[festNum] - b.festivals[festNum]);
   }
 
   res.render('pages/lineups/fest5lineup', { 
