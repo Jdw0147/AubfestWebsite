@@ -4,7 +4,7 @@ body::before {
     top: 0; left: 0; right: 0; bottom: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(236, 209, 137, 0.7); /* tan with 70% opacity */
+    background: rgba(236, 209, 137, 0.7);
     pointer-events: none;
     z-index: -1;
 }
@@ -32,11 +32,11 @@ body, html {
 .past-lineups-gallery {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start; 
   align-items: center;
   gap: 2rem;
   overflow-x: auto;
-  padding: 2rem 0;
+  padding: 2rem 1rem; 
   scroll-behavior: smooth;
   z-index: 2;
 }
