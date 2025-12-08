@@ -617,5 +617,76 @@
             "2": 9
         },
         "link": "https://linktr.ee/rachelexclamationpoint?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnojZjTRuBJhfEWvJfADocx4rUg91r1BD6GeZV65_81sZGDKRNkkXteI5ztp8_aem_V8t4M9TPTxaKX2HPVTPqQQ"
+    },
+
+    {
+        "name": "Vital",
+        "image": "/images/artists/vital.png",
+        "title": "/images/artists/vital-title.png",
+        "festivals": {
+            "1": 1
+        },
+        "link": "https://vitalbhm.bandcamp.com/"
+    },
+
+    {
+        "name": "The Number Nines",
+        "image": "/images/artists/number-nines.png",
+        "title": "/images/artists/number-nines-title.png",
+        "festivals": {
+            "1": 4
+        },
+        "link": "https://www.instagram.com/thenumbernines/?hl=en"
+    },
+
+    {
+        "name": "bedhead",
+        "image": "/images/artists/bedhead.png",
+        "title": "/images/artists/bedhead-title.png",
+        "festivals": {
+            "1": 2
+        },
+        "link": "https://hyperfollow.com/bedheadmp4?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnF0k6YgEm1GkAxde0XOPpsKxhTIkfyYwbTI07eN8my40FOWHaRUqybzPlDGo_aem_T8OVx6xSAZrS4vSj79Dtwg"
+    },
+
+    {
+        "name": "False Jasmine",
+        "image": "/images/artists/false-jasmine.png",
+        "title": "/images/artists/false-jasmine-title.png",
+        "festivals": {
+            "1": 3
+        },
+        "link": "https://falsejasmine.music/index.html"
+    },
+
+    {
+        "name": "The Brothers Gillespie",
+        "image": "/images/artists/brothers.png",
+        "title": "/images/artists/brothers-title.png",
+        "festivals": {
+            "1": 11
+        },
+        "link": "https://www.brothersgillespie.com/"
+    },
+
+    {
+        "name": "Plastik Ghost",
+        "image": "/images/artists/plastik-ghost.png",
+        "title": "/images/artists/plastik-ghost-title.png",
+        "festivals": {
+            "1": 12
+        },
+        "link": "https://www.instagram.com/plastikghost/?hl=en"
+    },
+
+    {
+        "name": "Magdalene",
+        "image": "/images/artists/magdalene.png",
+        "title": "/images/artists/magdalene-title.png",
+        "festivals": {
+            "1": 6
+        },
+        "link": "https://www.instagram.com/we_r_magdalene/?hl=en"
     }
+
 ]
