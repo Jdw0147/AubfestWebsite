@@ -577,5 +577,15 @@
             "3": 7
         },
         "link": "https://brothajoshmusic.com/"
+    },
+
+    {
+        "name": "kaydelis",
+        "image": "/images/artists/kaydelis.png",
+        "title": "/images/artists/kaydelis-title.png",
+        "festivals": {
+            "3": 8
+        },
+        "link": "https://kaydelismusic.com/"
     }
 ]
