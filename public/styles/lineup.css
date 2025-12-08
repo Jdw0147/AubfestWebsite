@@ -125,9 +125,7 @@
     text-align: center;
     padding: 1.5em;
 }
-.artist-card:hover img {
-    filter: brightness(0.6);
-}
+
 .artist-card:hover .card-overlay {
     opacity: 1;
 }
