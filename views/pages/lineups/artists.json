@@ -507,5 +507,75 @@
             "5": 11
         },
         "link": "https://www.instagram.com/averygreyy/"
+    },
+
+    {
+        "name": "Lemon's",
+        "image": "/images/artists/lemons.png",
+        "title": "/images/artists/lemons-title.png",
+        "festivals": {
+            "4": 1
+        },
+        "link": "https://www.musicbylemons.com/"
+    },
+
+    {
+        "name": "Audiophile",
+        "image": "/images/artists/audiophile.png",
+        "title": "/images/artists/audiophile-title.png",
+        "festivals": {
+            "4": 3
+        },
+        "link": "https://audiophilereal.com/"
+    },
+
+    {
+        "name": "Audiophile",
+        "image": "/images/artists/zeph-embers.jpg",
+        "title": "/images/artists/zeph-embers-title.png",
+        "festivals": {
+            "4": 8
+        },
+        "link": "https://www.instagram.com/zeph_embers/"
+    },
+
+    {
+        "name": "Audiophile",
+        "image": "/images/artists/sophie-wise.png",
+        "title": "/images/artists/sophie-wise-title.png",
+        "festivals": {
+            "4": 9
+        },
+        "link": "https://www.instagram.com/sophiewisemusic/"
+    },
+
+    {
+        "name": "Mad Cow",
+        "image": "/images/artists/mad-cow.png",
+        "title": "/images/artists/mad-cow-title.png",
+        "festivals": {
+            "4": 10
+        },
+        "link": "https://linktr.ee/mad.cow?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnvn7D3Dhl0YMK6JrzyvQTG91squAs4FXpIBez6udI94dELhBNciz9aLBdNFk_aem_jy2bJl6k7oF0dyYNBmh5YA"
+    },
+
+    {
+        "name": "Zee Tha Nomad",
+        "image": "/images/artists/zee.png",
+        "title": "/images/artists/zee-title.png",
+        "festivals": {
+            "3": 5
+        },
+        "link": "https://www.instagram.com/zee.thanomad/?hl=en"
+    },
+
+    {
+        "name": "Brotha Josh",
+        "image": "/images/artists/brotha-josh.jpg",
+        "title": "/images/artists/brotha-josh-title.png",
+        "festivals": {
+            "3": 7
+        },
+        "link": "https://brothajoshmusic.com/"
     }
 ]
