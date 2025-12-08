@@ -580,12 +580,42 @@
     },
 
     {
-        "name": "kaydelis",
+        "name": "Kaydelis",
         "image": "/images/artists/kaydelis.png",
         "title": "/images/artists/kaydelis-title.png",
         "festivals": {
             "3": 8
         },
         "link": "https://kaydelismusic.com/"
+    },
+
+    {
+        "name": "Radio Decay",
+        "image": "/images/artists/radio-decay.png",
+        "title": "/images/artists/radio-decay-title.png",
+        "festivals": {
+            "2": 5
+        },
+        "link": "https://radiodecay.com/"
+    },
+
+    {
+        "name": "Glenn Street Band",
+        "image": "/images/artists/glenn-st-band.png",
+        "title": "/images/artists/glenn-st-band-title.png",
+        "festivals": {
+            "2": 8
+        },
+        "link": "https://www.instagram.com/glennstreetband/"
+    },
+
+    {
+        "name": "RACHEL!",
+        "image": "/images/artists/rachel.png",
+        "title": "/images/artists/rachel-title.png",
+        "festivals": {
+            "2": 9
+        },
+        "link": "https://linktr.ee/rachelexclamationpoint?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnojZjTRuBJhfEWvJfADocx4rUg91r1BD6GeZV65_81sZGDKRNkkXteI5ztp8_aem_V8t4M9TPTxaKX2HPVTPqQQ"
     }
 ]
