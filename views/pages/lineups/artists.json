@@ -1,0 +1,692 @@
+[
+
+        {
+        "name": "Post Sex Nachos",
+        "image": "/images/artists/post-sex-nachos.jpg",
+        "title": "/images/artists/post-sex-nachos-title.png",
+        "festivals": {
+            "7": 1
+        },
+        "link": "https://postsexnachos.com/"
+    },
+
+    {
+        "name": "Anna Colson",
+        "image": "/images/artists/anna-colson.jpg",
+        "title": "/images/artists/anna-colson-title.png",
+        "festivals": {
+            "7": 19
+        },
+        "link": "https://linktr.ee/annacolson?utm_source=linktree_admin_share"
+    },
+
+    {
+        "name": "Slugbleed",
+        "image": "/images/artists/slugbleed.jpg",
+        "title": "/images/artists/slug-bleed-title.png",
+        "festivals": {
+            "7": 4
+        },
+        "link": "https://linktr.ee/Slugbleed"
+    },
+
+    {
+        "name": "Carmine Sun",
+        "image": "/images/artists/carmine-sun.jpg",
+        "title": "/images/artists/carmine-sun-title.png",
+        "festivals": {
+            "7": 2,
+            "6": 3
+        },
+        "link": "https://linktr.ee/carminesun"
+    },
+
+    {
+        "name": "Shock Tea",
+        "image": "/images/artists/shock-tea.jpg",
+        "title": "/images/artists/shock-tea-title.png",
+        "festivals": {
+            "7": 10
+        },
+        "link": "https://shocktea.bandcamp.com/"
+    },
+
+    {
+        "name": "Mayweather",
+        "image": "/images/artists/mayweather.jpg",
+        "title": "/images/artists/mayweather-title.PNG",
+        "festivals": {
+            "7": 13
+        },
+        "link": "https://linktr.ee/mayweather.music"
+    },
+
+    {
+        "name": "The Band Silhouette",
+        "image": "/images/artists/band-silhouette.JPG",
+        "title": "/images/artists/band-silhouette-title.PNG",
+        "festivals": {
+            "7": 18,
+            "5": 13,
+            "4": 2,
+            "3": 4,
+            "2": 4,
+            "1": 7
+        },
+        "link": "https://thebandsilhouette.com/"
+    },
+
+    {
+        "name": "Okay Kenedi",
+        "image": "/images/artists/okay-kenedi.JPG",
+        "title": "/images/artists/okay-kenedi-title.png",
+        "festivals": {
+            "7": 16
+        },
+        "link": "https://www.okaykenedi.com/"
+    },
+
+    {
+        "name": "Yes Daddy",
+        "image": "/images/artists/yes-daddy.jpg",
+        "title": "/images/artists/yes-daddy-title.png",
+        "festivals": {
+            "7": 8
+        },
+        "link": "https://www.whotfisyesdaddy.com/"
+    },
+
+    {
+        "name": "Pink Noire",
+        "image": "/images/artists/pink-noire.JPG",
+        "title": "/images/artists/pink-noire-title.PNG",
+        "festivals": {
+            "7": 14
+        },
+        "link": "https://www.instagram.com/pink.noire/?hl=en"
+    },
+
+    {
+        "name": "Varsity Blues",
+        "image": "/images/artists/varsity-blues.JPG",
+        "title": "/images/artists/varsity-blues-title.png",
+        "festivals": {
+            "7": 6
+        },
+        "link": "https://varsityblues.bandcamp.com/"
+    },
+
+    {
+        "name": "Asper",
+        "image": "/images/artists/Asper.jpg",
+        "title": "/images/artists/asper-title.png",
+        "festivals": {
+            "7": 12
+        },
+        "link": "https://itsasper.com/"
+    },
+
+    {
+        "name": "Jombi",
+        "image": "/images/artists/Jombi.jpeg",
+        "title": "/images/artists/jombi-title.PNG",
+        "festivals": {
+            "7": 11,
+            "6": 5
+        },
+        "link": "https://jombiofficial.com/"
+    },
+
+    {
+        "name": "The Band Honey",
+        "image": "/images/artists/band-honey.jpg",
+        "title": "/images/artists/band-honey-title.PNG",
+        "festivals": {
+            "7": 9
+        },
+        "link": "https://www.instagram.com/thebandhoney_/?hl=en"
+    },
+
+    {
+        "name": "Yes Dear",
+        "image": "/images/artists/yes-dear.JPG",
+        "title": "/images/artists/yes-dear-title.PNG",
+        "festivals": {
+            "7": 15
+        },
+        "link": "https://www.instagram.com/yesdearband/?hl=en"
+    },
+
+    {
+        "name": "County Road Basement",
+        "image": "/images/artists/county-rd-basement.JPG",
+        "title": "/images/artists/county-rd-title.png",
+        "festivals": {
+            "7": 7,
+            "6": 1
+        },
+        "link": "https://www.instagram.com/county.rd.basement/?hl=en"
+    },
+
+    {
+        "name": "The Normas",
+        "image": "/images/artists/normas.JPG",
+        "title": "/images/artists/normas-title.PNG",
+        "festivals": {
+            "7": 5,
+            "4": 6,
+            "2": 3,
+            "1": 8
+        },
+        "link": "https://www.thenormas.com/"
+    },
+
+    {
+        "name": "Treybaby and Mourning Dove",
+        "image": "/images/artists/treybaby-mourning-dove.jpg",
+        "title": "/images/artists/treybaby-mourning-dove-title.png",
+        "festivals": {
+            "7": 24
+        },
+        "link": "#"
+    },
+
+    {
+        "name": "Marz",
+        "image": "/images/artists/marz.JPG",
+        "title": "/images/artists/marz-title.PNG",
+        "festivals": {
+            "7": 22
+        },
+        "link": "https://www.instagram.com/marzdub/?hl=en"
+    },
+
+    {
+        "name": "Queen City Avenue",
+        "image": "/images/artists/qca.JPG",
+        "title": "/images/artists/qca-title.PNG",
+        "festivals": {
+            "7": 17
+        },
+        "link": "https://www.instagram.com/qcaband/"
+    },
+
+    {
+        "name": "Sunhouse",
+        "image": "/images/artists/sunhouse.jpg",
+        "title": "/images/artists/sunhouse-title.PNG",
+        "festivals": {
+            "7": 21
+        },
+        "link": "https://www.sunhouseband.com/"
+    },
+
+    {
+        "name": "Medicine Bus",
+        "image": "/images/artists/medicine-bus.jpg",
+        "title": "/images/artists/medicine-bus-title.png",
+        "festivals": {
+            "7": 3,
+            "4": 7
+        },
+        "link": "https://linktr.ee/MedicineBusBand"
+    },
+
+    {
+        "name": "CLD",
+        "image": "/images/artists/cld.jpeg",
+        "title": "/images/artists/cld-title.PNG",
+        "festivals": {
+            "7": 23
+        },
+        "link": "https://www.cldxp.net/cld"
+    },
+
+    {
+        "name": "Warhol",
+        "image": "/images/artists/warhol.JPG",
+        "title": "/images/artists/warhol-title.PNG",
+        "festivals": {
+            "7": 26
+        },
+        "link": "https://linktr.ee/thewarholband?fbclid=PAZXh0bgNhZW0CMTEAAaf4MNmdhXxY2RekOxtZaf3D4SenxwFgMUmUKA7lRCbDEqzYZuF51fPC5kE-qg_aem_3g7rw0ALT-zrIT6-lCyHTg"
+    },
+
+    {
+        "name": "The Sandpipers",
+        "image": "/images/artists/sandpipers.png",
+        "title": "/images/artists/sandpipers-title.PNG",
+        "festivals": {
+            "7": 20
+        },
+        "link": "https://www.instagram.com/ssandpiperss/"
+    },
+
+    {
+        "name": "Oh.Pake",
+        "image": "/images/artists/ohpake.jpg",
+        "title": "/images/artists/ohpake-title.PNG",
+        "festivals": {
+            "7": 27
+        },
+        "link": "https://www.instagram.com/oh.pake/"
+    },
+
+    {
+        "name": "CJ Fagan",
+        "image": "/images/artists/cj-fagan.png",
+        "title": "/images/artists/cj-fagan-title.png",
+        "festivals": {
+            "7": 28
+        },
+        "link": "https://linktr.ee/diaryofacoolkid?fbclid=PAZXh0bgNhZW0CMTEAAafmTYtSjwGJq9wi1VXzLoIgw3hkgqaSYONv5Mga18Diz39-Ill8LD6gqbnbXg_aem_He04II57IeJl32jQeunRMA"
+    },
+
+    {
+        "name": "DJ Chopp",
+        "image": "/images/artists/dj-chopp.png",
+        "title": "/images/artists/dj-chopp-title.png",
+        "festivals": {
+            "7": 29
+        },
+        "link": "https://www.instagram.com/djchopp/"
+    },
+
+    {
+        "name": "Feddie",
+        "image": "/images/artists/feddie.png",
+        "title": "/images/artists/feddie-title.png",
+        "festivals": {
+            "7": 30
+        },
+        "link": "l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Ffeddiesound%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAafSpYrJPfPE_mjwxJxooMNi00nAglzsdJ41BlN3IW2dCUwBUrHETK7SH4Y_OQ_aem_hDn7JMMw8OXDvkxWmrVM3Q&e=AT3AZUznDd4PDn2_hE5Pfcx7hdZ952sMRIe0fa1myCgvu5xbcj2Hpucxz-Lp6_3MoeZWUiqG94L_EY8Co0U35xMG8IHh9UT1QYmRexvUTw"
+    },
+
+    {
+        "name": "Post Mourning",
+        "image": "/images/artists/post-mourning.png",
+        "title": "/images/artists/post-mourning-title.png",
+        "festivals": {
+            "7": 31
+        },
+        "link": "https://linktr.ee/post_mourning?fbclid=PAZXh0bgNhZW0CMTEAAaffj6w3Sgm-oThvB8D6LR1PDTqOAI68A_rjtio706jqIHZ_KNOSU0p0okNayQ_aem_sCD2-9obzvYW-FrQhvOSdA"
+    },
+
+    {
+        "name": "Bruh Collective",
+        "image": "/images/artists/bruh-collective.jpg",
+        "title": "/images/artists/bruh-collective-title.png",
+        "festivals": {
+            "6": 2,
+            "5": 12,
+            "4": 5,
+            "3": 2,
+            "2": 1,
+            "1": 5        
+        },
+        "link": "https://bruhcollective.bandcamp.com/"
+    },
+
+    {
+        "name": "Lawn Dog",
+        "image": "/images/artists/lawn-dog.jpg",
+        "title": "/images/artists/lawn-dog-title.png",
+        "festivals": {
+            "6": 10
+        },
+        "link": "https://lawndogmusic.com/home"
+    },
+
+    {
+        "name": "Weary Pursuit",
+        "image": "/images/artists/weary-pursuit.jpg",
+        "title": "/images/artists/weary-pursuit-title.png",
+        "festivals": {
+            "6": 7
+        },
+        "link": "https://linktr.ee/wearypursuit?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnfYcLgM0ZLQc2cLjUHiMHsW7up4az_z36bB8Jo0-WjG3dw-613lsDEl5Lt4o_aem_6wYOII39_2gobcpgIOlIqQ"
+    },
+
+    {
+        "name": "Brunch With Rosie",
+        "image": "/images/artists/brunch-with-rosie.jpg",
+        "title": "/images/artists/brunch-with-rosie-title.png",
+        "festivals": {
+            "6": 12,
+            "5": 2,
+            "4": 4,
+            "3": 3,
+            "2": 6,
+            "1": 10
+        },
+        "link": "https://brunchwithrosie.bandcamp.com/"
+    },
+
+    {
+        "name": "Lunar Parque",
+        "image": "/images/artists/lunar-parque.jpg",
+        "title": "/images/artists/lunar-parque-title.png",
+        "festivals": {
+            "6": 13,
+            "5": 6,
+            "3": 6
+        },
+        "link": "https://lunarparque.bandcamp.com/"
+    },
+
+    {
+        "name": "BLXCK SHEEP",
+        "image": "/images/artists/blxck-sheep.jpg",
+        "title": "/images/artists/blxck-sheep-title.png",
+        "festivals": {
+            "6": 6,
+            "5": 9
+        },
+        "link": "https://www.instagram.com/blxcksheepband/?hl=en"
+    },
+
+    {
+        "name": "Blood Moon Riot",
+        "image": "/images/artists/blood-moon.jpg",
+        "title": "/images/artists/blood-moon-title.png",
+        "festivals": {
+            "6": 8
+        },
+        "link": "https://www.instagram.com/bloodmoonriot/?hl=en"
+    },
+
+    {
+        "name": "Timothy Rose",
+        "image": "/images/artists/timothy-rose.jpg",
+        "title": "/images/artists/timothy-rose-title.png",
+        "festivals": {
+            "6": 4
+        },
+        "link": "https://linktr.ee/timothyrosemusic?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnZwXROlaoEqLYwDtmAD9srKwdz5ZEO2zk9hdBy8L9Wg1IrWPnRD-6m1NWcOY_aem_Xf_6H08vNYtdGuya__lTtw"
+    },
+
+    {
+        "name": "Nordista Freeze",
+        "image": "/images/artists/nordista-freeze.jpg",
+        "title": "/images/artists/nordista-freeze-title.png",
+        "festivals": {
+            "6": 9
+        },
+        "link": "https://www.nordistafreeze.com/"
+    },
+
+    {
+        "name": "Speak Easy",
+        "image": "/images/artists/speak-easy.jpg",
+        "title": "/images/artists/speak-easy-title.png",
+        "festivals": {
+            "6": 11
+        },
+        "link": "https://www.speakeasylive.biz/"
+    },
+
+    {
+        "name": "The Review",
+        "image": "/images/artists/the-review.png",
+        "title": "/images/artists/the-review-title.png",
+        "festivals": {
+            "5": 1,
+            "2": 7
+        },
+        "link": "https://linktr.ee/_the_review?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn3ijkaUpfBiltAg-oNiunoOaIHz540eHR-jL6qWClVZUssebKDb4VUhNTVzU_aem_n99u_njNYt7BEU2d04B_Ig"
+    },
+
+    {
+        "name": "The Official Bard of Baldwin County",
+        "image": "/images/artists/bard.png",
+        "title": "/images/artists/bard-title.png",
+        "festivals": {
+            "5": 4,
+            "3": 1,
+            "2": 2,
+            "1": 9
+        },
+        "link": "https://bardofbaldwincounty.bandcamp.com/"
+    },
+
+    {
+        "name": "Khari Allen Lee",
+        "image": "/images/artists/khari-allen-lee.png",
+        "title": "/images/artists/khari-allen-lee-title.png",
+        "festivals": {
+            "5": 5
+        },
+        "link": "https://www.khariallenlee.com/"
+    },
+
+    {
+        "name": "Walter Lloyd",
+        "image": "/images/artists/walter-lloyd.jpg",
+        "title": "/images/artists/walter-lloyd-title.png",
+        "festivals": {
+            "5": 8
+        },
+        "link": "https://walterlloydmusic.com/"
+    },
+
+    {
+        "name": "TR!CK D!CE",
+        "image": "/images/artists/trick-dice.png",
+        "title": "/images/artists/trick-dice-title.png",
+        "festivals": {
+            "5": 6
+        },
+        "link": "https://trckdce.bandcamp.com/"
+    },
+
+    {
+        "name": "Trey Hibbard",
+        "image": "/images/artists/trey-hibbard.png",
+        "title": "/images/artists/trey-hibbard-title.png",
+        "festivals": {
+            "5": 9
+        },
+        "link": "https://www.instagram.com/treyhibbard/?hl=en"
+    },
+
+    {
+        "name": "STRXNGE",
+        "image": "/images/artists/strxnge.png",
+        "title": "/images/artists/strxnge-title.png",
+        "festivals": {
+            "5": 12
+        },
+        "link": "https://linktr.ee/STRXNGE?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnKS7IXBpscuzIhhlEzCVDsPq-WXXurHQBupdDQaihEq8duDJZb9N7ZUEozEI_aem_vHnWeh59uooNcdc-kd73eAn"
+    },
+
+    {
+        "name": "Circle Nine",
+        "image": "/images/artists/circle-nine.png",
+        "title": "/images/artists/circle-nine-title.png",
+        "festivals": {
+            "5": 11
+        },
+        "link": "https://www.instagram.com/averygreyy/"
+    },
+
+    {
+        "name": "Lemon's",
+        "image": "/images/artists/lemons.png",
+        "title": "/images/artists/lemons-title.png",
+        "festivals": {
+            "4": 1
+        },
+        "link": "https://www.musicbylemons.com/"
+    },
+
+    {
+        "name": "Audiophile",
+        "image": "/images/artists/audiophile.png",
+        "title": "/images/artists/audiophile-title.png",
+        "festivals": {
+            "4": 3
+        },
+        "link": "https://audiophilereal.com/"
+    },
+
+    {
+        "name": "Audiophile",
+        "image": "/images/artists/zeph-embers.jpg",
+        "title": "/images/artists/zeph-embers-title.png",
+        "festivals": {
+            "4": 8
+        },
+        "link": "https://www.instagram.com/zeph_embers/"
+    },
+
+    {
+        "name": "Audiophile",
+        "image": "/images/artists/sophie-wise.png",
+        "title": "/images/artists/sophie-wise-title.png",
+        "festivals": {
+            "4": 9
+        },
+        "link": "https://www.instagram.com/sophiewisemusic/"
+    },
+
+    {
+        "name": "Mad Cow",
+        "image": "/images/artists/mad-cow.png",
+        "title": "/images/artists/mad-cow-title.png",
+        "festivals": {
+            "4": 10
+        },
+        "link": "https://linktr.ee/mad.cow?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnvn7D3Dhl0YMK6JrzyvQTG91squAs4FXpIBez6udI94dELhBNciz9aLBdNFk_aem_jy2bJl6k7oF0dyYNBmh5YA"
+    },
+
+    {
+        "name": "Zee Tha Nomad",
+        "image": "/images/artists/zee.png",
+        "title": "/images/artists/zee-title.png",
+        "festivals": {
+            "3": 5
+        },
+        "link": "https://www.instagram.com/zee.thanomad/?hl=en"
+    },
+
+    {
+        "name": "Brotha Josh",
+        "image": "/images/artists/brotha-josh.jpg",
+        "title": "/images/artists/brotha-josh-title.png",
+        "festivals": {
+            "3": 7
+        },
+        "link": "https://brothajoshmusic.com/"
+    },
+
+    {
+        "name": "Kaydelis",
+        "image": "/images/artists/kaydelis.png",
+        "title": "/images/artists/kaydelis-title.png",
+        "festivals": {
+            "3": 8
+        },
+        "link": "https://kaydelismusic.com/"
+    },
+
+    {
+        "name": "Radio Decay",
+        "image": "/images/artists/radio-decay.png",
+        "title": "/images/artists/radio-decay-title.png",
+        "festivals": {
+            "2": 5
+        },
+        "link": "https://radiodecay.com/"
+    },
+
+    {
+        "name": "Glenn Street Band",
+        "image": "/images/artists/glenn-st-band.png",
+        "title": "/images/artists/glenn-st-band-title.png",
+        "festivals": {
+            "2": 8
+        },
+        "link": "https://www.instagram.com/glennstreetband/"
+    },
+
+    {
+        "name": "RACHEL!",
+        "image": "/images/artists/rachel.png",
+        "title": "/images/artists/rachel-title.png",
+        "festivals": {
+            "2": 9
+        },
+        "link": "https://linktr.ee/rachelexclamationpoint?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnojZjTRuBJhfEWvJfADocx4rUg91r1BD6GeZV65_81sZGDKRNkkXteI5ztp8_aem_V8t4M9TPTxaKX2HPVTPqQQ"
+    },
+
+    {
+        "name": "Vital",
+        "image": "/images/artists/vital.png",
+        "title": "/images/artists/vital-title.png",
+        "festivals": {
+            "1": 1
+        },
+        "link": "https://vitalbhm.bandcamp.com/"
+    },
+
+    {
+        "name": "The Number Nines",
+        "image": "/images/artists/number-nines.png",
+        "title": "/images/artists/number-nines-title.png",
+        "festivals": {
+            "1": 4
+        },
+        "link": "https://www.instagram.com/thenumbernines/?hl=en"
+    },
+
+    {
+        "name": "bedhead",
+        "image": "/images/artists/bedhead.png",
+        "title": "/images/artists/bedhead-title.png",
+        "festivals": {
+            "1": 2
+        },
+        "link": "https://hyperfollow.com/bedheadmp4?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnF0k6YgEm1GkAxde0XOPpsKxhTIkfyYwbTI07eN8my40FOWHaRUqybzPlDGo_aem_T8OVx6xSAZrS4vSj79Dtwg"
+    },
+
+    {
+        "name": "False Jasmine",
+        "image": "/images/artists/false-jasmine.png",
+        "title": "/images/artists/false-jasmine-title.png",
+        "festivals": {
+            "1": 3
+        },
+        "link": "https://falsejasmine.music/index.html"
+    },
+
+    {
+        "name": "The Brothers Gillespie",
+        "image": "/images/artists/brothers.png",
+        "title": "/images/artists/brothers-title.png",
+        "festivals": {
+            "1": 11
+        },
+        "link": "https://www.brothersgillespie.com/"
+    },
+
+    {
+        "name": "Plastik Ghost",
+        "image": "/images/artists/plastik-ghost.png",
+        "title": "/images/artists/plastik-ghost-title.png",
+        "festivals": {
+            "1": 12
+        },
+        "link": "https://www.instagram.com/plastikghost/?hl=en"
+    },
+
+    {
+        "name": "Magdalene",
+        "image": "/images/artists/magdalene.png",
+        "title": "/images/artists/magdalene-title.png",
+        "festivals": {
+            "1": 6
+        },
+        "link": "https://www.instagram.com/we_r_magdalene/?hl=en"
+    }
+
+]

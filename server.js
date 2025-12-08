@@ -235,6 +235,171 @@ app.get('/about', (req, res) => {
     res.render('pages/about', {title: 'About AubFest - Aubfest Music Festival',  page: 'about', loggedIn: req.session && req.session.loggedIn });
 });
 
+function stripThe(name) {
+  return name.replace(/^The\s+/i, '').trim();
+}
+app.get('/lineups/fest7lineup', (req, res) => {
+  const artists = JSON.parse(fs.readFileSync(path.join(__dirname, '/views/pages/lineups/artists.json')));
+  const festNum = 7
+  const fest7Artists = artists.filter(artist => artist.festivals && artist.festivals[festNum]);
+  const sort = req.query.sort || 'festival';
+
+  let sortedArtists;
+  if (sort === 'alpha') {
+    sortedArtists = [...fest7Artists].sort((a, b) => stripThe(a.name).localeCompare(stripThe(b.name)));
+  } else {
+    // Festival order: as in JSON
+    sortedArtists = [...fest7Artists].sort((a, b) => a.festivals[festNum] - b.festivals[festNum]);
+  }
+
+  res.render('pages/lineups/fest7lineup', { 
+    title: 'AubFest VII Lineup - Aubfest Music Festival', 
+    page: 'aubfest vii lineup', 
+    loggedIn: req.session && req.session.loggedIn,
+    artists: sortedArtists,
+    sort,});
+});
+
+app.get('/lineups/fest6lineup', (req, res) => {
+  const artists = JSON.parse(fs.readFileSync(path.join(__dirname, '/views/pages/lineups/artists.json')));
+  const festNum = 6
+  const fest6Artists = artists.filter(artist => artist.festivals && artist.festivals[festNum]);
+  const sort = req.query.sort || 'festival';
+
+  let sortedArtists;
+  if (sort === 'alpha') {
+    sortedArtists = [...fest6Artists].sort((a, b) => stripThe(a.name).localeCompare(stripThe(b.name)));
+  } else {
+    // Festival order: as in JSON
+    sortedArtists = [...fest6Artists].sort((a, b) => a.festivals[festNum] - b.festivals[festNum]);
+  }
+
+  res.render('pages/lineups/fest6lineup', { 
+    title: 'AubFest VI Lineup - Aubfest Music Festival', 
+    page: 'aubfest vi lineup', 
+    loggedIn: req.session && req.session.loggedIn,
+    artists: sortedArtists,
+    sort,});
+});
+
+app.get('/lineups/fest5lineup', (req, res) => {
+  const artists = JSON.parse(fs.readFileSync(path.join(__dirname, '/views/pages/lineups/artists.json')));
+  const festNum = 5
+  const fest5Artists = artists.filter(artist => artist.festivals && artist.festivals[festNum]);
+  const sort = req.query.sort || 'festival';
+
+  let sortedArtists;
+  if (sort === 'alpha') {
+    sortedArtists = [...fest5Artists].sort((a, b) => stripThe(a.name).localeCompare(stripThe(b.name)));
+  } else {
+    // Festival order: as in JSON
+    sortedArtists = [...fest5Artists].sort((a, b) => a.festivals[festNum] - b.festivals[festNum]);
+  }
+
+  res.render('pages/lineups/fest5lineup', { 
+    title: 'AubFest V Lineup - Aubfest Music Festival', 
+    page: 'aubfest v lineup', 
+    loggedIn: req.session && req.session.loggedIn,
+    artists: sortedArtists,
+    sort,});
+});
+
+app.get('/lineups/fest4lineup', (req, res) => {
+  const artists = JSON.parse(fs.readFileSync(path.join(__dirname, '/views/pages/lineups/artists.json')));
+  const festNum = 4
+  const fest4Artists = artists.filter(artist => artist.festivals && artist.festivals[festNum]);
+  const sort = req.query.sort || 'festival';
+
+  let sortedArtists;
+  if (sort === 'alpha') {
+    sortedArtists = [...fest4Artists].sort((a, b) => stripThe(a.name).localeCompare(stripThe(b.name)));
+  } else {
+    // Festival order: as in JSON
+    sortedArtists = [...fest4Artists].sort((a, b) => a.festivals[festNum] - b.festivals[festNum]);
+  }
+
+  res.render('pages/lineups/fest4lineup', { 
+    title: 'AubFest IV Lineup - Aubfest Music Festival', 
+    page: 'aubfest iv lineup', 
+    loggedIn: req.session && req.session.loggedIn,
+    artists: sortedArtists,
+    sort,});
+});
+
+app.get('/lineups/fest3lineup', (req, res) => {
+  const artists = JSON.parse(fs.readFileSync(path.join(__dirname, '/views/pages/lineups/artists.json')));
+  const festNum = 3
+  const fest3Artists = artists.filter(artist => artist.festivals && artist.festivals[festNum]);
+  const sort = req.query.sort || 'festival';
+
+  let sortedArtists;
+  if (sort === 'alpha') {
+    sortedArtists = [...fest3Artists].sort((a, b) => stripThe(a.name).localeCompare(stripThe(b.name)));
+  } else {
+    // Festival order: as in JSON
+    sortedArtists = [...fest3Artists].sort((a, b) => a.festivals[festNum] - b.festivals[festNum]);
+  }
+
+  res.render('pages/lineups/fest3lineup', { 
+    title: 'AubFest III Lineup - Aubfest Music Festival', 
+    page: 'aubfest iii lineup', 
+    loggedIn: req.session && req.session.loggedIn,
+    artists: sortedArtists,
+    sort,});
+});
+
+app.get('/lineups/fest2lineup', (req, res) => {
+  const artists = JSON.parse(fs.readFileSync(path.join(__dirname, '/views/pages/lineups/artists.json')));
+  const festNum = 2
+  const fest2Artists = artists.filter(artist => artist.festivals && artist.festivals[festNum]);
+  const sort = req.query.sort || 'festival';
+
+  let sortedArtists;
+  if (sort === 'alpha') {
+    sortedArtists = [...fest2Artists].sort((a, b) => stripThe(a.name).localeCompare(stripThe(b.name)));
+  } else {
+    // Festival order: as in JSON
+    sortedArtists = [...fest2Artists].sort((a, b) => a.festivals[festNum] - b.festivals[festNum]);
+  }
+
+  res.render('pages/lineups/fest2lineup', { 
+    title: 'AubFest II Lineup - Aubfest Music Festival', 
+    page: 'aubfest ii lineup', 
+    loggedIn: req.session && req.session.loggedIn,
+    artists: sortedArtists,
+    sort,});
+});
+
+app.get('/lineups/fest1lineup', (req, res) => {
+  const artists = JSON.parse(fs.readFileSync(path.join(__dirname, '/views/pages/lineups/artists.json')));
+  const festNum = 1
+  const fest1Artists = artists.filter(artist => artist.festivals && artist.festivals[festNum]);
+  const sort = req.query.sort || 'festival';
+
+  let sortedArtists;
+  if (sort === 'alpha') {
+    sortedArtists = [...fest1Artists].sort((a, b) => stripThe(a.name).localeCompare(stripThe(b.name)));
+  } else {
+    // Festival order: as in JSON
+    sortedArtists = [...fest1Artists].sort((a, b) => a.festivals[festNum] - b.festivals[festNum]);
+  }
+
+  res.render('pages/lineups/fest3lineup', { 
+    title: 'AubFest I Lineup - Aubfest Music Festival', 
+    page: 'aubfest i lineup', 
+    loggedIn: req.session && req.session.loggedIn,
+    artists: sortedArtists,
+    sort,});
+});
+
+app.get('/past-lineups', (req, res) => {
+  res.render('pages/past-lineups', {
+    title: 'Past Aubfest Lineups - Aubfest Music Festival', 
+    page: 'past lineups', 
+    loggedIn: req.session && req.session.loggedIn,
+  });
+});
+
 app.get('/photos', (req, res) => {
     res.render('pages/photos', {
         title: 'Photos - Aubfest Music Festival',

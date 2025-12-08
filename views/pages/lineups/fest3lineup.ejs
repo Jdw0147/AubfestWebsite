@@ -1,0 +1,44 @@
+<%- include('../../partials/header') %>
+
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="../styles/about.css">
+    <link rel="stylesheet" href="../styles/lineup.css">
+
+    <div class="page-header">
+        <h1>AubFest III Lineup</h1>
+    </div>
+
+    <main class="main-content lineup page">
+        <div class="card-container">
+            <form class="artist-card sort-card" method="get" id="sortForm"
+                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div style="font-weight: bold; font-size: 1.8em; margin-bottom: 1em;">Sort Artists</div>
+                <label style="display: flex; align-items: center; margin-bottom: 0.5em;">
+                    <input type="radio" name="sort" value="alpha" <%=sort==='alpha' ? 'checked' : '' %>
+                    onchange="document.getElementById('sortForm').submit()" style="margin-right: 0.5em;">
+                    Alphabetical Order
+                </label>
+                <label style="display: flex; align-items: center;">
+                    <input type="radio" name="sort" value="festival" <%=sort==='festival' ? 'checked' : '' %>
+                    onchange="document.getElementById('sortForm').submit()" style="margin-right: 0.5em;">
+                    Festival Order
+                </label>
+            </form>
+
+            <% artists.forEach(function(artist) { %>
+                <% if (artist.link) { %>
+                    <a href="<%= artist.link %>" target="_blank" rel="noopener noreferrer" class="artist-card-link">
+                        <div class="artist-card">
+                            <img src="<%= artist.image %>" alt="<%= artist.name %>">
+                            <div class="artist-white-fade"></div>
+                            <img src="<%= artist.title %>" alt="<%= artist.name %> Title" class="artist-overlay-img">
+                        </div>
+                    </a>
+                    <% } %>
+                        <% }); %>
+
+        </div>
+    </main>
+
+    <%- include('../../partials/footer') %>
+    <script src="/scripts/lineup.js"></script>

@@ -125,13 +125,121 @@
     text-align: center;
     padding: 1.5em;
 }
-.artist-card:hover img {
-    filter: brightness(0.6);
-}
+
 .artist-card:hover .card-overlay {
     opacity: 1;
 }
 
+/* =========================
+   Sorting Card for past Lineups
+   ========================= */
+.sort-card {
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  padding: 1.5em 1em;
+  margin: 0;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  grid-column: auto;
+}
+.sort-card label {
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  font-size: 1.45em;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+}
+.sort-card input[type="radio"] {
+  accent-color: #AE1C33;
+}
+
+
+/* =========================
+   TBA Styling
+   ========================= */
+
+.lineup-tba-section,
+.lineup-tba-title,
+.lineup-buttons {
+  position: relative;
+  z-index: 10;
+}
+
+.lineup-tba-section {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+}
+
+.lineup-tba-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #AE1C33;
+  margin-bottom: 2rem;
+  letter-spacing: 0.04em;
+}
+
+.lineup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.lineup-btn {
+  background: #392F5A;
+  color: #ECD189;
+  border: none;
+  border-radius: 32px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  padding: 1.2em 2.5em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(174,28,51,0.10);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s, transform 0.12s;
+  outline: none;
+}
+
+.lineup-btn:hover, .lineup-btn:focus {
+  background: #57429c !important;
+  color: #ECD189;
+  border: 2px solid #AE1C33;
+  transform: scale(1.06);
+}
+
+.btn-apply {
+  background: #AE1C33 !important;
+  color: #ECD189;
+  border: none;
+  border-radius: 32px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  padding: 1.2em 2.5em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(174,28,51,0.10);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s, transform 0.12s;
+  outline: none;
+}
+
+.btn-apply:hover, .btn-apply:focus {
+  background: #6e0c1b !important;
+  color: #ECD189;
+  border: 2px solid #AE1C33;
+  transform: scale(1.06);
+}
 /* =========================
    Responsive Grid for Artist Cards
    ========================= */

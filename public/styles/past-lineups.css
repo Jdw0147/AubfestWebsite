@@ -1,0 +1,63 @@
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(236, 209, 137, 0.7);
+    pointer-events: none;
+    z-index: -1;
+}
+body, html {
+    position: relative;
+    z-index: 1;
+    background-color: #ECD189 !important;
+    background-image: url('/images/paper.jpg');
+    background-repeat: repeat;
+}
+
+.lineup-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.btn {
+  padding: 0.75rem 1.5rem;
+  background: #222;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.past-lineups-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; 
+  align-items: center;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 2rem 1rem; 
+  scroll-behavior: smooth;
+  z-index: 2;
+}
+
+.poster-btn {
+  width: 180px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  z-index: 3;
+}
+
+.poster-btn:hover {
+  transform: scale(1.08);
+}
+
+.past-lineups-gallery::-webkit-scrollbar {
+  display: none;
+}
+.past-lineups-gallery {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
