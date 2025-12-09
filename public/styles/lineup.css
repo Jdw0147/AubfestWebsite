@@ -187,10 +187,9 @@ s
    Sorting Card for past Lineups
    ========================= */
 .sort-card {
-  min-width: 0;
-  min-height: 0;
+  min-width: 12rem;
   aspect-ratio: 1 / 1;
-  border-radius: 12px;
+  border-radius: 1rem;
   box-shadow: 0 2px 12px rgba(0,0,0,0.10);
   padding: 1.5em 1em;
   margin: 0;
@@ -201,18 +200,25 @@ s
   flex-direction: column;
   grid-column: auto;
 }
-.sort-card label {
+.sort-card > div {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 1em;
   width: 100%;
-  justify-content: flex-start;
-  align-items: center;
+  text-align: left;
+}
+
+.sort-card label {
+  font-size: 1rem;
+  width: 100%;
   display: flex;
-  font-size: 1.45em;
-  font-weight: 500;
-  cursor: pointer;
+  align-items: center;
   margin-bottom: 0.5em;
 }
+
 .sort-card input[type="radio"] {
   accent-color: #AE1C33;
+  margin-right: 0.5em;
 }
 
 
