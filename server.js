@@ -263,7 +263,7 @@ app.get('/lineups/fest/:festNum', (req, res) => {
   };
 
   const festTitle = festTitles[festNum] || `AubFest ${festNum} Lineup`;
-
+  const maxFestNum = 7;
   res.render('pages/lineups/lineup-archive', { 
     title: festTitle + ' - AubFest Music Festival', 
     header: festTitle,
@@ -271,7 +271,8 @@ app.get('/lineups/fest/:festNum', (req, res) => {
     loggedIn: req.session && req.session.loggedIn,
     artists: sortedArtists,
     sort,
-    festNum
+    festNum,
+    maxFestNum
   });
 
 });
