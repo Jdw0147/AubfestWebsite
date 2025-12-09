@@ -1,3 +1,7 @@
+body, html {
+  overflow-x: hidden;
+}
+
 /* =========================
    View Past Lineups Button Card
    ========================= */
@@ -125,10 +129,59 @@
     text-align: center;
     padding: 1.5em;
 }
-
+s
 .artist-card:hover .card-overlay {
     opacity: 1;
 }
+
+
+.lineup-flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 60vh;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+.lineup-flyer-col {
+  flex: 0 0 35rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+}
+
+.lineup-flyer-img {
+  width: 30rem;
+  max-width: 100%; 
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(30,30,60,0.10);
+}
+
+.lineup-main-col {
+  flex: 1 1 28rem; 
+  max-width: 32rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .lineup-flyer-col {
+    display: none;
+  }
+  .lineup-main-col {
+    padding: 1rem;
+  }
+}
+
 
 /* =========================
    Sorting Card for past Lineups
@@ -191,6 +244,7 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
+  padding: 1rem;
 }
 
 .lineup-btn {
