@@ -42,11 +42,11 @@ body, html {
 }
 
 .poster-btn {
-  width: 180px;
-  border-radius: 8px;
+  width: 15rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   transition: transform 0.2s;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  box-shadow: 0 0.125rem 0.75rem rgba(0,0,0,0.10);
   z-index: 3;
 }
 
