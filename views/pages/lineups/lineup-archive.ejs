@@ -26,16 +26,28 @@
       </form>
 
       <% artists.forEach(function(artist) { %>
-    <a href="<%= artist.link %>" target="_blank" class="artist-card-link">
-      <div class="artist-card">
-        <img src="<%= artist.image %>" alt="<%= artist.name %>">
-        <div class="artist-white-fade"></div>
-        <img src="<%= artist.title %>" alt="<%= artist.name %> Title" class="artist-overlay-img">
-      </div>
-    </a>
-  <% }); %>
-
+        <a href="<%= artist.link %>" target="_blank" class="artist-card-link">
+          <div class="artist-card">
+            <img src="<%= artist.image %>" alt="<%= artist.name %>">
+            <div class="artist-white-fade"></div>
+            <img src="<%= artist.title %>" alt="<%= artist.name %> Title" class="artist-overlay-img">
+          </div>
+        </a>
+        <% }); %>
     </div>
+
+    <div class="lineup-buttons" style="justify-content: center; margin: 2rem 0;">
+      <% const festNumInt=parseInt(festNum); %>
+        <% if (festNumInt < maxFestNum) { %>
+          <a href="/lineups/fest/<%= festNumInt + 1 %>" class="lineup-btn"> &#8592; AubFest <%= festNumInt + 1 %></a>
+          <% } %>
+            <a href="/lineup" class="lineup-btn btn-apply">Current Lineup</a>
+            <% if (festNumInt > 1) { %>
+              <a href="/lineups/fest/<%= festNumInt - 1 %>" class="lineup-btn">AubFest <%= festNumInt - 1 %> &#8594; </a>
+              <% } %>
+    </div>
+
+
   </main>
 
   <%- include('../../partials/footer') %>
