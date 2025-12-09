@@ -238,6 +238,43 @@ app.get('/about', (req, res) => {
 function stripThe(name) {
   return name.replace(/^The\s+/i, '').trim();
 }
+
+app.get('/lineups/fest/:festNum', (req, res) => {
+  const festNum = req.params.festNum;
+  const artists = JSON.parse(fs.readFileSync(path.join(__dirname, 'views/pages/lineups/artists.json')));
+  const festArtists = artists.filter(artist => artist.festivals && artist.festivals[festNum]);
+  const sort = req.query.sort || 'festival';
+
+  let sortedArtists;
+  if (sort === 'alpha') {
+    sortedArtists = [...festArtists].sort((a, b) => stripThe(a.name).localeCompare(stripThe(b.name)));
+  } else {
+    sortedArtists = [...festArtists].sort((a, b) => a.festivals[festNum] - b.festivals[festNum]);
+  }
+
+  const festTitles = {
+    "1": "AubFest I Lineup",
+    "2": "AubFest II Lineup",
+    "3": "AubFest III Lineup",
+    "4": "AubFest IV Lineup",
+    "5": "AubFest V Lineup",
+    "6": "AubFest VI Lineup",
+    "7": "AubFest VII Lineup"
+  };
+
+  const festTitle = festTitles[festNum] || `AubFest ${festNum} Lineup`;
+
+  res.render('pages/lineups/lineup-archive', { 
+    title: festTitle + ' - AubFest Music Festival', 
+    header: festTitle,
+    page: `aubfest ${festNum} lineup`, 
+    loggedIn: req.session && req.session.loggedIn,
+    artists: sortedArtists,
+    sort,
+    festNum
+  });
+
+});
 app.get('/lineups/fest7lineup', (req, res) => {
   const artists = JSON.parse(fs.readFileSync(path.join(__dirname, '/views/pages/lineups/artists.json')));
   const festNum = 7
