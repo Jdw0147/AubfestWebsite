@@ -384,7 +384,7 @@ app.get('/lineups/fest1lineup', (req, res) => {
     sortedArtists = [...fest1Artists].sort((a, b) => a.festivals[festNum] - b.festivals[festNum]);
   }
 
-  res.render('pages/lineups/fest3lineup', { 
+  res.render('pages/lineups/fest1lineup', { 
     title: 'AubFest I Lineup - Aubfest Music Festival', 
     page: 'aubfest i lineup', 
     loggedIn: req.session && req.session.loggedIn,
