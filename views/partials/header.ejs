@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" type="image/png" href="/favicon.png">   
+<link rel="icon" type="image/png" href="/favicon.png">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
+    <title>
+        <%= title %>
+    </title>
     <link rel="stylesheet" href="/styles/main.css">
-    <% if (page === 'home') { %>
-    <link rel="stylesheet" href="/styles/home.css">
-    <% } %>
-    <% if (page === 'photos') { %>
-    <link rel="stylesheet" href="/styles/photos.css">
-    <% } %>
+    <% if (page==='home' ) { %>
+        <link rel="stylesheet" href="/styles/home.css">
+        <% } %>
+            <% if (page==='photos' ) { %>
+                <link rel="stylesheet" href="/styles/photos.css">
+                <% } %>
 </head>
+
 <body>
     <header class="main-header" style="background-color: #AE1C33; color: #ECD189;">
-        <nav class="nav-container">
+        <div class="header-flex">
             <div class="logo mobile-logo">
                 <a href="/">
-                    <img src="/images/aubfest-logo.png" />
+                    <img class="rectangle-logo" src="/images/aubfest-horizontal.png" />
+                    <img class="square-logo" src="/images/aubfest-logo.png" />
                 </a>
             </div>
-            <div>
-                <button class="tickets-btn tickets-button<%= page === 'tickets' ? ' active' : '' %>" onclick="window.location.href='/tickets'" type="button">Tickets</button>
-            </div>
+            <nav class="nav-container">
+                <div>
+                    <button class="tickets-btn tickets-button<%= page === 'tickets' ? ' active' : '' %>"
+                        onclick="window.location.href='/tickets'" type="button">Tickets</button>
+                </div>
+            </nav>
             <button class="hamburger" id="hamburger-menu" aria-label="Open navigation menu">
                 <span></span>
                 <span></span>
@@ -34,26 +42,36 @@
             <!-- Desktop nav links -->
             <ul class="nav-links desktop-nav">
                 <li><a href="/" class="<%= page === 'home' ? 'active' : '' %>" style="color: #ECD189;">Home</a></li>
-                <li><a href="/lineup" class="<%= page === 'lineup' ? 'active' : '' %>" style="color: #ECD189;">Lineup</a></li>
-                <li><a href="/involved" class="<%= page === 'involved' ? 'active' : '' %>" style="color: #ECD189;">Get Involved</a></li>
-                <li><a href="/photos" class="<%= page === 'photos' ? 'active' : '' %>" style="color: #ECD189;">Photos</a></li>
-                <li><a href="/about" class="<%= page === 'about' ? 'active' : '' %>" style="color: #ECD189;">FAQ</a></li>
-                <% if (typeof loggedIn !== 'undefined' && loggedIn) { %>
-                <li><a href="/admin" class="<%= page === 'admin' ? 'active' : '' %>" style="color: #ECD189;">Admin</a></li>
-                <% } %>
+                <li><a href="/lineup" class="<%= page === 'lineup' ? 'active' : '' %>"
+                        style="color: #ECD189;">Lineup</a></li>
+                <li><a href="/involved" class="<%= page === 'involved' ? 'active' : '' %>" style="color: #ECD189;">Get
+                        Involved</a></li>
+                <li><a href="/photos" class="<%= page === 'photos' ? 'active' : '' %>"
+                        style="color: #ECD189;">Photos</a></li>
+                <li><a href="/about" class="<%= page === 'about' ? 'active' : '' %>" style="color: #ECD189;">FAQ</a>
+                </li>
+                <% if (typeof loggedIn !=='undefined' && loggedIn) { %>
+                    <li><a href="/admin" class="<%= page === 'admin' ? 'active' : '' %>"
+                            style="color: #ECD189;">Admin</a></li>
+                    <% } %>
             </ul>
             <!-- Mobile slide-in menu -->
             <ul class="slide-menu" id="slide-menu">
                 <li><a href="/" class="<%= page === 'home' ? 'active' : '' %>" style="color: #ECD189;">Home</a></li>
-                <li><a href="/lineup" class="<%= page === 'lineup' ? 'active' : '' %>" style="color: #ECD189;">Lineup</a></li>
-                <li><a href="/involved" class="<%= page === 'involved' ? 'active' : '' %>" style="color: #ECD189;">Get Involved</a></li>
-                <li><a href="/photos" class="<%= page === 'photos' ? 'active' : '' %>" style="color: #ECD189;">Photos</a></li>
-                <li><a href="/about" class="<%= page === 'about' ? 'active' : '' %>" style="color: #ECD189;">FAQ</a></li>
-                <% if (typeof loggedIn !== 'undefined' && loggedIn) { %>
-                <li><a href="/admin" class="<%= page === 'admin' ? 'active' : '' %>" style="color: #ECD189;">Admin</a></li>
-                <% } %>
+                <li><a href="/lineup" class="<%= page === 'lineup' ? 'active' : '' %>"
+                        style="color: #ECD189;">Lineup</a></li>
+                <li><a href="/involved" class="<%= page === 'involved' ? 'active' : '' %>" style="color: #ECD189;">Get
+                        Involved</a></li>
+                <li><a href="/photos" class="<%= page === 'photos' ? 'active' : '' %>"
+                        style="color: #ECD189;">Photos</a></li>
+                <li><a href="/about" class="<%= page === 'about' ? 'active' : '' %>" style="color: #ECD189;">FAQ</a>
+                </li>
+                <% if (typeof loggedIn !=='undefined' && loggedIn) { %>
+                    <li><a href="/admin" class="<%= page === 'admin' ? 'active' : '' %>"
+                            style="color: #ECD189;">Admin</a></li>
+                    <% } %>
             </ul>
-        </nav>
+        </div>
     </header>
     <script>
         const hamburgerMenu = document.getElementById('hamburger-menu');
@@ -77,4 +95,5 @@
         });
     </script>
 </body>
+
 </html>

@@ -6,254 +6,255 @@
 /* =========================
    Reset and Base Styles
    ========================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body, html, .main-header, .header-flex {
+  overflow-x: hidden;
+}
+
 body {
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 700;
     line-height: 1.6;
     background-color: #ECD189;
     color: #392F5A;
+    min-height: 100vh;
 }
 
-/* =========================
-   Login Page Background
-   ========================= */
-.body-bg-fixed.login-bg {
-    background: url('/images/login-background.png') center center / cover no-repeat fixed !important;
-}
-
-/* =========================
-   Full Background for Other Pages
-   ========================= */
-.body-bg-fixed {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1000;
-    background: url('/images/aubfest-background3.png') center center / cover no-repeat fixed;
-    pointer-events: none;
-}
 
 /* =========================
    Header Styles
    ========================= */
 .main-header {
-    background-color: #AE1C33;
-    color: #ECD189;
-    padding: 2rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+  background: #AE1C33;
+  color: #ECD189;
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 100%;
 }
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 18px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*max-width: 100vw;*/
+  width: 100%;
+  padding-left: clamp(0.5rem, 6vw, 5rem);
+  padding-right: clamp(0.5rem, 6vw, 5rem);
+  box-sizing: border-box;
 }
+
+@media (max-width: 1000px) {
+    .header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: clamp(0.5rem, 6vw, 5rem);
+  padding-right: clamp(0.5rem, 6vw, 5rem);
+  box-sizing: border-box;
+}
+}
+
 
 /* =========================
    Logo Styles
    ========================= */
-.logo img {
-    height: 100px !important;
-    width: auto !important;
-    display: block;
+.logo {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+.rectangle-logo {
+  width: clamp(4rem, 18vw, 20rem);
+  height: clamp(2rem, 9vw, 10rem);
+  object-fit: contain;
+  display: inline-block;
+}
+.square-logo {
+  display: none;
+  width: clamp(5rem, 9vw, 10rem);
+  height: clamp(5rem, 9vw, 10rem);
+  object-fit: contain;
 }
 
+/* Show square logo on small screens */
+@media (max-width: 1300px) {
+  .rectangle-logo { display: none; }
+  .square-logo { display: inline-block; }
+}
+
+
 /* =========================
-   Navigation Links Styles
+   Navigation Styles
    ========================= */
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  box-shadow: none;
+  min-width: 0;
+  width: auto;
+  flex: 0 0 auto;
+}
+
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2.5rem;
-    font-size: 1.25rem;
-    align-items: center;
+  list-style: none;
+  display: flex;
+  gap: clamp(0rem, 0vw, 2.5rem);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .nav-links a {
-    color: #ECD189;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    padding: 0.5rem 1.2rem;
-    border-radius: 4px;
-    font-size: 1.1em;
+  min-width: 0;
+  flex-shrink: 1;
+  color: #ECD189;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  font-size: 1em;
 }
 .nav-links a:hover,
 .nav-links a.active {
-    color: #392F5A !important;
+  color: #392F5A;
 }
+
+@media (max-width: 1000px) {
+    .nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  box-shadow: none;
+  min-width: 0;
+  width: auto;
+  flex: 0 0 auto;
+}   
+  .nav-links {
+    display: none !important;
+  }
+}
+
 
 /* =========================
    Tickets Button Styles
    ========================= */
 .tickets-btn {
-    padding: 0;
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .tickets-button {
-    background: #392F5A;
-    color: #ECD189 !important;
-    border: 2.5px solid #ECD189;
-    border-radius: 22px;
-    font-size: 2em;
-    font-weight: 900;
-    font-family: 'Fredoka', 'Montserrat', 'Arial Black', Arial, sans-serif;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    padding: 1.2em 3em;
-    margin-left: 0.5em;
-    cursor: pointer;
-    box-shadow: 0 4px 18px rgba(0, 100, 0, 0.18), 0 2px 8px rgba(0,0,0,0.10);
-    transition: background 0.2s, color 0.2s, border 0.2s, transform 0.1s, box-shadow 0.2s;
-    animation: tickets-pulse 1.5s infinite alternate;
-    text-decoration: none !important;
+  background: #392F5A;
+  color: #ECD189;
+  border: 2.5px solid #ECD189;
+  border-radius: 1.5rem;
+  font-size: 1.5em;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 1em 2em;
+  margin: 0 1em;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0,100,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s, color 0.2s, border 0.2s, transform 0.1s, box-shadow 0.2s;
+  text-decoration: none;
 }
-@keyframes tickets-pulse {
-    0% { box-shadow: 0 0 0 0 rgba(0, 100, 0, 0.25); }
-    100% { box-shadow: 0 0 16px 8px rgba(34, 139, 34, 0.18); }
-}
-.tickets-button:hover, .tickets-btn.active .tickets-button {
-    background: #392F5A;
-    color: #fff;
-    border: 2.5px solid #ECD189;
-    transform: scale(1.08);
-    box-shadow: 0 6px 24px rgba(0, 100, 0, 0.25), 0 2px 8px rgba(0,0,0,0.12);
+.tickets-button:hover {
+  background: #241c38;
+  color: #ECD189;
+  border-color: #ECD189;
+  transform: scale(1.08);
 }
 
-/* =========================
-   Remove Underline from Tickets Button in All States
-   ========================= */
-.tickets-btn a,
-.tickets-btn a:link,
-.tickets-btn a:visited,
-.tickets-btn a:focus,
-.tickets-btn a:hover,
-.tickets-btn a:active,
-.tickets-btn > a > .tickets-button,
-.tickets-button:focus,
-.tickets-button:active,
-.tickets-btn .tickets-button,
-.tickets-btn .tickets-button:visited,
-.tickets-btn .tickets-button:active,
-.tickets-btn .tickets-button:focus,
-.tickets-btn .tickets-button:hover,
-.tickets-btn a .tickets-button,
-.tickets-btn a .tickets-button:visited,
-.tickets-btn a .tickets-button:active,
-.tickets-btn a .tickets-button:focus,
-.tickets-btn a .tickets-button:hover {
-    text-decoration: none !important;
-    box-shadow: none;
-}
 
 /* =========================
    Main Content Styles
    ========================= */
 .main-content {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 20px;
+  max-width: 75rem;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
 }
 .content-section {
-    background: rgba(255,255,255,0.90);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  background: rgba(255,255,255,0.90);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* =========================
-   Footer Styles
-   ========================= */
-.main-footer {
-    background: #AE1C33;
-    color: #ECD189;
-    padding: 3rem 0 1rem;
-    margin-top: 3rem;
-}
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-.social-row {
-  display: flex;
-  gap: 1.5em;
-  justify-content: center;
-}
-.footer-socials {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5em;
-  margin-bottom: 1em;
-}
-.footer-section h3 {
-    color: #FFFDD0;
-    margin-bottom: 1rem;
-}
-.footer-section ul {
-    list-style: none;
-}
-.footer-section a {
-    color: #FFFDD0;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-}
-.footer-section a:hover {
-    opacity: 0.8;
-}
-.social-links {
-    display: flex;
-    gap: 1rem;
-}
-.footer-bottom {
-    max-width: 1200px;
-    margin: 2rem auto 0;
-    padding: 1rem 20px;
-    text-align: center;
-    border-top: 1px solid rgba(255, 253, 208, 0.2);
-}
 
 /* =========================
    Hamburger Menu Styles
    ========================= */
 .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1201;
-    position: absolute;
-    top: 28px;
-    right: 24px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1201;
+  top: 28px;
+  right: 24px;
 }
 .hamburger span {
-    display: block;
-    width: 28px;
-    height: 4px;
-    margin: 4px 0;
-    background: #ECD189 !important;
-    border-radius: 2px;
-    transition: 0.3s;
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 4px 0;
+  background: #ECD189;
+  border-radius: 2px;
+  transition: 0.3s;
 }
+
+/* Larger hamburger on bigger screens */
+@media (min-width: 530px) {
+  .hamburger {
+    width: 56px;
+    height: 56px;
+  }
+  .hamburger span {
+    width: 38px;
+    height: 6px;
+  }
+}
+
+/* Show hamburger on mobile */
+@media (max-width: 1000px) {
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 
 /* =========================
    Close Button Styles
@@ -326,9 +327,285 @@ body {
     text-decoration: none;
 }
 
+
+/* =========================
+   Footer Styles
+   ========================= */
+.main-footer {
+  background: #AE1C33;
+  color: #ECD189;
+  padding: 2.5rem 0 1rem;
+  margin-top: 3rem;
+}
+.footer-content {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.footer-section h3 {
+  color: #FFFDD0;
+  margin-bottom: 1rem;
+}
+.footer-section ul {
+  list-style: none;
+}
+.footer-section a {
+  color: #FFFDD0;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+.footer-section a:hover {
+  opacity: 0.8;
+}
+.footer-bottom {
+  max-width: 75rem;
+  margin: 2rem auto 0;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  border-top: 1px solid rgba(255,253,208,0.2);
+}
+
+
 /* =========================
    Page Header Styles
    ========================= */
+.page-header {
+  width: 100%;
+  background: #AE1C33;
+  color: #ECD189;
+  border-radius: 0 0 3rem 3rem;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  position: relative;
+  z-index: 2;
+}
+.page-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0;
+  letter-spacing: 0.04em;
+  font-weight: bold;
+}
+
+
+/* =========================
+   Responsive Design
+   ========================= */
+
+@media (max-width: 600px) {
+  .nav-container {
+    padding: 0;
+  }
+  .header-flex {
+    padding-left: clamp(0px, 2vw, 1rem);
+    padding-right: clamp(0px, 2vw, 1rem);
+  }
+}
+
+
+/* =========================
+   Utility Classes
+   ========================= */
+.text-center { text-align: center; }
+.mt-2 { margin-top: 2rem; }
+.mb-2 { margin-bottom: 2rem; }
+.p-2 { padding: 2rem; }
+.rounded { border-radius: 0.5rem; }
+.shadow { box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+
+
+/* =========================
+   Login Page Background
+   ========================= */
+.body-bg-fixed.login-bg {
+    background: url('/images/login-background.png') center center / cover no-repeat fixed !important;
+}
+
+
+/* =========================
+   Z-Index for Main Layout Elements
+   ========================= */
+.main-header,
+.page-header,
+.about-main,
+.involved-main,
+footer {
+    z-index: auto !important;
+}
+
+
+/* =========================
+   Header Styles
+   ========================= 
+.main-header {
+    background-color: #AE1C33;
+    color: #ECD189;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.nav-container {
+    flex: 1 1 0;
+    max-width: 100%;
+    margin: 0 2rem;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.header-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%; 
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 10rem;
+  box-sizing: border-box;
+}
+/* =========================
+   Logo Styles
+   ========================= 
+.logo {
+    
+    flex: 0 0 auto;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.rectangle-logo {
+  height: 10.5rem !important;
+  max-width: 38.5rem !important;
+  width: auto !important;
+  display: inline-block;
+  object-fit: contain;  /* Prevent stretching 
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.square-logo {
+    display: none;
+    height: 3rem;
+}
+
+/* =========================
+   Navigation Links Styles
+   ========================= 
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: clamp(0.5rem, 5vw, 2.5rem);
+    font-size: 1.25rem;
+    align-items: center;
+}
+.nav-links a {
+    color: #ECD189;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    font-size: 1.1em;
+}
+.nav-links a:hover,
+.nav-links a.active {
+    color: #392F5A !important;
+}
+
+/* =========================
+   Tickets Button Styles
+   ========================= 
+.tickets-btn {
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================
+   Main Content Styles
+   ========================= 
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+.content-section {
+    background: rgba(255,255,255,0.90);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+   Footer Styl
+   ========================= 
+.main-footer {
+    background: #AE1C33;
+    color: #ECD189;
+    padding: 3rem 0 1rem;
+    margin-top: 3rem;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.social-row {
+  display: flex;
+  gap: 1.5em;
+  justify-content: center;
+}
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+.footer-section h3 {
+    color: #FFFDD0;
+    margin-bottom: 1rem;
+}
+.footer-section ul {
+    list-style: none;
+}
+.footer-section a {
+    color: #FFFDD0;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+.footer-section a:hover {
+    opacity: 0.8;
+}
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+.footer-bottom {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding: 1rem 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 253, 208, 0.2);
+}
+
+/* =========================
+   Page Header Styles
+   ========================= 
 .page-header {
     width: 100%;
     background: #AE1C33;
@@ -360,7 +637,7 @@ body {
 
 /* =========================
    Major Headers Font Consistency
-   ========================= */
+   ========================= 
 .page-header h1,
 .lineup-preview-section h2,
 .get-involved-section h2,
@@ -376,7 +653,7 @@ body {
 
 /* =========================
    Responsive Design
-   ========================= */
+   ========================= 
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
@@ -469,7 +746,6 @@ body {
         display: flex !important;
         position: static;
         flex-direction: row;
-        gap: 2.5rem;
         background: none;
         box-shadow: none;
         height: auto;
@@ -497,9 +773,8 @@ footer,
 @media (min-width: 900px) {
   .main-header .logo img,
   .logo img {
-    height: 140px !important;
-    max-width: 180px !important;
-    width: auto !important;
+    margin-right: 2rem;
+    margin-left: 2rem;
   }
 }
 
@@ -513,7 +788,7 @@ footer,
     height: 6px;
   }
 }
-/* Media query for mobile font size adjustment */
+/* Media query for mobile font size adjustment 
 @media (max-width: 530px) {
   .main-header .logo img,
   .mobile-logo img {
@@ -530,14 +805,14 @@ footer,
 
 /* =========================
    Get Involved Section Margin
-   ========================= */
+   ========================= 
 .get-involved-section {
     margin-top: 2.5em;
 }
 
 /* =========================
    Shared Button Styles
-   ========================= */
+   ========================= 
 .tickets-btn .tickets-btn.active, .tickets-btn .tickets-button,
 .about-btn, .lineup-btn, .apply-btn, .involved-nav-link {
     background: #392F5A;
@@ -559,37 +834,16 @@ footer,
 
 /* =========================
    Active Link Styles
-   ========================= */
+   ========================= 
 .nav-links a.active,
 .slide-menu a.active {
-    color: #392F5A !important; /* Darker shade of tan for active page */
+    color: #392F5A !important; /* Darker shade of tan for active page 
     background: none;
 }
 
 /* =========================
-   Responsive Logo Sizing
-   ========================= */
-@media (max-width: 900px) {
-    .logo img {
-        height: 140px !important;
-        width: auto !important;
-    }
-}
-
-/* =========================
-   Z-Index for Main Layout Elements
-   ========================= */
-.main-header,
-.page-header,
-.about-main,
-.involved-main,
-footer {
-    z-index: auto !important;
-}
-
-/* =========================
    Login Container Background
-   ========================= */
+   ========================= 
 .login-container-bg {
     background: url('/images/login-section-background.png') center center / cover no-repeat;
     position: relative;
@@ -599,7 +853,7 @@ footer {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(174,28,51,0.7); /* Less opaque for clearer image */
+    background: rgba(174,28,51,0.7); /* Less opaque for clearer image 
     z-index: 0;
     border-radius: 18px;
 }
@@ -607,3 +861,4 @@ footer {
     position: relative;
     z-index: 1;
 }
+    */
