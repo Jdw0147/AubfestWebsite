@@ -45,6 +45,7 @@ html {
    Section Background Images for Each Involvement Type
    ========================= */
 .volunteer-bg { background-image: url('/images/Volunteer.jpg'); }
+.production-bg { background-image: url('/images/production.JPG'); }
 .photographer-bg { background-image: url('/images/photo.jpeg'); }
 .art-vendor-bg { background-image: url('/images/vendor1.jpg'); }
 .food-vendor-bg { background-image: url('/images/Food.jpg'); }
@@ -112,6 +113,10 @@ html {
     margin-left: auto;
     margin-right: auto;
     background: none !important;
+}
+.involved-section-box {
+  width: 100%;
+  box-sizing: border-box;
 }
 .involved-section-box:hover {
     box-shadow: 0 4px 24px rgba(0,0,0,0.13);
