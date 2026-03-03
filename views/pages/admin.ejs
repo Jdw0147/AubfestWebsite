@@ -1,12 +1,26 @@
+<!-- =========================
+     Admin Homepage
+     This page will greet any user with
+     admin access when they log in.
+     Right now only feature is editing
+     The public photo lobrary but
+     will hopefully have text editing
+     and maybe even template creating
+     soon.
+     ========================= -->
 
-
+<!-- Including Header -->
 <%- include('../partials/header') %>
+
+<!-- Stylesheets -->
 <link rel="stylesheet" href="/styles/about.css">
 
-
+<!-- Header -->
 <div class="page-header">
     <h1>Admin Dashboard</h1>
 </div>
+
+<!-- Main Content -->
 <main class="main-content">
     <div class="content-section" style="display: flex; flex-direction: column; align-items: center; gap: 2.5rem;">
         <p>Welcome, admin! This is a protected page.</p>
@@ -20,6 +34,8 @@
                 Log Out
             </a>
         </div>
+
+        <!-- EEK! This looks bad.  Make admin.css ASAP!!!-->
         <style>
         .admin-square-btn {
             display: flex;
@@ -66,4 +82,5 @@
     </div>
 </main>
 
+<!-- Footer Inclusion -->
 <%- include('../partials/footer') %>
