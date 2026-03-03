@@ -1,6 +1,16 @@
+<!-- =========================
+     Past Lineups Page,
+     This page displays posters
+     from past festivals, once
+     clicked, user will be taken
+     to a lineup page for that festival
+     ========================= -->
 <!-- filepath: views/pages/past-lineups.ejs -->
 
+<!-- Including Header -->
 <%- include('../partials/header') %>
+
+<!-- Stylesheets-->
 <link rel="stylesheet" href="/styles/lineup.css">
 <link rel="stylesheet" href="/styles/past-lineups.css">
 
@@ -9,7 +19,7 @@
     <h1>Past Lineups</h1>
 </div>
 
-
+<!-- Main Content -->
 <div class="past-lineups-gallery">
   <a href="/lineups/fest/7">
     <img src="/images/flyers/fest7-flyer.jpg" alt="AubFest VII Poster" class="poster-btn">
@@ -34,5 +44,8 @@
   </a>
 </div>
 
+<!-- Including Footer -->
 <%- include('../partials/footer') %>
+
+<!-- Scripts -->
 <script src="/scripts/past-lineups.js"></script>

@@ -1,3 +1,5 @@
+/* Cleanup This page */
+
 import { lotteryImages, fetchLotteryImages } from './lotteryImages.js';
 
 const grid = document.getElementById('lottery-grid');

@@ -1,3 +1,5 @@
+/* Cleanup This page */
+
 // Dynamically fill the left and right flair stacks with squares to match the main content height
 (function() {
 

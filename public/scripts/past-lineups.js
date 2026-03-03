@@ -1,4 +1,9 @@
+/* Past Lineups Script
+  Implements scroll functionality
+  for the gallery of previous
+  flyers */
 
+/* Scroll functionality */
 document.addEventListener("DOMContentLoaded", function() {
 const gallery = document.querySelector('.past-lineups-gallery');
   if (gallery) {

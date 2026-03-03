@@ -1,3 +1,8 @@
+<!-- =========================
+     Header Partial, included
+     on every main page.
+     ========================= -->
+
 <!DOCTYPE html>
 <html lang="en">
 <link rel="icon" type="image/png" href="/favicon.png">
@@ -8,6 +13,8 @@
     <title>
         <%= title %>
     </title>
+    <!-- See if you can tinker around and remove this, looks wierd and
+     shouldn't really even affect anything -->
     <link rel="stylesheet" href="/styles/main.css">
     <% if (page==='home' ) { %>
         <link rel="stylesheet" href="/styles/home.css">
@@ -17,6 +24,7 @@
                 <% } %>
 </head>
 
+<!-- Main Content -->
 <body>
     <header class="main-header" style="background-color: #AE1C33; color: #ECD189;">
         <div class="header-flex">
@@ -73,6 +81,8 @@
             </ul>
         </div>
     </header>
+
+    <!-- YIPES!!!!! Make a 'header.js' -->
     <script>
         const hamburgerMenu = document.getElementById('hamburger-menu');
         const closeMenu = document.getElementById('close-menu');

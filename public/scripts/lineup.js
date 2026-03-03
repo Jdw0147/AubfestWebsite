@@ -1,3 +1,5 @@
+/* Cleanup This page */
+
 // =========================
 // Immediately Invoked Function Expression (IIFE) to scope variables
 // =========================

@@ -1,3 +1,5 @@
+/* Cleanup This page */
+
 // =========================
 // Scroll to Volunteer Section Link Handler
 // =========================

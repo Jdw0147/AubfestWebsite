@@ -1,3 +1,5 @@
+/* Cleanup This page */
+
 // Replace import with dynamic fetch
 export let lotteryImages = [];
 

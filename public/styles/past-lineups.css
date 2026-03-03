@@ -1,3 +1,5 @@
+/* Cleanup This page */
+
 body::before {
     content: "";
     position: fixed;

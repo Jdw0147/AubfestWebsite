@@ -1,3 +1,5 @@
+/* Cleanup This page */
+
 // =========================
 // Smooth Scrolling for Anchor Links
 // =========================

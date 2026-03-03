@@ -1,3 +1,5 @@
+/* Cleanup This page */
+
 // =========================
 // Wait for DOM to be fully loaded
 // =========================

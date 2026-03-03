@@ -1,13 +1,28 @@
+<!-- =========================
+     Lineup Page - This page displays
+     The lineup of artists for a 
+     specific festival.  This 
+     page was newly created to handle
+     automatic filling of artists
+     based on which festival is
+     being viewed.
+     ========================= -->
+
+<!-- Including Header -->
 <%- include('../../partials/header') %>
+
+<!-- Stylesheets -->
   <link rel="stylesheet" href="/styles/about.css">
   <link rel="stylesheet" href="/styles/lineup.css">
 
+  <!-- Header -->
   <div class="page-header">
     <h1>
       <%= header %>
     </h1>
   </div>
 
+  <!-- Main Content -->
   <main class="main-content lineup page">
     <div class="card-container">
       <form class="artist-card sort-card" method="get" id="sortForm"
@@ -25,6 +40,7 @@
         </label>
       </form>
 
+      <!-- Filling in artist data from the JSON -->
       <% artists.forEach(function(artist) { %>
         <a href="<%= artist.link %>" target="_blank" class="artist-card-link">
           <div class="artist-card">
@@ -36,6 +52,8 @@
         <% }); %>
     </div>
 
+    <!-- Lineup Navigation Buttons
+        Can toggle next/previous lineup -->
     <div class="lineup-buttons" style="justify-content: center; margin: 2rem 0;">
       <% const festNumInt=parseInt(festNum); %>
         <% if (festNumInt < maxFestNum) { %>
@@ -50,5 +68,8 @@
 
   </main>
 
+  <!-- Including Footer -->
   <%- include('../../partials/footer') %>
-    <script src="/scripts/lineup.js"></script>
+
+  <!-- Scripts -->
+  <script src="/scripts/lineup.js"></script>
