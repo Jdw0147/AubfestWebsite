@@ -36,7 +36,8 @@
         "title": "/images/artists/carmine-sun-title.png",
         "festivals": {
             "7": 2,
-            "6": 3
+            "6": 3,
+            "8": 25
         },
         "link": "https://linktr.ee/carminesun"
     },
@@ -46,7 +47,8 @@
         "image": "/images/artists/shock-tea.jpg",
         "title": "/images/artists/shock-tea-title.png",
         "festivals": {
-            "7": 10
+            "7": 10,
+            "8": 4
         },
         "link": "https://shocktea.bandcamp.com/"
     },
@@ -56,6 +58,7 @@
         "image": "/images/artists/mayweather.jpg",
         "title": "/images/artists/mayweather-title.PNG",
         "festivals": {
+            "8": 5,
             "7": 13
         },
         "link": "https://linktr.ee/mayweather.music"
@@ -66,6 +69,7 @@
         "image": "/images/artists/band-silhouette.JPG",
         "title": "/images/artists/band-silhouette-title.PNG",
         "festivals": {
+            "8": 14,
             "7": 18,
             "5": 13,
             "4": 2,
@@ -111,7 +115,8 @@
         "image": "/images/artists/varsity-blues.JPG",
         "title": "/images/artists/varsity-blues-title.png",
         "festivals": {
-            "7": 6
+            "7": 6,
+            "8": 1
         },
         "link": "https://varsityblues.bandcamp.com/"
     },
@@ -121,6 +126,7 @@
         "image": "/images/artists/Asper.jpg",
         "title": "/images/artists/asper-title.png",
         "festivals": {
+            "8": 32,
             "7": 12
         },
         "link": "https://itsasper.com/"
@@ -142,6 +148,7 @@
         "image": "/images/artists/band-honey.jpg",
         "title": "/images/artists/band-honey-title.PNG",
         "festivals": {
+            "8": 9,
             "7": 9
         },
         "link": "https://www.instagram.com/thebandhoney_/?hl=en"
@@ -192,10 +199,31 @@
     },
 
     {
+        "name": "Treybaby",
+        "image": "/images/artists/treybaby-mourning-dove.jpg",
+        "title": "/images/artists/treybaby-mourning-dove-title.png",
+        "festivals": {
+            "8": 30
+        },
+        "link": "#"
+    },
+
+    {
+        "name": "Mourning Dove",
+        "image": "/images/artists/treybaby-mourning-dove.jpg",
+        "title": "/images/artists/treybaby-mourning-dove-title.png",
+        "festivals": {
+            "8": 31
+        },
+        "link": "#"
+    },
+
+    {
         "name": "Marz",
         "image": "/images/artists/marz.JPG",
         "title": "/images/artists/marz-title.PNG",
         "festivals": {
+            "8": 11,
             "7": 22
         },
         "link": "https://www.instagram.com/marzdub/?hl=en"
@@ -237,6 +265,7 @@
         "image": "/images/artists/cld.jpeg",
         "title": "/images/artists/cld-title.PNG",
         "festivals": {
+            "8": 10,
             "7": 23
         },
         "link": "https://www.cldxp.net/cld"
@@ -247,7 +276,8 @@
         "image": "/images/artists/warhol.JPG",
         "title": "/images/artists/warhol-title.PNG",
         "festivals": {
-            "7": 26
+            "8": 26,
+            "7": 26            
         },
         "link": "https://linktr.ee/thewarholband?fbclid=PAZXh0bgNhZW0CMTEAAaf4MNmdhXxY2RekOxtZaf3D4SenxwFgMUmUKA7lRCbDEqzYZuF51fPC5kE-qg_aem_3g7rw0ALT-zrIT6-lCyHTg"
     },
@@ -257,7 +287,8 @@
         "image": "/images/artists/sandpipers.png",
         "title": "/images/artists/sandpipers-title.PNG",
         "festivals": {
-            "7": 20
+            "7": 20,
+            "8": 2
         },
         "link": "https://www.instagram.com/ssandpiperss/"
     },
@@ -267,7 +298,8 @@
         "image": "/images/artists/ohpake.jpg",
         "title": "/images/artists/ohpake-title.PNG",
         "festivals": {
-            "7": 27
+            "7": 27,
+            "8": 19
         },
         "link": "https://www.instagram.com/oh.pake/"
     },
@@ -420,6 +452,7 @@
         "image": "/images/artists/speak-easy.jpg",
         "title": "/images/artists/speak-easy-title.png",
         "festivals": {
+            "8": 8,
             "6": 11
         },
         "link": "https://www.speakeasylive.biz/"
@@ -534,6 +567,7 @@
         "image": "/images/artists/zeph-embers.jpg",
         "title": "/images/artists/zeph-embers-title.png",
         "festivals": {
+            "8": 22,
             "4": 8
         },
         "link": "https://www.instagram.com/zeph_embers/"
@@ -688,5 +722,6 @@
         },
         "link": "https://www.instagram.com/we_r_magdalene/?hl=en"
     }
+
 
 ]
