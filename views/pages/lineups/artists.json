@@ -210,12 +210,12 @@
 
     {
         "name": "Mourning Dove",
-        "image": "/images/artists/treybaby-mourning-dove.jpg",
-        "title": "/images/artists/treybaby-mourning-dove-title.png",
+        "image": "/images/artists/mourning-dove.jpeg",
+        "title": "/images/artists/mourning-dove-title.png",
         "festivals": {
             "8": 31
         },
-        "link": "#"
+        "link": "https://www.instagram.com/ilovethatdove/"
     },
 
     {
@@ -741,6 +741,26 @@
             "8": 24
         },
         "link": "https://linktr.ee/gazelucid?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnSsBcJIcFQuxiY-CTp375hO_O3bOI5oMXaTg-iR3Zw6NDC7GpR-b3ZcM9_X0_aem_E3i3rnyEg12tDkw1rvYP1g"
+    },
+
+    {
+        "name": "Carver Commodore",
+        "image": "/images/artists/carver-commodore.jpg",
+        "title": "/images/artists/carver-commodore-title.png",
+        "festivals": {
+            "8": 29
+        },
+        "link": "https://carvercommodore.com/"
+    },
+
+    {
+        "name": "KR3WCIRL",
+        "image": "/images/artists/kr3wcirl.JPG",
+        "title": "/images/artists/kr3wcirl-title.png",
+        "festivals": {
+            "8": 16
+        },
+        "link": "https://linktr.ee/ikr3wcial?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnQ170R4CzNBBXSEb5YrybB4dgp-RDe7n_ypO1K-1KihSWdbswltH9wHSJ8hw_aem_q0vfcGSEbW9IG1A8wQtL6w"
     }
 
 
