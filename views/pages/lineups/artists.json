@@ -763,6 +763,16 @@
             "8": 7
         },
         "link": "https://www.nocultureisaband.com/"
+    },
+
+    {
+        "name": "Make Sure",
+        "image": "/images/artists/make-sure.png",
+        "title": "/images/artists/make-sure-title.png",
+        "festivals": {
+            "8": 21
+        },
+        "link": "https://www.instagram.com/makesure.music/"
     }
 
 
