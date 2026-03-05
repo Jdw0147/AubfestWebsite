@@ -773,7 +773,16 @@
             "8": 21
         },
         "link": "https://www.instagram.com/makesure.music/"
-    }
+    },
 
+    {
+        "name": "Rabbithole",
+        "image": "/images/artists/rabbithole.jpg",
+        "title": "/images/artists/rabbithole-title.png",
+        "festivals": {
+            "8": 28
+        },
+        "link": "https://www.instagram.com/rabbithole3d/"
+    }
 
 ]
