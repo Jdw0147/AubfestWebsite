@@ -721,6 +721,26 @@
             "1": 6
         },
         "link": "https://www.instagram.com/we_r_magdalene/?hl=en"
+    },
+
+    {
+        "name": "Thwack",
+        "image": "/images/artists/thwack.jpeg",
+        "title": "/images/artists/thwack-title.jpeg",
+        "festivals": {
+            "8": 23
+        },
+        "link": "https://www.instagram.com/thwackagram/?hl=en"
+    },
+
+    {
+        "name": "Lucid",
+        "image": "/images/artists/lucid.jpeg",
+        "title": "/images/artists/lucid-title.PNG",
+        "festivals": {
+            "8": 24
+        },
+        "link": "https://linktr.ee/gazelucid?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnSsBcJIcFQuxiY-CTp375hO_O3bOI5oMXaTg-iR3Zw6NDC7GpR-b3ZcM9_X0_aem_E3i3rnyEg12tDkw1rvYP1g"
     }
 
 
