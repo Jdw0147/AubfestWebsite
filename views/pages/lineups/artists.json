@@ -189,23 +189,14 @@
     },
 
     {
-        "name": "Treybaby and Mourning Dove",
-        "image": "/images/artists/treybaby-mourning-dove.jpg",
+        "name": "Treybaby",
+        "image": "/images/artists/treybaby.jpeg",
         "title": "/images/artists/treybaby-mourning-dove-title.png",
         "festivals": {
+            "8": 30,
             "7": 24
         },
-        "link": "#"
-    },
-
-    {
-        "name": "Treybaby",
-        "image": "/images/artists/treybaby-mourning-dove.jpg",
-        "title": "/images/artists/treybaby-mourning-dove-title.png",
-        "festivals": {
-            "8": 30
-        },
-        "link": "#"
+        "link": "https://www.instagram.com/heytreybaby/"
     },
 
     {
@@ -213,7 +204,8 @@
         "image": "/images/artists/mourning-dove.jpeg",
         "title": "/images/artists/mourning-dove-title.png",
         "festivals": {
-            "8": 31
+            "8": 31,
+            "7": 24
         },
         "link": "https://www.instagram.com/ilovethatdove/"
     },
@@ -726,7 +718,7 @@
     {
         "name": "Thwack",
         "image": "/images/artists/thwack.jpeg",
-        "title": "/images/artists/thwack-title.jpeg",
+        "title": "/images/artists/thwack-title.png",
         "festivals": {
             "8": 23
         },
@@ -761,6 +753,16 @@
             "8": 16
         },
         "link": "https://linktr.ee/ikr3wcial?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnQ170R4CzNBBXSEb5YrybB4dgp-RDe7n_ypO1K-1KihSWdbswltH9wHSJ8hw_aem_q0vfcGSEbW9IG1A8wQtL6w"
+    },
+    
+    {
+        "name": "No Culture",
+        "image": "/images/artists/no-culture.JPG",
+        "title": "/images/artists/no-culture-title.png",
+        "festivals": {
+            "8": 7
+        },
+        "link": "https://www.nocultureisaband.com/"
     }
 
 
