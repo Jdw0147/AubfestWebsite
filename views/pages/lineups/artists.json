@@ -190,7 +190,7 @@
 
     {
         "name": "Treybaby",
-        "image": "/images/artists/treybaby.jpeg",
+        "image": "/images/artists/treybaby.jpg",
         "title": "/images/artists/treybaby-mourning-dove-title.png",
         "festivals": {
             "8": 30,
@@ -783,6 +783,89 @@
             "8": 28
         },
         "link": "https://www.instagram.com/rabbithole3d/"
+    },
+
+    {
+        "name": "When Day Breaks",
+        "image": "/images/artists/when-day-breaks.jpg",
+        "title": "/images/artists/when-day-breaks-title.png",
+        "festivals": {
+            "8": 3
+        },
+        "link": "https://www.instagram.com/whendaybreaks_music/?hl=en"
+    },
+
+    {
+        "name": "Greenish Pools",
+        "image": "/images/artists/greenish-pools.jpg",
+        "title": "/images/artists/greenish-pools-title.png",
+        "festivals": {
+            "8": 6
+        },
+        "link": "https://www.instagram.com/greenishpools/"
+    },
+
+    {
+        "name": "Tim McNary",
+        "image": "/images/artists/tim-mcnary.jpg",
+        "title": "/images/artists/tim-mcnary-title.png",
+        "festivals": {
+            "8": 12
+        },
+        "link": "https://www.musicbed.com/artists/tim-mcnary/45324?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnhrk-acTxYyM8qcF0dYYfOJhU4uyQkLRXflNCaqM2Rb4yqPWyztVbb2MNk7g_aem_enQjKLgqOYq7xgTQps8Log"
+    },
+
+    {
+        "name": "sayryn",
+        "image": "/images/artists/sayryn.jpg",
+        "title": "/images/artists/sayryn-title.png",
+        "festivals": {
+            "8": 13
+        },
+        "link": "https://linktr.ee/sayryn?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnm1PVzbIkpUCbaU4WTMzHrtV8HakCzH55Og8hkW5CMoP5Lm2DquGhPF7rTJI_aem_lo8P7Tr-QlgsI0lRWklPEQ"
+    },
+
+    {
+        "name": "Rex Novi",
+        "image": "/images/artists/rex-novi.jpg",
+        "title": "/images/artists/rex-novi-title.png",
+        "festivals": {
+            "8": 15
+        },
+        "link": "https://rexnovi.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGndxuTHLYewHxivH-X0sx-7YPapndJQN4H7XcARVmxRqSJkbAr8c_v659AKng_aem_Ctk8fMSiOvr2AvB1Eh4mzw"
+    },
+
+    {
+        "name": "anjel",
+        "image": "/images/artists/anjel.jpg",
+        "title": "/images/artists/anjel-title.png",
+        "festivals": {
+            "8": 18
+        },
+        "link": "/"
+    },
+
+    {
+        "name": "auburn",
+        "image": "/images/artists/auburn.jpg",
+        "title": "/images/artists/auburn-title.png",
+        "festivals": {
+            "8": 20
+        },
+        "link": "/"
+    },
+
+    {
+        "name": "Dog City",
+        "image": "/images/artists/dog-city.jpg",
+        "title": "/images/artists/dog-city-title.png",
+        "festivals": {
+            "8": 27
+        },
+        "link": "https://linktr.ee/dogcity"
     }
+    
+
+
 
 ]
