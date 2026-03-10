@@ -199,11 +199,23 @@ app.get('/', (req, res) => {
 });
 
 app.get('/lineup', (req, res) => {
-    res.render('pages/lineup', {
-        title: 'Lineup - Aubfest Music Festival',
-        page: 'lineup',
-        loggedIn: req.session && req.session.loggedIn
-    });
+    // Dynamically determine maxFestNum
+    function getMaxFestNum() {
+        const artists = JSON.parse(fs.readFileSync(path.join(__dirname, 'views/pages/lineups/artists.json')));
+        let maxFestNum = 0;
+        artists.forEach(artist => {
+            if (artist.festivals) {
+                Object.keys(artist.festivals).forEach(num => {
+                    const festNum = parseInt(num, 10);
+                    if (festNum > maxFestNum) maxFestNum = festNum;
+                });
+            }
+        });
+        return maxFestNum;
+    }
+    const maxFestNum = getMaxFestNum();
+    // Redirect to the most recent festival lineup
+    res.redirect(`/lineups/fest/${maxFestNum}`);
 });
 
 app.get('/tickets', (req, res) => {
