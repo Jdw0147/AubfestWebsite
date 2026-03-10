@@ -11,7 +11,7 @@
 <!-- Including Header -->
 <%- include('../../partials/header') %>
 
-<!-- Stylesheets -->
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="/styles/about.css">
   <link rel="stylesheet" href="/styles/lineup.css">
 
@@ -58,20 +58,22 @@
         Can toggle next/previous lineup -->
     <div class="lineup-buttons" style="justify-content: center; margin: 2rem 0;">
       <% const festNumInt=parseInt(festNum); %>
-        <% if (festNumInt < maxFestNum) { %>
+        <% if (festNumInt < maxFestNum - 1) { %>
           <a href="/lineups/fest/<%= festNumInt + 1 %>" class="lineup-btn"> &#8592; AubFest <%= festNumInt + 1 %></a>
           <% } %>
-            <a href="/lineup" class="lineup-btn btn-apply">Current Lineup</a>
-            <% if (festNumInt > 1) { %>
-              <a href="/lineups/fest/<%= festNumInt - 1 %>" class="lineup-btn">AubFest <%= festNumInt - 1 %> &#8594; </a>
+            <% if (festNumInt !==maxFestNum) { %>
+              <a href="/lineups/fest/<%= maxFestNum %>" class="lineup-btn btn-apply">Current Lineup</a>
               <% } %>
+                <% if (festNumInt> 1) { %>
+                  <a href="/lineups/fest/<%= festNumInt - 1 %>" class="lineup-btn">AubFest <%= festNumInt - 1 %> &#8594;
+                  </a>
+                  <% } %>
     </div>
-
 
   </main>
 
   <!-- Including Footer -->
   <%- include('../../partials/footer') %>
 
-  <!-- Scripts -->
-  <script src="/scripts/lineup.js"></script>
+    <!-- Scripts -->
+    <script src="/scripts/lineup.js"></script>
