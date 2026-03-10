@@ -241,9 +241,31 @@ function stripThe(name) {
 
 app.get('/lineups/fest/:festNum', (req, res) => {
   const festNum = req.params.festNum;
+  const maxFestNum = getMaxFestNum();
   const artists = JSON.parse(fs.readFileSync(path.join(__dirname, 'views/pages/lineups/artists.json')));
   const festArtists = artists.filter(artist => artist.festivals && artist.festivals[festNum]);
   const sort = req.query.sort || 'festival';
+
+  // Logic to throw 404 if festnum is manually typed in url and is out of bounds
+if (festNum > maxFestNum || festNum < 1) {
+    return res.status(404).render('pages/not-found'); // Or your error page
+  }
+
+// Function to get whatever the current festival number is
+// Finds highest fest number that contains artists.
+function getMaxFestNum() {
+  const artists = JSON.parse(fs.readFileSync(path.join(__dirname, 'views/pages/lineups/artists.json')));
+  let maxFestNum = 0;
+  artists.forEach(artist => {
+    if (artist.festivals) {
+      Object.keys(artist.festivals).forEach(num => {
+        const festNum = parseInt(num, 10);
+        if (festNum > maxFestNum) maxFestNum = festNum;
+      });
+    }
+  });
+  return maxFestNum;
+}
 
   let sortedArtists;
   if (sort === 'alpha') {
@@ -259,11 +281,11 @@ app.get('/lineups/fest/:festNum', (req, res) => {
     "4": "AubFest IV Lineup",
     "5": "AubFest V Lineup",
     "6": "AubFest VI Lineup",
-    "7": "AubFest VII Lineup"
+    "7": "AubFest VII Lineup",
+    "8": "AubFest VIII Lineup"
   };
 
   const festTitle = festTitles[festNum] || `AubFest ${festNum} Lineup`;
-  const maxFestNum = 7;
   res.render('pages/lineups/lineup-archive', { 
     title: festTitle + ' - AubFest Music Festival', 
     header: festTitle,
