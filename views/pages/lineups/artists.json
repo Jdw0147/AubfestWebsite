@@ -56,7 +56,7 @@
     {
         "name": "Mayweather",
         "image": "/images/artists/mayweather.jpg",
-        "title": "/images/artists/mayweather-title.PNG",
+        "title": "/images/artists/mayweather-title.png",
         "festivals": {
             "8": 5,
             "7": 13
@@ -129,7 +129,7 @@
             "8": 32,
             "7": 12
         },
-        "link": "https://itsasper.com/"
+        "link": "https://linktr.ee/dj.asper"
     },
 
     {
@@ -151,7 +151,7 @@
             "8": 9,
             "7": 9
         },
-        "link": "https://www.instagram.com/thebandhoney_/?hl=en"
+        "link": "https://linktr.ee/thebandhoney"
     },
 
     {
@@ -265,8 +265,8 @@
 
     {
         "name": "Warhol",
-        "image": "/images/artists/warhol.JPG",
-        "title": "/images/artists/warhol-title.PNG",
+        "image": "/images/artists/warhol.jpeg",
+        "title": "/images/artists/warhol-title.png",
         "festivals": {
             "8": 26,
             "7": 26            
@@ -797,7 +797,7 @@
 
     {
         "name": "Tim McNary",
-        "image": "/images/artists/tim-mcnary.jpg",
+        "image": "/images/artists/tim-mcnary.jpeg",
         "title": "/images/artists/tim-mcnary-title.png",
         "festivals": {
             "8": 12
@@ -827,27 +827,27 @@
 
     {
         "name": "anjel",
-        "image": "/images/artists/anjel.jpg",
+        "image": "/images/artists/anjel.jpeg",
         "title": "/images/artists/anjel-title.png",
         "festivals": {
             "8": 18
         },
-        "link": "/"
+        "link": "https://iamanjel.univer.se"
     },
 
     {
         "name": "auburn",
-        "image": "/images/artists/auburn.jpg",
+        "image": "/images/artists/auburn.jpeg",
         "title": "/images/artists/auburn-title.png",
         "festivals": {
             "8": 20
         },
-        "link": "/"
+        "link": "https://auburnisrealmusic.com"
     },
 
     {
         "name": "Dog City",
-        "image": "/images/artists/dog-city.jpg",
+        "image": "/images/artists/dog-city.jpeg",
         "title": "/images/artists/dog-city-title.png",
         "festivals": {
             "8": 27
