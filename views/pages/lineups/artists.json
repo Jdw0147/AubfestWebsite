@@ -56,7 +56,7 @@
     {
         "name": "Mayweather",
         "image": "/images/artists/mayweather.jpg",
-        "title": "/images/artists/mayweather-title.png",
+        "title": "/images/artists/mayweather-title.PNG",
         "festivals": {
             "8": 5,
             "7": 13
@@ -67,7 +67,7 @@
     {
         "name": "The Band Silhouette",
         "image": "/images/artists/band-silhouette.JPG",
-        "title": "/images/artists/band-silhouette-title.png",
+        "title": "/images/artists/band-silhouette-title.PNG",
         "festivals": {
             "8": 14,
             "7": 18,
@@ -146,7 +146,7 @@
     {
         "name": "The Band Honey",
         "image": "/images/artists/band-honey.jpg",
-        "title": "/images/artists/band-honey-title.png",
+        "title": "/images/artists/band-honey-title.PNG",
         "festivals": {
             "8": 9,
             "7": 9
@@ -266,7 +266,7 @@
     {
         "name": "Warhol",
         "image": "/images/artists/warhol.jpeg",
-        "title": "/images/artists/warhol-title.png",
+        "title": "/images/artists/warhol-title.PNG",
         "festivals": {
             "8": 26,
             "7": 26            
@@ -277,7 +277,7 @@
     {
         "name": "The Sandpipers",
         "image": "/images/artists/sandpipers.png",
-        "title": "/images/artists/sandpipers-title.png",
+        "title": "/images/artists/sandpipers-title.PNG",
         "festivals": {
             "7": 20,
             "8": 2
@@ -288,7 +288,7 @@
     {
         "name": "Oh.Pake",
         "image": "/images/artists/ohpake.jpg",
-        "title": "/images/artists/ohpake-title.png",
+        "title": "/images/artists/ohpake-title.PNG",
         "festivals": {
             "7": 27,
             "8": 19
