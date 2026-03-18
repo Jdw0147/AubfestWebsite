@@ -135,7 +135,7 @@
     {
         "name": "Jombi",
         "image": "/images/artists/Jombi.jpeg",
-        "title": "/images/artists/jombi-title.png",
+        "title": "/images/artists/Jombi-title.png",
         "festivals": {
             "7": 11,
             "6": 5
@@ -234,7 +234,7 @@
     {
         "name": "Sunhouse",
         "image": "/images/artists/sunhouse.jpg",
-        "title": "/images/artists/sunhouse-title.png",
+        "title": "/images/artists/Sunhouse-title.png",
         "festivals": {
             "7": 21
         },
