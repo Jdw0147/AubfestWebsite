@@ -126,7 +126,7 @@
         "image": "/images/artists/Asper.png",
         "title": "/images/artists/asper-title.png",
         "festivals": {
-            "8": 32,
+            "8": 30,
             "7": 12
         },
         "link": "https://linktr.ee/dj.asper"
@@ -193,7 +193,7 @@
         "image": "/images/artists/treybaby.jpg",
         "title": "/images/artists/treybaby-title.png",
         "festivals": {
-            "8": 30,
+            "8": 31,
             "7": 24
         },
         "link": "https://www.instagram.com/heytreybaby/"
@@ -204,7 +204,7 @@
         "image": "/images/artists/mourning-dove.jpeg",
         "title": "/images/artists/mourning-dove-title.png",
         "festivals": {
-            "8": 31,
+            "8": 32,
             "7": 24
         },
         "link": "https://www.instagram.com/ilovethatdove/"
